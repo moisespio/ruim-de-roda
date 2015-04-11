@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80F9AFD21AD942D100DCE8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD11AD942D100DCE8E0 /* main.m */; };
+		80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */; };
+		80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */; };
+		80F9AFDB1AD942D100DCE8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFDA1AD942D100DCE8E0 /* ViewController.m */; };
+		80F9AFDE1AD942D100DCE8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */; };
+		80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */; };
+		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
+		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80F9AFE91AD942D100DCE8E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80F9AFC41AD942D100DCE8E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80F9AFCB1AD942D100DCE8E0;
+			remoteInfo = "Ruim de Roda";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80F9AFCC1AD942D100DCE8E0 /* Ruim de Roda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ruim de Roda.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F9AFD01AD942D100DCE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F9AFD11AD942D100DCE8E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		80F9AFD31AD942D100DCE8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		80F9AFD71AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ruim_de_Roda.xcdatamodel; sourceTree = "<group>"; };
+		80F9AFD91AD942D100DCE8E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		80F9AFDA1AD942D100DCE8E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		80F9AFDD1AD942D100DCE8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		80F9AFE21AD942D100DCE8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ruim de RodaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F9AFED1AD942D100DCE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80F9AFC91AD942D100DCE8E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F9AFE51AD942D100DCE8E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80F9AFC31AD942D100DCE8E0 = {
+			isa = PBXGroup;
+			children = (
+				80F9AFCE1AD942D100DCE8E0 /* Ruim de Roda */,
+				80F9AFEB1AD942D100DCE8E0 /* Ruim de RodaTests */,
+				80F9AFCD1AD942D100DCE8E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80F9AFCD1AD942D100DCE8E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFCC1AD942D100DCE8E0 /* Ruim de Roda.app */,
+				80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80F9AFCE1AD942D100DCE8E0 /* Ruim de Roda */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFD31AD942D100DCE8E0 /* AppDelegate.h */,
+				80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */,
+				80F9AFD91AD942D100DCE8E0 /* ViewController.h */,
+				80F9AFDA1AD942D100DCE8E0 /* ViewController.m */,
+				80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */,
+				80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */,
+				80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */,
+				80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */,
+				80F9AFCF1AD942D100DCE8E0 /* Supporting Files */,
+			);
+			path = "Ruim de Roda";
+			sourceTree = "<group>";
+		};
+		80F9AFCF1AD942D100DCE8E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFD01AD942D100DCE8E0 /* Info.plist */,
+				80F9AFD11AD942D100DCE8E0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80F9AFEB1AD942D100DCE8E0 /* Ruim de RodaTests */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */,
+				80F9AFEC1AD942D100DCE8E0 /* Supporting Files */,
+			);
+			path = "Ruim de RodaTests";
+			sourceTree = "<group>";
+		};
+		80F9AFEC1AD942D100DCE8E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFED1AD942D100DCE8E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80F9AFCB1AD942D100DCE8E0 /* Ruim de Roda */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F9AFF21AD942D100DCE8E0 /* Build configuration list for PBXNativeTarget "Ruim de Roda" */;
+			buildPhases = (
+				80F9AFC81AD942D100DCE8E0 /* Sources */,
+				80F9AFC91AD942D100DCE8E0 /* Frameworks */,
+				80F9AFCA1AD942D100DCE8E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ruim de Roda";
+			productName = "Ruim de Roda";
+			productReference = 80F9AFCC1AD942D100DCE8E0 /* Ruim de Roda.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80F9AFE71AD942D100DCE8E0 /* Ruim de RodaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80F9AFF51AD942D100DCE8E0 /* Build configuration list for PBXNativeTarget "Ruim de RodaTests" */;
+			buildPhases = (
+				80F9AFE41AD942D100DCE8E0 /* Sources */,
+				80F9AFE51AD942D100DCE8E0 /* Frameworks */,
+				80F9AFE61AD942D100DCE8E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80F9AFEA1AD942D100DCE8E0 /* PBXTargetDependency */,
+			);
+			name = "Ruim de RodaTests";
+			productName = "Ruim de RodaTests";
+			productReference = 80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80F9AFC41AD942D100DCE8E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Ruim de Roda";
+				TargetAttributes = {
+					80F9AFCB1AD942D100DCE8E0 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					80F9AFE71AD942D100DCE8E0 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 80F9AFCB1AD942D100DCE8E0;
+					};
+				};
+			};
+			buildConfigurationList = 80F9AFC71AD942D100DCE8E0 /* Build configuration list for PBXProject "Ruim de Roda" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80F9AFC31AD942D100DCE8E0;
+			productRefGroup = 80F9AFCD1AD942D100DCE8E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80F9AFCB1AD942D100DCE8E0 /* Ruim de Roda */,
+				80F9AFE71AD942D100DCE8E0 /* Ruim de RodaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80F9AFCA1AD942D100DCE8E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F9AFDE1AD942D100DCE8E0 /* Main.storyboard in Resources */,
+				80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */,
+				80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F9AFE61AD942D100DCE8E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80F9AFC81AD942D100DCE8E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
+				80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */,
+				80F9AFDB1AD942D100DCE8E0 /* ViewController.m in Sources */,
+				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F9AFE41AD942D100DCE8E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80F9AFEA1AD942D100DCE8E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80F9AFCB1AD942D100DCE8E0 /* Ruim de Roda */;
+			targetProxy = 80F9AFE91AD942D100DCE8E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F9AFDD1AD942D100DCE8E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80F9AFE21AD942D100DCE8E0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80F9AFF01AD942D100DCE8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		80F9AFF11AD942D100DCE8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80F9AFF31AD942D100DCE8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80F9AFF41AD942D100DCE8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80F9AFF61AD942D100DCE8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ruim de RodaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ruim de Roda.app/Ruim de Roda";
+			};
+			name = Debug;
+		};
+		80F9AFF71AD942D100DCE8E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Ruim de RodaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ruim de Roda.app/Ruim de Roda";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80F9AFC71AD942D100DCE8E0 /* Build configuration list for PBXProject "Ruim de Roda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F9AFF01AD942D100DCE8E0 /* Debug */,
+				80F9AFF11AD942D100DCE8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80F9AFF21AD942D100DCE8E0 /* Build configuration list for PBXNativeTarget "Ruim de Roda" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F9AFF31AD942D100DCE8E0 /* Debug */,
+				80F9AFF41AD942D100DCE8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80F9AFF51AD942D100DCE8E0 /* Build configuration list for PBXNativeTarget "Ruim de RodaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80F9AFF61AD942D100DCE8E0 /* Debug */,
+				80F9AFF71AD942D100DCE8E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				80F9AFD71AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodel */,
+			);
+			currentVersion = 80F9AFD71AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodel */;
+			path = Ruim_de_Roda.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 80F9AFC41AD942D100DCE8E0 /* Project object */;
+}
