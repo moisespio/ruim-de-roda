@@ -43,7 +43,7 @@
     
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
     
-    [query includeKey:@"Category"];
+    [query includeKey:@"categoryID"];
     [query orderByAscending:@"createdAt"];
     
     
@@ -71,7 +71,7 @@
                 
                 //Category
                 CategoryReport *category = [[CategoryReport alloc] init];
-                PFObject *pfCategory = resultReport[@"Category"];
+                PFObject *pfCategory = resultReport[@"categoryID"];
                 
                 category.objectId = pfCategory.objectId;
                 category.text = [pfCategory objectForKey:@"text"];
