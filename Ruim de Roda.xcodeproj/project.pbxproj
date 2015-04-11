@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8088C17C1AD9DB5F00E092C7 /* PatrickHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */; };
 		80F9AFD21AD942D100DCE8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD11AD942D100DCE8E0 /* main.m */; };
 		80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */; };
 		80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */; };
@@ -454,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8088C17C1AD9DB5F00E092C7 /* PatrickHand.ttf in Resources */,
 				C53F71A21AD9B7C60050FFD3 /* LICENSE.txt in Resources */,
 				80F9AFDE1AD942D100DCE8E0 /* Main.storyboard in Resources */,
 				80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */,
