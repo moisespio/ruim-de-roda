@@ -505,8 +505,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-7Z-2ax">
-                                                <rect key="frame" x="16" y="7" width="37" height="30"/>
-                                                <state key="normal" title="Flash">
+                                                <rect key="frame" x="38" y="7" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="6CF-qN-oOh"/>
+                                                    <constraint firstAttribute="height" constant="30" id="7HS-t3-df1"/>
+                                                </constraints>
+                                                <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -514,8 +519,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-qE-u2c">
-                                                <rect key="frame" x="491" y="7" width="93" height="30"/>
-                                                <state key="normal" title="Troca camera">
+                                                <rect key="frame" x="532" y="7" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="TW7-Fl-SIW"/>
+                                                    <constraint firstAttribute="width" constant="30" id="YuH-II-nk9"/>
+                                                </constraints>
+                                                <state key="normal">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -523,13 +533,13 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.3333333731" green="0.84313720459999997" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="centerY" secondItem="laH-7Z-2ax" secondAttribute="centerY" id="7NQ-cH-hSL"/>
                                             <constraint firstAttribute="height" constant="44" id="DRd-NU-4gw"/>
-                                            <constraint firstItem="laH-7Z-2ax" firstAttribute="leading" secondItem="Zbw-X3-j54" secondAttribute="leadingMargin" constant="8" id="LJr-9M-A7t"/>
+                                            <constraint firstItem="laH-7Z-2ax" firstAttribute="leading" secondItem="Zbw-X3-j54" secondAttribute="leadingMargin" constant="30" id="LJr-9M-A7t"/>
                                             <constraint firstAttribute="centerY" secondItem="9ji-qE-u2c" secondAttribute="centerY" id="Sgs-kz-1dL"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="9ji-qE-u2c" secondAttribute="trailing" constant="8" id="aUC-hh-CVg"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="9ji-qE-u2c" secondAttribute="trailing" constant="30" id="aUC-hh-CVg"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -548,8 +558,13 @@
                                 <rect key="frame" x="0.0" y="800" width="600" height="151"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJN-Hb-O69">
-                                        <rect key="frame" x="269" y="61" width="63" height="30"/>
-                                        <state key="normal" title="Tirar foto">
+                                        <rect key="frame" x="260" y="36" width="80" height="80"/>
+                                        <color key="backgroundColor" red="0.3333333731" green="0.84313720459999997" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="HBb-K2-7AW"/>
+                                            <constraint firstAttribute="width" constant="80" id="QAW-FK-lL3"/>
+                                        </constraints>
+                                        <state key="normal">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -557,7 +572,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.32156862749999998" green="0.39607843139999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="wJN-Hb-O69" secondAttribute="centerY" id="MNR-rt-Zm0"/>
                                     <constraint firstAttribute="centerX" secondItem="wJN-Hb-O69" secondAttribute="centerX" id="MXl-H1-hfE"/>

@@ -67,10 +67,14 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     
     self.flashMode = -1;
     
+    self.stillButton.layer.cornerRadius = self.stillButton.frame.size.width / 2;
+    self.stillButton.layer.borderWidth = 5;
+    self.stillButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    
     [self setFlash:nil];
     
     self.flashButton.tintColor = [UIColor whiteColor];
-    [self.flashButton setImageEdgeInsets:UIEdgeInsetsMake(6, 6, 6, 6)];
+    [self.flashButton setImageEdgeInsets:UIEdgeInsetsMake(6, 8, 6, 8)];
     self.flashButton.layer.cornerRadius = self.flashButton.frame.size.width / 2;
     self.flashButton.clipsToBounds = YES;
     
@@ -81,7 +85,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     [self.cameraButton setImage:image forState:UIControlStateNormal];
     self.cameraButton.tintColor = [UIColor whiteColor];
     
-    [self.cameraButton setImageEdgeInsets:UIEdgeInsetsMake(6, 6, 6, 6)];
+    [self.cameraButton setImageEdgeInsets:UIEdgeInsetsMake(6, 8, 6, 8)];
     
     // Create the AVCaptureSession
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
