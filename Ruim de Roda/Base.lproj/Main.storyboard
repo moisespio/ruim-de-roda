@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="79" id="CbB-2t-2oe" customClass="FeedViewControllerCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="79" id="CbB-2t-2oe" customClass="FeedTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CbB-2t-2oe" id="Mnw-6x-7RN">
@@ -100,14 +100,18 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imgPhoto" destination="Mnw-6x-7RN" id="lwv-Bl-wsu"/>
-                                            <outlet property="lblCategory" destination="XGE-5e-zkf" id="OSX-oQ-h8y"/>
-                                            <outlet property="lblDate" destination="tLf-20-Vwz" id="Rs4-X1-vcc"/>
-                                            <outlet property="lblHour" destination="qXe-nM-sTj" id="mp6-Az-rGm"/>
-                                            <outlet property="lblPlate" destination="0xg-ny-cgf" id="xTK-GS-NmU"/>
+                                            <outlet property="imgPhoto" destination="TnS-kR-CMg" id="pdX-RA-JZE"/>
+                                            <outlet property="lblCategory" destination="XGE-5e-zkf" id="5QZ-4K-gV3"/>
+                                            <outlet property="lblDate" destination="tLf-20-Vwz" id="YEC-fb-2C5"/>
+                                            <outlet property="lblHour" destination="qXe-nM-sTj" id="cn3-GB-w4j"/>
+                                            <outlet property="lblPlate" destination="0xg-ny-cgf" id="bF7-ht-EwX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="BNP-wJ-XG1"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="VdZ-ef-9Py"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -120,7 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT"/>
                     <connections>
-                        <outlet property="tableView" destination="Tdl-nT-wNj" id="l05-JB-zTa"/>
+                        <outlet property="tableView" destination="Tdl-nT-wNj" id="0we-VN-ebb"/>
                         <segue destination="LgT-Na-JBU" kind="show" identifier="segueDetail" id="Eiu-OM-Qcd"/>
                     </connections>
                 </viewController>

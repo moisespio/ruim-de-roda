@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerCell.h
+//  FeedTableViewCell.h
 //  Ruim de Roda
 //
 //  Created by Henrique Velloso on 4/11/15.
@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 @import UIKit;
 
-@interface FeedViewControllerCell : UITableViewCell
+@interface FeedTableViewCell : UITableViewCell
 
 
-@property (weak, nonatomic) IBOutlet UIView *imgPhoto;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
 @property (weak, nonatomic) IBOutlet UILabel *lblCategory;
 @property (weak, nonatomic) IBOutlet UILabel *lblPlate;
 @property (weak, nonatomic) IBOutlet UILabel *lblHour;
