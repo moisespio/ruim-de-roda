@@ -90,7 +90,7 @@
 				80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */,
 				80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */,
 				80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */,
-				80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */,
+				C5A0A8CF1AD9609500864136 /* CoreData */,
 				80F9AFCF1AD942D100DCE8E0 /* Supporting Files */,
 			);
 			path = "Ruim de Roda";
@@ -120,6 +120,14 @@
 				80F9AFED1AD942D100DCE8E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5A0A8CF1AD9609500864136 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +424,7 @@
 				80F9AFF41AD942D100DCE8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80F9AFF51AD942D100DCE8E0 /* Build configuration list for PBXNativeTarget "Ruim de RodaTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +433,7 @@
 				80F9AFF71AD942D100DCE8E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
