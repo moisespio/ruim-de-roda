@@ -128,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="1909" y="368"/>
         </scene>
-        <!--Report View Controller-->
+        <!--Denuncie-->
         <scene sceneID="Cax-ph-iBH">
             <objects>
                 <viewController id="jjK-RE-2cI" customClass="ReportViewController" sceneMemberID="viewController">
@@ -159,33 +159,49 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yar-St-cF1">
                                         <rect key="frame" x="0.0" y="799" width="600" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Porto Alegre - RS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldl-14-XqR">
-                                                <rect key="frame" x="218" y="82" width="135" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
+                                                <rect key="frame" x="16" y="64" width="568" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="OXt-vC-89R"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Av. vicente monteggia 2772" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
-                                                <rect key="frame" x="179" y="64" width="212" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgd-GH-mlf">
-                                                <rect key="frame" x="286" y="26" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AAA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDp-5P-uav">
-                                                <rect key="frame" x="181" y="26" width="97" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-QC-oXO">
+                                                <rect key="frame" x="200" y="10" width="200" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgd-GH-mlf">
+                                                        <rect key="frame" x="147" y="10" width="53" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AAA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDp-5P-uav">
+                                                        <rect key="frame" x="0.0" y="10" width="49" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="sDp-5P-uav" firstAttribute="leading" secondItem="sUP-QC-oXO" secondAttribute="leading" id="6aM-c3-t6V"/>
+                                                    <constraint firstAttribute="centerY" secondItem="Cgd-GH-mlf" secondAttribute="centerY" id="HXg-Hl-5WR"/>
+                                                    <constraint firstAttribute="height" constant="50" id="LTm-5p-FwV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Cgd-GH-mlf" secondAttribute="trailing" id="UUd-6i-ie1"/>
+                                                    <constraint firstAttribute="width" constant="200" id="tVl-Gt-sLU"/>
+                                                    <constraint firstItem="Cgd-GH-mlf" firstAttribute="centerY" secondItem="sDp-5P-uav" secondAttribute="centerY" id="zOq-UW-aRs"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="bMJ-5d-yF7" firstAttribute="top" secondItem="yar-St-cF1" secondAttribute="top" constant="64" id="Af6-R5-mek"/>
                                             <constraint firstAttribute="height" constant="150" id="J31-6y-U5X"/>
+                                            <constraint firstAttribute="trailing" secondItem="bMJ-5d-yF7" secondAttribute="trailing" constant="16" id="TA5-NE-VT7"/>
+                                            <constraint firstAttribute="centerX" secondItem="sUP-QC-oXO" secondAttribute="centerX" id="a4V-MS-YLS"/>
+                                            <constraint firstItem="bMJ-5d-yF7" firstAttribute="leading" secondItem="yar-St-cF1" secondAttribute="leading" constant="16" id="hza-xI-6Ue"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ii9-3X-RQh"/>
+                                            <constraint firstItem="sUP-QC-oXO" firstAttribute="top" secondItem="yar-St-cF1" secondAttribute="top" constant="10" id="ilD-ba-8Gw"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xbn-CN-bB8">
@@ -235,10 +251,22 @@
                             <constraint firstItem="ZPB-6M-R23" firstAttribute="top" secondItem="aRA-vE-VS3" secondAttribute="top" id="taY-OL-haH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IcB-x7-6vv"/>
+                    <navigationItem key="navigationItem" title="Denuncie" id="XGx-Kp-AHo">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="4IY-gc-5ic">
+                            <connections>
+                                <action selector="cancelReport:" destination="jjK-RE-2cI" id="8tb-cq-Zth"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Postar" id="Gog-a3-Wue">
+                            <connections>
+                                <action selector="sendReport:" destination="jjK-RE-2cI" id="Jbi-6p-tBZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
+                        <outlet property="addressLabel" destination="bMJ-5d-yF7" id="G3X-Gy-hoq"/>
                         <outlet property="mapView" destination="Xbn-CN-bB8" id="DcB-JT-9wQ"/>
                         <outlet property="reportImage" destination="twy-bq-h0A" id="MGb-p6-ZM2"/>
                     </connections>

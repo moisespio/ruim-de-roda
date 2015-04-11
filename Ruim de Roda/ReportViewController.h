@@ -8,15 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ReportViewController : UIViewController <UIApplicationDelegate,CLLocationManagerDelegate,MKMapViewDelegate,UITextFieldDelegate> {
-    CLLocationManager *locationManager;
-}
-
+@interface ReportViewController : UIViewController <UIApplicationDelegate,CLLocationManagerDelegate,MKMapViewDelegate,UITextFieldDelegate>
 
 @property UIImage *imageReport;
 
 @property (weak, nonatomic) IBOutlet UIImageView *reportImage;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+
+@property NSString *plate;
+@property NSString *address;
+@property NSString *latitude;
+@property NSString *longitude;
+@property (strong, nonatomic) CLLocation *initialLocation;
 
 @end
