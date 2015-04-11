@@ -10,4 +10,10 @@
 
 @interface DetailViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (weak, nonatomic) IBOutlet UILabel *lblCategory;
+@property (weak, nonatomic) IBOutlet UILabel *lblPlate;
+@property (weak, nonatomic) IBOutlet UILabel *lblHour;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
+
 @end
