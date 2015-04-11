@@ -7,6 +7,7 @@
 //
 
 #import "ReportViewController.h"
+#import "ReportManager.h"
 
 @interface ReportViewController ()
 
@@ -61,15 +62,27 @@
 //    NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
+    
+    if (currentLocation != nil) {
+        _latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+        _longitude= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+    }
+
     [locationManager stopUpdatingLocation];
 
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-//        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
             self.addressLabel.text = [NSString stringWithFormat:@"%@, %@\n %@ - %@",
                                  placemark.thoroughfare, placemark.subThoroughfare,
                                  placemark.locality, placemark.administrativeArea];
+            
+            NSString *street = placemark.thoroughfare;
+            NSString *number = placemark.subThoroughfare;
+            NSString *city = placemark.locality;
+            NSString *state = placemark.administrativeArea;
+            
+            _address = [NSString stringWithFormat:@"%@, %@\n %@, %@", street, number, city, state];
         } else {
             NSLog(@"%@", error.debugDescription);
         }
@@ -93,7 +106,59 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sendReport:(id)sender {
+    Report *report = [[Report alloc] init];
     
+    NSString *plateLetter = self.plateLetters.text;
+    NSString *plateNumber = self.plateNumbers.text;
+    
+    _plate = [NSString stringWithFormat:@"%@%@", plateLetter, plateNumber];
+
+    report.plate = _plate;
+    report.address = _address;
+    report.latitude = _latitude;
+    report.longitude = _longitude;
+
+    ReportManager *reportControl = [[ReportManager alloc] init];
+    
+    _imageCrop = _reportImage.image;
+    _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
+
+    [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, NSError *error) {
+        if (success) {
+            [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
+        } else {
+            [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
+        }
+    }];
+}
+-(UIImage *)adjustImageSizeWhenCropping:(UIImage *)image {
+    float actualHeight = image.size.height;
+    
+    float actualWidth = image.size.width;
+    
+    float ratio=300/actualWidth;
+    actualHeight = actualHeight*ratio;
+    
+    CGRect rect = CGRectMake(0.0, 0.0, 300, actualHeight);
+    // UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    [image drawInRect:rect];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+- (void)successfulRequest {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)errorRequest {
+    [self alertWithTitle:@"Erro!" message:@"Ocorreu um erro ao salvar report"];
+}
+- (void)alertWithTitle:(NSString *)_alertTitle message:(NSString *)_alertMessage {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:_alertTitle message:_alertMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 - (IBAction)cancelReport:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];

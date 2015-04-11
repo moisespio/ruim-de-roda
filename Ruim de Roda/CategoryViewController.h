@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryViewController : UIViewController
+@interface CategoryViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property NSString *categoryID;
+@property NSString *categoryText;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

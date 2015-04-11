@@ -176,7 +176,7 @@
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="OXt-vC-89R"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUP-QC-oXO">
@@ -206,7 +206,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione uma categoria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un5-OI-e0m">
                                                 <rect key="frame" x="205" y="8" width="190" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdA-oL-XSD">
@@ -299,7 +299,10 @@
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
                         <outlet property="addressLabel" destination="bMJ-5d-yF7" id="G3X-Gy-hoq"/>
+                        <outlet property="categoryText" destination="un5-OI-e0m" id="QWb-DA-cPA"/>
                         <outlet property="mapView" destination="Xbn-CN-bB8" id="DcB-JT-9wQ"/>
+                        <outlet property="plateLetters" destination="sDp-5P-uav" id="mbk-pZ-294"/>
+                        <outlet property="plateNumbers" destination="Cgd-GH-mlf" id="lTD-4r-uCJ"/>
                         <outlet property="reportImage" destination="twy-bq-h0A" id="MGb-p6-ZM2"/>
                         <segue destination="m9w-2U-Qkn" kind="show" identifier="showCategory" id="JrU-kI-WmV"/>
                     </connections>
@@ -331,9 +334,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDv-Vc-WcP">
-                                                    <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="498" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -343,6 +346,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="m9w-2U-Qkn" id="nfl-Ff-8ip"/>
+                                    <outlet property="delegate" destination="m9w-2U-Qkn" id="Tft-DV-UQj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -356,10 +363,13 @@
                     <navigationItem key="navigationItem" title="Selecione a ocorrencia" id="dWj-bG-FhC">
                         <barButtonItem key="leftBarButtonItem" title="Cancelar" id="oA9-Tb-r81">
                             <connections>
-                                <segue destination="5nD-fK-f8f" kind="unwind" unwindAction="backCategory:" id="0Pf-mB-nyS"/>
+                                <segue destination="5nD-fK-f8f" kind="unwind" identifier="segueBackCategory" unwindAction="backCategory:" id="0Pf-mB-nyS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="uFI-QC-m6n" id="iYF-hc-1aS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHT-R2-b5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5nD-fK-f8f" userLabel="Exit" sceneMemberID="exit"/>
@@ -432,7 +442,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hjx-07-taH" secondAttribute="height" multiplier="3:4" id="QNg-BJ-HH2"/>
                                     <constraint firstAttribute="trailing" secondItem="Zbw-X3-j54" secondAttribute="trailing" id="gPL-IS-SKM"/>

@@ -9,6 +9,8 @@
 #import "CategoryViewController.h"
 #import "CategoryTableViewCell.h"
 #import "ReportViewController.h"
+#import "CategoryReportManager.h"
+#import <Parse/Parse.h>
 
 @interface CategoryViewController () {
     NSMutableArray *categoryArray;
@@ -22,29 +24,43 @@
     [super viewDidLoad];
 
     categoryArray = [[NSMutableArray alloc] init];
+    
+    [self loadCategory];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void) loadCategory {
+    CategoryReportManager *categoryControl = [[CategoryReportManager alloc] init];
+    
+    [categoryControl requestCategory:^(NSArray *resultCategories, NSError *error) {
+        categoryArray = [resultCategories mutableCopy];
+
+        [self performSelectorOnMainThread:@selector(updateTableView) withObject:nil waitUntilDone:NO];
+    }];
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
-    return 1;
+- (void)updateTableView {
+    [self.tableView reloadData];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [categoryArray count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CategoryTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"categoryCell" forIndexPath:indexPath];
     
-//    cell.categoryName.text = 
+    CategoryReport *crm = [categoryArray objectAtIndex:indexPath.row];
+
+    cell.categoryName.text = crm.text;
+
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//        Species *species = [self.filteredData objectAtIndex:indexPath.row];
-//        
-//        infoSelected = NSLocalizedString(species.specieName, nil);
-//        _infoId = species.objectId;
+    CategoryReport *crm = [categoryArray objectAtIndex:indexPath.row];
+    
+    _categoryID = crm.objectId;
+    _categoryText = crm.text;
    
     [self performSegueWithIdentifier:@"segueBackCategory" sender:self];
 }
@@ -53,6 +69,11 @@
     
     ReportViewController *rpv = [segue destinationViewController];
     rpv.categoryID = _categoryID;
+    rpv.categoryText.text = _categoryText;
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 @end
