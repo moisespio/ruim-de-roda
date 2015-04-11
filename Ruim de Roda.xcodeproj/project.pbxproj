@@ -10,11 +10,11 @@
 		80F9AFD21AD942D100DCE8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD11AD942D100DCE8E0 /* main.m */; };
 		80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */; };
 		80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */; };
-		80F9AFDB1AD942D100DCE8E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFDA1AD942D100DCE8E0 /* ViewController.m */; };
 		80F9AFDE1AD942D100DCE8E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */; };
 		80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */; };
 		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
 		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
+		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +34,14 @@
 		80F9AFD31AD942D100DCE8E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		80F9AFD71AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ruim_de_Roda.xcdatamodel; sourceTree = "<group>"; };
-		80F9AFD91AD942D100DCE8E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		80F9AFDA1AD942D100DCE8E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		80F9AFDD1AD942D100DCE8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		80F9AFE21AD942D100DCE8E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ruim de RodaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F9AFED1AD942D100DCE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
+		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +85,11 @@
 			children = (
 				80F9AFD31AD942D100DCE8E0 /* AppDelegate.h */,
 				80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */,
-				80F9AFD91AD942D100DCE8E0 /* ViewController.h */,
-				80F9AFDA1AD942D100DCE8E0 /* ViewController.m */,
-				80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */,
 				80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */,
-				80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */,
 				C5A0A8CF1AD9609500864136 /* CoreData */,
+				BFB4144A1AD9686A00D2D7BD /* Model */,
+				BFB4144B1AD9686F00D2D7BD /* View */,
+				BFB4144C1AD9687500D2D7BD /* Controller */,
 				80F9AFCF1AD942D100DCE8E0 /* Supporting Files */,
 			);
 			path = "Ruim de Roda";
@@ -120,6 +119,31 @@
 				80F9AFED1AD942D100DCE8E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFB4144A1AD9686A00D2D7BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BFB4144B1AD9686F00D2D7BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */,
+				80F9AFDC1AD942D100DCE8E0 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BFB4144C1AD9687500D2D7BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFB4144D1AD9692200D2D7BD /* CameraViewController.h */,
+				BFB4144E1AD9692200D2D7BD /* CameraViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		C5A0A8CF1AD9609500864136 /* CoreData */ = {
@@ -231,8 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
+				BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */,
 				80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */,
-				80F9AFDB1AD942D100DCE8E0 /* ViewController.m in Sources */,
 				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
