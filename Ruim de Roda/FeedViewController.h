@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Report.h"
 
 @interface FeedViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray* arrayReports;
+@property (strong, nonatomic) Report* selectedReport;
 
 @end

@@ -114,6 +114,18 @@
     [self.tableView reloadData];
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Report *report = [_arrayReports objectAtIndex:indexPath.row];
+    _selectedReport = report;
+    
+    [self performSegueWithIdentifier:@"segueBackCategory" sender:self];
+    
+}
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation

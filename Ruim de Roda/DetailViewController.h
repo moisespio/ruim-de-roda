@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Report.h"
 
 @interface DetailViewController : UIViewController
 
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPlate;
 @property (weak, nonatomic) IBOutlet UILabel *lblHour;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
+
+@property (strong, nonatomic) Report* report;
 
 @end
