@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.tableView.separatorColor = [UIColor clearColor];
     [self loadData:nil];
 }
 
