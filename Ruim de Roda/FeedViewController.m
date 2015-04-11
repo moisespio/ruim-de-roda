@@ -88,22 +88,12 @@
 
 -(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
     
-    /*
-    NSString *str = @"2012-10-30"; /// here this is your date with format yyyy-MM-dd
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; // here we create NSDateFormatter object for change the Format of date..
-    [dateFormatter setDateFormat:format]; //// here set format of date which is in your output date (means above str with format)
-    
-    NSDate *date = [dateFormatter dateFromString: str]; // here you can fetch date from string with define format
-    */
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];// here set format which you want...
     
     NSString *convertedString = [dateFormatter stringFromDate:date];
-    //NSLog(@"Converted String : %@",convertedString);
-    
     
     return convertedString;
 }
