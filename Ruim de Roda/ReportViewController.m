@@ -64,8 +64,8 @@
     
     
     if (currentLocation != nil) {
-        _latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-        _longitude= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        _latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
+        _longitude= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
     }
 
     [locationManager stopUpdatingLocation];
