@@ -29,9 +29,16 @@
     // Do any additional setup after loading the view.
     
     self.tableView.separatorColor = [UIColor clearColor];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(loadData:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
     [self loadData:nil];
 }
-
 
 - (void)loadData:(UIRefreshControl *)refreshControl {
     ReportManager *reportManager = [[ReportManager alloc] init];
@@ -40,11 +47,9 @@
         if (resultReports) {
             
             _arrayReports = [resultReports mutableCopy];
-            [self.tableView reloadData];
+            [self performSelectorOnMainThread:@selector(updateTableView:) withObject:refreshControl waitUntilDone:NO];
         }
-        
     }];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,7 +107,12 @@
     return convertedString;
 }
 
+- (void)updateTableView:(UIRefreshControl *)refreshControl {
+    if (refreshControl)
+        [refreshControl endRefreshing];
 
+    [self.tableView reloadData];
+}
 
 #pragma mark - Navigation
 

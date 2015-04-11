@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8088C17C1AD9DB5F00E092C7 /* PatrickHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */; };
 		80F9AFD21AD942D100DCE8E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD11AD942D100DCE8E0 /* main.m */; };
 		80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD41AD942D100DCE8E0 /* AppDelegate.m */; };
 		80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFD61AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld */; };
@@ -15,6 +16,11 @@
 		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
 		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
 		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
+		BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414511AD96F3400D2D7BD /* CameraView.m */; };
+		BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414541AD98FDA00D2D7BD /* ReportViewController.m */; };
+		BFB414571AD997A600D2D7BD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB414561AD997A600D2D7BD /* MapKit.framework */; };
+		BFB4145A1AD9C54100D2D7BD /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414591AD9C54100D2D7BD /* CategoryTableViewCell.m */; };
+		BFB4145D1AD9C5CD00D2D7BD /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4145C1AD9C5CD00D2D7BD /* CategoryViewController.m */; };
 		C53F713E1AD9718A0050FFD3 /* CategoryReport.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F713D1AD9718A0050FFD3 /* CategoryReport.m */; };
 		C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71401AD972CA0050FFD3 /* ReportManager.m */; };
 		C53F71441AD972E10050FFD3 /* CategoryReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71431AD972E10050FFD3 /* CategoryReportManager.m */; };
@@ -80,6 +86,15 @@
 		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
 		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		BFB414501AD96F3400D2D7BD /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
+		BFB414511AD96F3400D2D7BD /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
+		BFB414531AD98FDA00D2D7BD /* ReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportViewController.h; sourceTree = "<group>"; };
+		BFB414541AD98FDA00D2D7BD /* ReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportViewController.m; sourceTree = "<group>"; };
+		BFB414561AD997A600D2D7BD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BFB414581AD9C54100D2D7BD /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
+		BFB414591AD9C54100D2D7BD /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
+		BFB4145B1AD9C5CD00D2D7BD /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		BFB4145C1AD9C5CD00D2D7BD /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		C53F713C1AD9718A0050FFD3 /* CategoryReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryReport.h; sourceTree = "<group>"; };
 		C53F713D1AD9718A0050FFD3 /* CategoryReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryReport.m; sourceTree = "<group>"; };
 		C53F713F1AD972CA0050FFD3 /* ReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportManager.h; sourceTree = "<group>"; };
@@ -161,6 +176,7 @@
 				C53F71501AD9A6570050FFD3 /* AudioToolbox.framework in Frameworks */,
 				C53F71491AD97BEA0050FFD3 /* Parse.framework in Frameworks */,
 				C53F714E1AD9A5F70050FFD3 /* Bolts.framework in Frameworks */,
+				BFB414571AD997A600D2D7BD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +193,7 @@
 		80F9AFC31AD942D100DCE8E0 = {
 			isa = PBXGroup;
 			children = (
+				BFB414561AD997A600D2D7BD /* MapKit.framework */,
 				80F9AFCE1AD942D100DCE8E0 /* Ruim de Roda */,
 				80F9AFEB1AD942D100DCE8E0 /* Ruim de RodaTests */,
 				80F9AFCD1AD942D100DCE8E0 /* Products */,
@@ -264,6 +281,14 @@
 			children = (
 				BFB4144D1AD9692200D2D7BD /* CameraViewController.h */,
 				BFB4144E1AD9692200D2D7BD /* CameraViewController.m */,
+				BFB414501AD96F3400D2D7BD /* CameraView.h */,
+				BFB414511AD96F3400D2D7BD /* CameraView.m */,
+				BFB414531AD98FDA00D2D7BD /* ReportViewController.h */,
+				BFB414541AD98FDA00D2D7BD /* ReportViewController.m */,
+				BFB4145B1AD9C5CD00D2D7BD /* CategoryViewController.h */,
+				BFB4145C1AD9C5CD00D2D7BD /* CategoryViewController.m */,
+				BFB414581AD9C54100D2D7BD /* CategoryTableViewCell.h */,
+				BFB414591AD9C54100D2D7BD /* CategoryTableViewCell.m */,
 				C5A0A8D01AD96B0900864136 /* FeedViewController.h */,
 				C5A0A8D11AD96B0900864136 /* FeedViewController.m */,
 				C53F714A1AD9A1FA0050FFD3 /* FeedTableViewCell.h */,
@@ -454,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C53F719A1AD9B7BD0050FFD3 /* UIImageView+HighlightedWebCache.m in Sources */,
+				BFB4145A1AD9C54100D2D7BD /* CategoryTableViewCell.m in Sources */,
 				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
 				C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */,
 				C5A0A8D81AD96D8500864136 /* Report.m in Sources */,
@@ -461,9 +487,12 @@
 				C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */,
 				C53F71961AD9B7BD0050FFD3 /* SDWebImagePrefetcher.m in Sources */,
 				C53F71951AD9B7BD0050FFD3 /* SDWebImageManager.m in Sources */,
+				BFB4145D1AD9C5CD00D2D7BD /* CategoryViewController.m in Sources */,
 				C53F71441AD972E10050FFD3 /* CategoryReportManager.m in Sources */,
 				BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */,
 				C53F71911AD9B7BD0050FFD3 /* SDWebImageCompat.m in Sources */,
+				BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */,
+				BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */,
 				80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */,
 				C53F71921AD9B7BD0050FFD3 /* SDWebImageDecoder.m in Sources */,
 				C53F71A41AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
