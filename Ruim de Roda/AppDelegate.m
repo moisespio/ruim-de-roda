@@ -29,6 +29,10 @@
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:73/255.0 green:204/255.0 blue:255/255.0 alpha:1.0]];
+    
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:112/255.0 green:133/255.0 blue:150/255.0 alpha:0.5]];
     
     return YES;
 }

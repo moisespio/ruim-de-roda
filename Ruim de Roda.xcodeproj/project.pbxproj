@@ -147,6 +147,7 @@
 		C53F719F1AD9B7C60050FFD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C53F71A01AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
+		C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PatrickHand.ttf; sourceTree = "<group>"; };
 		C5A0A8D01AD96B0900864136 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		C5A0A8D11AD96B0900864136 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		C5A0A8D31AD96B3000864136 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -225,6 +226,7 @@
 		80F9AFCF1AD942D100DCE8E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */,
 				80F9AFD01AD942D100DCE8E0 /* Info.plist */,
 				80F9AFD11AD942D100DCE8E0 /* main.m */,
 			);

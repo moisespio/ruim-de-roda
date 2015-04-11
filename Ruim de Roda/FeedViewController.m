@@ -28,14 +28,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
+    self.tableView.separatorColor = [UIColor clearColor];
     [self loadData:nil];
 }
 
 
 - (void)loadData:(UIRefreshControl *)refreshControl {
-    
-    
     ReportManager *reportManager = [[ReportManager alloc] init];
     [reportManager requestReports:^(NSArray *resultReports, NSError *error) {
         
@@ -46,9 +44,6 @@
         }
         
     }];
-    
-    
-    
     
 }
 
@@ -77,6 +72,15 @@
     cell.lblPlate.text = report.plate;
     cell.lblDate.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
     cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"hh:mm"];
+    [cell.viewPostIcon setBackgroundColor:[UIColor colorWithRed:238.0/255.0 green:45.0/255.0 blue:100.0/255.0 alpha: 1]];
+    cell.viewPostIcon.layer.cornerRadius = cell.viewPostIcon.frame.size.width / 2;
+    cell.viewPostIcon.clipsToBounds = YES;
+    cell.viewPostIcon.layer.borderWidth = 5;
+    cell.viewPostIcon.layer.borderColor = [UIColor whiteColor].CGColor;
+    
+    cell.viewImgPhoto.layer.cornerRadius = 6;
+    cell.imgPhoto.layer.cornerRadius = 3;
+    cell.imgPhoto.clipsToBounds = YES;
     
     [cell.imgPhoto setImageWithURL:[NSURL URLWithString:report.photo]
                    placeholderImage:[UIImage imageNamed:@"placeholder"]
