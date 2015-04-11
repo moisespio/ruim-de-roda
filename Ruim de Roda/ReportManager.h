@@ -15,7 +15,7 @@
 
 @interface ReportManager : NSObject
 
-- (void)postReport:(Report *)photo photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, NSError *error))response;
+- (void)postReport:(Report *)report forCategory:(NSString*)categoryId photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, NSError *error))response ;
 
 - (void)requestReports:(void (^)(NSArray *resultReports, NSError *error))response;
 
