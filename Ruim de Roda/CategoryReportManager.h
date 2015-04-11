@@ -15,6 +15,7 @@
 @interface CategoryReportManager : NSObject
 
 
+- (void)requestCategory:(void (^)(NSArray *resultCategories, NSError *error))response;
 
 
 @end
