@@ -98,7 +98,11 @@
 - (IBAction)cancelReport:(id)sender {
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
-
+- (IBAction)selectCategory:(id)sender {
+    [self performSegueWithIdentifier:@"showCategory" sender:sender];
+}
+- (IBAction)backCategory:(UIStoryboardSegue *)sender {
+}
 /*
 #pragma mark - Navigation
 

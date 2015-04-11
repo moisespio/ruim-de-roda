@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
+@property NSString *categoryID;
 @property NSString *plate;
 @property NSString *address;
 @property NSString *latitude;
