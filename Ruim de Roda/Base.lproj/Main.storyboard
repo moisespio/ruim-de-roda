@@ -8,6 +8,9 @@
     <customFonts key="customFonts">
         <mutableArray key="PatrickHand.ttf">
             <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -41,7 +44,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="H2m-3m-mTx"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                             <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
