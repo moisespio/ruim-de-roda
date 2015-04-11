@@ -56,6 +56,7 @@
 		C53F71A21AD9B7C60050FFD3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C53F719E1AD9B7C60050FFD3 /* LICENSE.txt */; };
 		C53F71A31AD9B7C60050FFD3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C53F719F1AD9B7C60050FFD3 /* README.md */; };
 		C53F71A41AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
+		C55008351AD9DB3800440D6A /* PatrickHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */; };
 		C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D11AD96B0900864136 /* FeedViewController.m */; };
 		C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D41AD96B3000864136 /* DetailViewController.m */; };
 		C5A0A8D81AD96D8500864136 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D71AD96D8500864136 /* Report.m */; };

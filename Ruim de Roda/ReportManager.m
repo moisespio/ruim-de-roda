@@ -44,8 +44,7 @@
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
     
     [query includeKey:@"categoryID"];
-    [query orderByAscending:@"createdAt"];
-    
+    [query orderByDescending:@"createdAt"];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *resultReports, NSError *error) {
         
