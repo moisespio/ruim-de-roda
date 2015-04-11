@@ -11,17 +11,39 @@
 
 @implementation ReportManager
 
-- (void)postReport:(Report *)photo photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, NSError *error))response {
+- (void)postReport:(Report *)report forCategory:(NSString*)categoryId photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, NSError *error))response {
+    
+    PFObject *pfReport = [PFObject objectWithClassName:@"Report"];
+    
+    [pfReport setObject:report.address forKey:@"address"];
+    [pfReport setObject:report.latitude forKey:@"latitude"];
+    [pfReport setObject:report.longitude forKey:@"longitude"];
+    [pfReport setObject:report.plate forKey:@"plate"];
     
     
+    [pfReport setObject:[PFObject objectWithoutDataWithClassName:@"Category" objectId:categoryId]forKey:@"categoryID"];
+    
+    if (photoImage)
+    {
+        NSData *imageData = UIImageJPEGRepresentation(photoImage, 0.6);
+        PFFile *imageFile = [PFFile fileWithName:[NSString stringWithFormat:@"%@.jpg", categoryId]
+                                            data:imageData];
+        [pfReport setObject:imageFile forKey:@"photo"];
+    }
+    
+    [pfReport saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
+        
+        response(succeed, error);
+        
+    }];
     
 }
 
 - (void)requestReports:(void (^)(NSArray *resultReports, NSError *error))response {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
-
-    [query includeKey:@"Category"];
+    
+    [query includeKey:@"categoryID"];
     [query orderByAscending:@"createdAt"];
     
     
@@ -49,7 +71,7 @@
                 
                 //Category
                 CategoryReport *category = [[CategoryReport alloc] init];
-                PFObject *pfCategory = resultReport[@"Category"];
+                PFObject *pfCategory = resultReport[@"categoryID"];
                 
                 category.objectId = pfCategory.objectId;
                 category.text = [pfCategory objectForKey:@"text"];
