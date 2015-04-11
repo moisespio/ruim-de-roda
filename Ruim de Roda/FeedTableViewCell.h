@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblPlate;
 @property (weak, nonatomic) IBOutlet UILabel *lblHour;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
+@property (weak, nonatomic) IBOutlet UIView *viewPostIcon;
+@property (weak, nonatomic) IBOutlet UIView *viewImgPhoto;
 
 
 @end
