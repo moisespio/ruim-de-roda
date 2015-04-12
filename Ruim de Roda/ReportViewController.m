@@ -9,6 +9,7 @@
 #import "ReportViewController.h"
 #import "ReportManager.h"
 #import "MapAnnotation.h"
+#import "PushNotifications.h"
 
 @interface ReportViewController ()
 
@@ -198,6 +199,10 @@
         
         [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, NSError *error) {
             if (success) {
+                PushNotifications *pushNotifications = [[PushNotifications alloc] init];
+
+                [pushNotifications sendPushNotificationsWithMessage:[NSString stringWithFormat:@"Você recebeu uma denuncia na placa: %@", _plate] plate:_plate];
+
                 [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
             } else {
                 [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];

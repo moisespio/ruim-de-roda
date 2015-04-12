@@ -49,9 +49,7 @@
         }
     }];
 }
-
-- (void)requestPlate:(void (^)(NSArray *resultPlates, NSError *error))response plate:(NSString*) plate {
-    
+- (void)requestUserIDbyPlate:(NSString *)plate response:(void (^)(NSString *userID, NSError *error))response {
     PFQuery *query = [PFQuery queryWithClassName:@"Plate"];
     [query whereKey:@"plate" equalTo:plate];
     
@@ -65,20 +63,29 @@
         else {
             NSMutableArray *reports = [[NSMutableArray alloc] init];
             
+            Plate *plate;
+            
             for (PFObject *resultPlate in resultPlates)
             {
                 
-                Plate *plate = [[Plate alloc] init];
+                plate = [[Plate alloc] init];
                 
                 plate.objectId = resultPlate.objectId;
                 plate.plate = [resultPlate objectForKey:@"plate"];
                 
+                PFUser *user = [PFUser user];
+                user = resultPlate[@"userID"];
+                
+                plate.user = [[User alloc] init];
+                plate.user.objectId = user.objectId;
+                
                 [reports addObject:plate];
             }
             
-            response([reports copy], nil);
+            response(plate.user.objectId, nil);
         }
     }];
+
 }
 
 - (void)removePlate:(NSString *)objectId response:(void (^)(BOOL succeeded, NSError *error))response {

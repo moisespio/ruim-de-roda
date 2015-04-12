@@ -16,6 +16,7 @@
 
 - (void)savePlate:(Plate *)plate forUser:(NSString*)userID response:(void (^)(BOOL success, NSError *error))response;
 - (void)requestPlates:(void (^)(NSArray *resultPlates, NSError *error))response;
+- (void)requestUserIDbyPlate:(NSString *)plate response:(void (^)(NSString *userID, NSError *error))response;
 - (void)removePlate:(NSString *)objectId response:(void (^)(BOOL succeeded, NSError *error))response;
 
 @end
