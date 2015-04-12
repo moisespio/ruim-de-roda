@@ -51,6 +51,7 @@
 }
 - (void)requestUserIDbyPlate:(NSString *)plate response:(void (^)(NSString *userID, NSError *error))response {
     PFQuery *query = [PFQuery queryWithClassName:@"Plate"];
+    [query whereKey:@"plate" equalTo:plate];
     
     [query includeKey:@"userID"];
     [query orderByDescending:@"createdAt"];
@@ -86,6 +87,7 @@
     }];
 
 }
+
 - (void)removePlate:(NSString *)objectId response:(void (^)(BOOL succeeded, NSError *error))response {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Plate"];

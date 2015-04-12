@@ -489,15 +489,15 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
-                                        <rect key="frame" x="0.0" y="39" width="600" height="798"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
+                                        <rect key="frame" x="0.0" y="40" width="600" height="798"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ebs-Ba-zWe"/>
                                             <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="3:4" constant="1" id="tbk-Fq-hwj"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
-                                        <rect key="frame" x="0.0" y="837" width="600" height="55"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
+                                        <rect key="frame" x="0.0" y="838" width="600" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-EC-TTl">
                                                 <rect key="frame" x="8" y="27" width="60" height="17"/>
