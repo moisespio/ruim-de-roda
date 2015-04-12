@@ -22,6 +22,7 @@
 		BFB4145A1AD9C54100D2D7BD /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414591AD9C54100D2D7BD /* CategoryTableViewCell.m */; };
 		BFB4145D1AD9C5CD00D2D7BD /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4145C1AD9C5CD00D2D7BD /* CategoryViewController.m */; };
 		BFCB0A5C1AD9EA7A00E00A9F /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCB0A5B1AD9EA7A00E00A9F /* SearchViewController.m */; };
+		BFCB0A5F1AD9EB2F00E00A9F /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCB0A5E1AD9EB2F00E00A9F /* SearchTableViewCell.m */; };
 		C53F713E1AD9718A0050FFD3 /* CategoryReport.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F713D1AD9718A0050FFD3 /* CategoryReport.m */; };
 		C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71401AD972CA0050FFD3 /* ReportManager.m */; };
 		C53F71441AD972E10050FFD3 /* CategoryReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71431AD972E10050FFD3 /* CategoryReportManager.m */; };
@@ -98,6 +99,8 @@
 		BFB4145C1AD9C5CD00D2D7BD /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		BFCB0A5A1AD9EA7A00E00A9F /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		BFCB0A5B1AD9EA7A00E00A9F /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		BFCB0A5D1AD9EB2F00E00A9F /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		BFCB0A5E1AD9EB2F00E00A9F /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
 		C53F713C1AD9718A0050FFD3 /* CategoryReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryReport.h; sourceTree = "<group>"; };
 		C53F713D1AD9718A0050FFD3 /* CategoryReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryReport.m; sourceTree = "<group>"; };
 		C53F713F1AD972CA0050FFD3 /* ReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportManager.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				C5A0A8D41AD96B3000864136 /* DetailViewController.m */,
 				BFCB0A5A1AD9EA7A00E00A9F /* SearchViewController.h */,
 				BFCB0A5B1AD9EA7A00E00A9F /* SearchViewController.m */,
+				BFCB0A5D1AD9EB2F00E00A9F /* SearchTableViewCell.h */,
+				BFCB0A5E1AD9EB2F00E00A9F /* SearchTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
 				C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */,
 				C5A0A8D81AD96D8500864136 /* Report.m in Sources */,
+				BFCB0A5F1AD9EB2F00E00A9F /* SearchTableViewCell.m in Sources */,
 				C53F71A31AD9B7C60050FFD3 /* README.md in Sources */,
 				BFCB0A5C1AD9EA7A00E00A9F /* SearchViewController.m in Sources */,
 				C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */,

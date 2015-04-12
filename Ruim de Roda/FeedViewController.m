@@ -24,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     
     self.tableView.separatorColor = [UIColor clearColor];
     
@@ -131,9 +132,6 @@
 
     DetailViewController *detailViewController = [segue destinationViewController];
     detailViewController.report = _selectedReport;
-    
-    
-    
 }
 
 

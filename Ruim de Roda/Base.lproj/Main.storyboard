@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -224,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="252"/>
+            <point key="canvasLocation" x="1797" y="1132"/>
         </scene>
         <!--Denuncie-->
         <scene sceneID="Cax-ph-iBH">
@@ -403,7 +403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMF-jg-uUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="1327"/>
+            <point key="canvasLocation" x="2578" y="95"/>
         </scene>
         <!--Selecione a ocorrencia-->
         <scene sceneID="xdm-yg-awz">
@@ -468,7 +468,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHT-R2-b5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5nD-fK-f8f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3358" y="1327"/>
+            <point key="canvasLocation" x="3295" y="95"/>
         </scene>
         <!--Detail-->
         <scene sceneID="bYX-Tq-1Oa">
@@ -641,7 +641,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjx-07-taH" customClass="CameraView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbw-X3-j54">
+                                    <view alpha="0.74999999999999978" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zbw-X3-j54">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-7Z-2ax">
@@ -730,7 +730,9 @@
                             <constraint firstItem="hjx-07-taH" firstAttribute="leading" secondItem="45V-CT-k1d" secondAttribute="leading" id="sDC-5D-v2g"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="SkE-ni-0NO"/>
+                    <tabBarItem key="tabBarItem" title="" image="photo" id="SkE-ni-0NO">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Camera" id="ckR-KW-HVN"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
@@ -750,7 +752,7 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qal-q9-gFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="1227"/>
+            <point key="canvasLocation" x="1034" y="-5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="md3-ZL-x0b">
@@ -773,11 +775,13 @@
             </objects>
             <point key="canvasLocation" x="105" y="1540"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="SGR-Ao-psg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RgN-Zo-gUA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="FMS-dP-33A"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="FMS-dP-33A">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUo-tP-1Qg">
@@ -791,7 +795,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apZ-hy-dqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="252"/>
+            <point key="canvasLocation" x="1034" y="1132"/>
         </scene>
         <!--Config-->
         <scene sceneID="UMz-uE-okY">
@@ -810,13 +814,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5d-1I-IzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="2369"/>
+            <point key="canvasLocation" x="1806" y="2681"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="GMg-tR-OU2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jo3-J0-k0l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="86h-uR-Tia"/>
+                    <tabBarItem key="tabBarItem" title="" image="config" id="86h-uR-Tia">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6vX-zh-ybU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -829,12 +835,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uf4-1i-UT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="2369"/>
+            <point key="canvasLocation" x="1049" y="2681"/>
         </scene>
         <!--Busca-->
         <scene sceneID="xV4-xs-AK4">
             <objects>
-                <viewController id="W3K-4l-WSO" sceneMemberID="viewController">
+                <viewController id="W3K-4l-WSO" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BMW-1Q-Oyd"/>
                         <viewControllerLayoutGuide type="bottom" id="4s8-MH-irw"/>
@@ -843,57 +849,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-i0-1qH">
+                            <searchBar contentMode="redraw" placeholder="Insira a sua placa" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-i0-1qH">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="W3K-4l-WSO" id="5SO-lM-Mbg"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-zq-gWT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-zq-gWT">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="68" id="ac5-43-MLK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="64" id="ac5-43-MLK" customClass="SearchTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ac5-43-MLK" id="FvC-Dk-eDu">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Infração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cL-NSb">
-                                                    <rect key="frame" x="8" y="18" width="63" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cL-NSb">
+                                                    <rect key="frame" x="16" y="8" width="54.5" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
-                                                    <rect key="frame" x="8" y="38" width="62" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
+                                                    <rect key="frame" x="16" y="33" width="46" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-rz-JC2">
-                                                    <rect key="frame" x="526" y="8" width="36" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-rz-JC2">
+                                                    <rect key="frame" x="501.5" y="22" width="22.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-a3-hb2">
-                                                    <rect key="frame" x="8" y="0.0" width="43" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73f-h7-Odk">
+                                                    <rect key="frame" x="535" y="22" width="23.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hora" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73f-h7-Odk">
-                                                    <rect key="frame" x="524" y="33" width="38" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="022-xH-1aQ">
+                                                    <rect key="frame" x="524" y="22" width="9" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="top" secondItem="FvC-Dk-eDu" secondAttribute="topMargin" id="2e2-3A-tyq"/>
+                                                <constraint firstAttribute="centerY" secondItem="022-xH-1aQ" secondAttribute="centerY" id="2tL-me-8B1"/>
+                                                <constraint firstItem="EPB-QN-Xmd" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" constant="8" id="AAL-HS-0oh"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="leading" secondItem="022-xH-1aQ" secondAttribute="trailing" constant="2" id="Fsc-Xe-KjO"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="leading" secondItem="cWF-rz-JC2" secondAttribute="trailing" constant="20" id="InJ-rv-shu"/>
+                                                <constraint firstItem="cWF-rz-JC2" firstAttribute="leading" secondItem="1Ko-cL-NSb" secondAttribute="trailing" id="JdP-Q6-gBD"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="trailing" secondItem="FvC-Dk-eDu" secondAttribute="trailingMargin" id="JpV-1k-KxU"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" constant="8" id="Tyj-J2-dox"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" id="fTG-UT-uAl"/>
+                                                <constraint firstItem="EPB-QN-Xmd" firstAttribute="top" secondItem="1Ko-cL-NSb" secondAttribute="bottom" id="htn-vd-q6A"/>
+                                                <constraint firstItem="022-xH-1aQ" firstAttribute="leading" secondItem="cWF-rz-JC2" secondAttribute="trailing" id="mbh-nh-Fi3"/>
+                                                <constraint firstAttribute="centerY" secondItem="cWF-rz-JC2" secondAttribute="centerY" id="oV9-m1-dyx"/>
+                                                <constraint firstAttribute="centerY" secondItem="73f-h7-Odk" secondAttribute="centerY" id="uQb-ua-w15"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="top" secondItem="FvC-Dk-eDu" secondAttribute="topMargin" id="wU3-kc-yFW"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2e2-3A-tyq"/>
+                                                    <exclude reference="fTG-UT-uAl"/>
+                                                    <exclude reference="JdP-Q6-gBD"/>
+                                                    <exclude reference="InJ-rv-shu"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="EPB-QN-Xmd" id="xey-tK-QjG"/>
+                                            <outlet property="dateLabel" destination="cWF-rz-JC2" id="zhE-7s-I60"/>
+                                            <outlet property="hourLabel" destination="73f-h7-Odk" id="90U-sf-8Zn"/>
+                                            <outlet property="reportLabel" destination="1Ko-cL-NSb" id="ZCX-vl-HRZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="W3K-4l-WSO" id="lmt-OG-7nD"/>
+                                    <outlet property="delegate" destination="W3K-4l-WSO" id="MkL-N2-BMk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -908,20 +948,31 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Busca" id="975-RM-4DK"/>
+                    <connections>
+                        <outlet property="searchBar" destination="XMJ-i0-1qH" id="VlN-QS-0dk"/>
+                        <outlet property="tableView" destination="ALx-zq-gWT" id="f4N-sm-KBw"/>
+                        <segue destination="LgT-Na-JBU" kind="show" identifier="detailSearch" id="Dc0-h5-fQm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaC-a1-mGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="3100"/>
+            <point key="canvasLocation" x="1812" y="1924"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="KBE-Wy-9CK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gxt-ZO-Xrs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9Hl-PJ-Ke9"/>
+                    <tabBarItem key="tabBarItem" title="" image="search" id="9Hl-PJ-Ke9">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pe-iy-zPt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -930,7 +981,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgb-2j-H9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="3100"/>
+            <point key="canvasLocation" x="1049" y="1924"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6XL-oX-3vQ">
@@ -948,10 +999,17 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpV-cL-EHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1860" y="1227"/>
+            <point key="canvasLocation" x="1797" y="-5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="config" width="44" height="45"/>
+        <image name="home" width="46" height="45"/>
         <image name="image-icon" width="128" height="128"/>
+        <image name="photo" width="45" height="38"/>
+        <image name="search" width="45" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dc0-h5-fQm"/>
+    </inferredMetricsTieBreakers>
 </document>
