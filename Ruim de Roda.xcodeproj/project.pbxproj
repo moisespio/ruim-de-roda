@@ -56,10 +56,10 @@
 		C53F71A21AD9B7C60050FFD3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C53F719E1AD9B7C60050FFD3 /* LICENSE.txt */; };
 		C53F71A31AD9B7C60050FFD3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C53F719F1AD9B7C60050FFD3 /* README.md */; };
 		C53F71A41AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
-		C55008351AD9DB3800440D6A /* PatrickHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */; };
 		C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D11AD96B0900864136 /* FeedViewController.m */; };
 		C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D41AD96B3000864136 /* DetailViewController.m */; };
 		C5A0A8D81AD96D8500864136 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D71AD96D8500864136 /* Report.m */; };
+		C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658C1ADA0E77000B419D /* MapAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +159,8 @@
 		C5A0A8D41AD96B3000864136 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C5A0A8D61AD96D8500864136 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
 		C5A0A8D71AD96D8500864136 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		C5B6658B1ADA0E77000B419D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		C5B6658C1ADA0E77000B419D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,8 @@
 				C53F713D1AD9718A0050FFD3 /* CategoryReport.m */,
 				C53F71421AD972E10050FFD3 /* CategoryReportManager.h */,
 				C53F71431AD972E10050FFD3 /* CategoryReportManager.m */,
+				C5B6658B1ADA0E77000B419D /* MapAnnotation.h */,
+				C5B6658C1ADA0E77000B419D /* MapAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -512,6 +516,7 @@
 				C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */,
 				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
 				C53F71901AD9B7BD0050FFD3 /* SDImageCache.m in Sources */,
+				C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */,
 				C53F71971AD9B7BD0050FFD3 /* UIButton+WebCache.m in Sources */,
 				C53F718F1AD9B7BD0050FFD3 /* NSData+ImageContentType.m in Sources */,
 				C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */,
