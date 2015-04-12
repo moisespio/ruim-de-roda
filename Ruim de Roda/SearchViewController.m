@@ -87,7 +87,7 @@
 }
 
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
-    if(text.length < 7) {
+    if(text.length == 0) {
         isFiltered = FALSE;
         self.tableView.hidden = YES;
     }

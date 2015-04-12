@@ -22,6 +22,7 @@
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -48,7 +49,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA8-XL-MO5">
-                                                    <rect key="frame" x="80" y="16" width="512" height="265.5"/>
+                                                    <rect key="frame" x="80" y="16" width="512" height="266"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado na faixa de segurança" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-5e-zkf">
                                                             <rect key="frame" x="10" y="8" width="492" height="21"/>
@@ -60,7 +61,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-nM-sTj">
-                                                            <rect key="frame" x="10" y="239" width="60" height="16.5"/>
+                                                            <rect key="frame" x="10" y="239" width="60" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="hED-RW-Msb"/>
                                                             </constraints>
@@ -69,7 +70,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/04/2015" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-20-Vwz">
-                                                            <rect key="frame" x="10" y="220" width="57.5" height="19"/>
+                                                            <rect key="frame" x="10" y="220" width="58" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="216" id="R7l-Pk-unM"/>
                                                             </constraints>
@@ -102,14 +103,17 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
-                                                            <rect key="frame" x="440" y="231" width="61.5" height="24.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
+                                                            <rect key="frame" x="412" y="226" width="90" height="30"/>
+                                                            <color key="backgroundColor" red="0.61176470588235299" green="0.6588235294117647" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="168" id="4S0-Xl-dmD"/>
+                                                                <constraint firstAttribute="height" constant="30" id="ms4-Nb-uTD"/>
                                                                 <constraint firstAttribute="height" constant="29" id="yma-6Q-1R5"/>
+                                                                <constraint firstAttribute="width" constant="90" id="ynV-aC-QT4"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="18"/>
-                                                            <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="default">
                                                                 <mask key="constraints">
@@ -142,10 +146,10 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1O-w3-G6d">
-                                                    <rect key="frame" x="0.0" y="8" width="80" height="273.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="80" height="274"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-Tu-XqF">
-                                                            <rect key="frame" x="38" y="-8" width="4" height="289.5"/>
+                                                            <rect key="frame" x="38" y="-8" width="4" height="290"/>
                                                             <color key="backgroundColor" red="0.80784313725490198" green="0.8666666666666667" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="4" id="lOQ-jM-Gvo"/>
@@ -532,7 +536,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
-                                        <rect key="frame" x="0.0" y="838" width="600" height="55"/>
+                                        <rect key="frame" x="0.0" y="838" width="600" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-EC-TTl">
                                                 <rect key="frame" x="8" y="27" width="60" height="17"/>
@@ -542,6 +546,20 @@
                                                 <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="12"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="endereço" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-JN-n3A">
+                                                <rect key="frame" x="8" y="52" width="45" height="19"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="P1E-Tc-uoT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="P1E-Tc-uoT"/>
+                                                    </mask>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/04/2015" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ3-DD-I13">
                                                 <rect key="frame" x="8" y="8" width="58" height="19"/>
@@ -557,38 +575,44 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVy-E2-3r3">
-                                                <rect key="frame" x="530" y="4" width="62" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-Yu-pqt">
+                                                <rect key="frame" x="502" y="8" width="90" height="30"/>
+                                                <color key="backgroundColor" red="0.61176470589999998" green="0.6588235294" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="168" id="1PF-nG-3zQ"/>
-                                                    <constraint firstAttribute="height" constant="29" id="dOb-eN-IRc"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="4S0-Ca-BFS"/>
+                                                    <constraint firstAttribute="height" constant="30" id="5mw-NB-dsc"/>
+                                                    <constraint firstAttribute="width" constant="90" id="ENQ-6k-Xlu"/>
+                                                    <constraint firstAttribute="width" constant="168" id="HH9-rn-F8T"/>
+                                                    <constraint firstAttribute="height" constant="29" id="dbm-yE-Vy3"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="kre-3n-VJA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="18"/>
-                                                <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
-                                                        <exclude reference="1PF-nG-3zQ"/>
-                                                        <exclude reference="dOb-eN-IRc"/>
+                                                        <exclude reference="HH9-rn-F8T"/>
+                                                        <exclude reference="dbm-yE-Vy3"/>
                                                     </mask>
                                                 </variation>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="T8K-JN-n3A" firstAttribute="top" secondItem="0qK-EC-TTl" secondAttribute="bottom" constant="8" id="D96-Mv-GZu"/>
+                                            <constraint firstItem="wsc-Yu-pqt" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="8" id="Ifl-wI-IFo"/>
                                             <constraint firstItem="DQ3-DD-I13" firstAttribute="leading" secondItem="1W9-yG-vlQ" secondAttribute="leading" constant="8" id="PZK-S1-RjE"/>
-                                            <constraint firstAttribute="trailing" secondItem="QVy-E2-3r3" secondAttribute="trailing" constant="8.5" id="S0w-EY-R46"/>
+                                            <constraint firstAttribute="trailing" secondItem="wsc-Yu-pqt" secondAttribute="trailing" constant="8" id="Vgl-aV-gU0"/>
+                                            <constraint firstItem="T8K-JN-n3A" firstAttribute="leading" secondItem="1W9-yG-vlQ" secondAttribute="leading" constant="8" id="WIY-Yr-AcS"/>
                                             <constraint firstItem="0qK-EC-TTl" firstAttribute="leading" secondItem="1W9-yG-vlQ" secondAttribute="leading" constant="8" id="bma-s8-JUO"/>
-                                            <constraint firstItem="QVy-E2-3r3" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="4" id="e7q-A4-6bU"/>
-                                            <constraint firstAttribute="height" constant="55" id="fln-2W-dkk"/>
+                                            <constraint firstAttribute="height" constant="80" id="fln-2W-dkk"/>
                                             <constraint firstItem="DQ3-DD-I13" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="8" id="qGK-pm-5g7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rRp-V7-7Cd"/>
-                                            <constraint firstItem="QVy-E2-3r3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="4" id="t1s-Hj-SC3"/>
                                             <constraint firstItem="0qK-EC-TTl" firstAttribute="top" secondItem="DQ3-DD-I13" secondAttribute="bottom" id="zir-KY-Js3"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
-                                        <rect key="frame" x="0.0" y="893" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="918" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2tR-tr-bTA"/>
                                             <constraint firstAttribute="height" constant="150" id="n6N-nd-XFO"/>
@@ -646,10 +670,11 @@
                     <size key="freeformSize" width="600" height="1300"/>
                     <connections>
                         <outlet property="imgPhoto" destination="ys0-Vw-83t" id="1Eg-fh-RIO"/>
+                        <outlet property="lblAddress" destination="T8K-JN-n3A" id="boU-QV-VfN"/>
                         <outlet property="lblCategory" destination="GOq-W5-o64" id="RX6-np-a3C"/>
                         <outlet property="lblDate" destination="DQ3-DD-I13" id="ovD-pC-ePt"/>
                         <outlet property="lblHour" destination="0qK-EC-TTl" id="xaW-ud-aNR"/>
-                        <outlet property="lblPlate" destination="QVy-E2-3r3" id="Hbh-Q3-asX"/>
+                        <outlet property="lblPlate" destination="wsc-Yu-pqt" id="PHj-BL-vjm"/>
                         <outlet property="map" destination="YVu-us-AgL" id="7X9-52-vbJ"/>
                     </connections>
                 </viewController>
@@ -790,6 +815,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JUN-Sf-MrA" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tse-4a-EVT">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1346,6 +1372,6 @@
         <image name="search" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dc0-h5-fQm"/>
+        <segue reference="Eiu-OM-Qcd"/>
     </inferredMetricsTieBreakers>
 </document>

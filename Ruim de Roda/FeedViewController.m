@@ -150,6 +150,9 @@
     
     cell.lblCategory.text = report.category.text;
     cell.lblPlate.text = report.plate;
+    cell.lblPlate.layer.cornerRadius = 3;
+    cell.lblPlate.clipsToBounds = YES;
+    
     cell.lblDate.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
     cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"hh:mm"];
     [cell.viewPostIcon setBackgroundColor:[UIColor colorWithRed:238.0/255.0 green:45.0/255.0 blue:100.0/255.0 alpha: 1]];
