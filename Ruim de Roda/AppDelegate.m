@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "TabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,22 @@
     [Parse setApplicationId:@"3qHKou3OidT4uEM7OCgBAEBuLGpjdREyihlMtMrZ"
                   clientKey:@"ZJitFcqHIx9HXHfAy3e5Wman0hSh1PKZlyUscfO3"];
     
+    
+    // ---------------------------------------
+    // --- Setup for Push Notifications
+
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                        UIUserNotificationTypeBadge |
+                                                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        [application registerUserNotificationSettings:settings];
+        [application registerForRemoteNotifications];
+    
+ 
+    
+    
+    
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -36,6 +53,61 @@
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:238/255.0 green:45/255.0 blue:100/255.0 alpha:1]];
     
     return YES;
+}
+
+
+- (void)handleRemoteNotification:(UIApplication *)application userInfo:(NSDictionary *)userInfo {
+    
+    TabBarViewController *tabBarController = (TabBarViewController*)self.window.rootViewController;
+    
+    
+    if (application.applicationState == UIApplicationStateInactive) {
+        // The application was just brought from the background to the foreground,
+        // so we consider the app as having been "opened by a push notification."
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+        
+        
+        // Recebendo o Push de Comments, Likes e Follow
+        if ([[userInfo objectForKey:@"pushType"] isEqualToString:@"report"])
+        {
+            NSLog(@"User Reported with plate: %@", [userInfo objectForKey:@"plate"]);
+        }
+       
+        
+        tabBarController.plate = [userInfo objectForKey:@"plate"];
+        
+        
+        
+        if(tabBarController.selectedIndex == 0)
+        {
+            [tabBarController.viewControllers[0] popToRootViewControllerAnimated:NO];
+        }
+        else {
+            tabBarController.selectedIndex = 0;
+        }
+        
+    }
+    else {
+
+    }
+    
+    
+    
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    [self handleRemoteNotification:application userInfo:userInfo];
+    
+}
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Store the deviceToken in the current Installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

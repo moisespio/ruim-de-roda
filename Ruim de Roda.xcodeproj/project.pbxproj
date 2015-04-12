@@ -68,6 +68,8 @@
 		C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D41AD96B3000864136 /* DetailViewController.m */; };
 		C5A0A8D81AD96D8500864136 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D71AD96D8500864136 /* Report.m */; };
 		C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658C1ADA0E77000B419D /* MapAnnotation.m */; };
+		C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658F1ADA3F22000B419D /* TabBarViewController.m */; };
+		C5B665931ADA415A000B419D /* PushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B665921ADA415A000B419D /* PushNotifications.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,10 @@
 		C5A0A8D71AD96D8500864136 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
 		C5B6658B1ADA0E77000B419D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		C5B6658C1ADA0E77000B419D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		C5B6658E1ADA3F22000B419D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
+		C5B6658F1ADA3F22000B419D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		C5B665911ADA4159000B419D /* PushNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifications.h; sourceTree = "<group>"; };
+		C5B665921ADA415A000B419D /* PushNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotifications.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +308,8 @@
 				C53F71431AD972E10050FFD3 /* CategoryReportManager.m */,
 				C5B6658B1ADA0E77000B419D /* MapAnnotation.h */,
 				C5B6658C1ADA0E77000B419D /* MapAnnotation.m */,
+				C5B665911ADA4159000B419D /* PushNotifications.h */,
+				C5B665921ADA415A000B419D /* PushNotifications.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -474,6 +482,7 @@
 				TargetAttributes = {
 					80F9AFCB1AD942D100DCE8E0 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DNPZJLD62G;
 					};
 					80F9AFE71AD942D100DCE8E0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -561,8 +570,10 @@
 				C53F714C1AD9A1FA0050FFD3 /* FeedTableViewCell.m in Sources */,
 				C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */,
 				BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */,
+				C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */,
 				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
 				C53F71901AD9B7BD0050FFD3 /* SDImageCache.m in Sources */,
+				C5B665931ADA415A000B419D /* PushNotifications.m in Sources */,
 				C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */,
 				BF25ACE71ADA300700E821E3 /* NewPlateTableViewController.m in Sources */,
 				C53F71971AD9B7BD0050FFD3 /* UIButton+WebCache.m in Sources */,
@@ -689,6 +700,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/HenriqueVelloso/Downloads/parse-library-1-2",
@@ -697,6 +709,7 @@
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b8f05ab6-4e43-4276-8370-2170daa41f63";
 			};
 			name = Debug;
 		};
@@ -704,6 +717,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/HenriqueVelloso/Downloads/parse-library-1-2",
@@ -712,6 +726,7 @@
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b8f05ab6-4e43-4276-8370-2170daa41f63";
 			};
 			name = Release;
 		};
