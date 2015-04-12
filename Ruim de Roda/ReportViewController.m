@@ -8,6 +8,7 @@
 
 #import "ReportViewController.h"
 #import "ReportManager.h"
+#import "MapAnnotation.h"
 
 @interface ReportViewController ()
 
@@ -46,7 +47,7 @@
 //    [locationManager setDistanceFilter:kCLDistanceFilterNone];
 //    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
 
-    [self.mapView setShowsUserLocation:YES];
+    [self.mapView setShowsUserLocation:NO];
 
     // Override point for customization after application launch.
 }
@@ -66,6 +67,7 @@
     if (currentLocation != nil) {
         _latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
         _longitude= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
+
     }
 
     [locationManager stopUpdatingLocation];
@@ -76,6 +78,16 @@
             self.addressLabel.text = [NSString stringWithFormat:@"%@, %@\n %@ - %@",
                                  placemark.thoroughfare, placemark.subThoroughfare,
                                  placemark.locality, placemark.administrativeArea];
+            
+            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, 6*METERS_MILE, 6*METERS_MILE);
+            [self.mapView setRegion:viewRegion animated: YES];
+            
+            MapAnnotation * pin = [[MapAnnotation alloc] init];
+            pin.title = @"";
+            pin.subtitle = @"";
+            pin.coordinate = placemark.location.coordinate;
+            
+            [self.mapView addAnnotation:pin];
             
             NSString *street = placemark.thoroughfare;
             NSString *number = placemark.subThoroughfare;

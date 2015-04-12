@@ -10,6 +10,9 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
+#define METERS_MILE 109.344
+#define METERS_FEET 3.28084
+
 @interface ReportViewController : UIViewController <UIApplicationDelegate,CLLocationManagerDelegate,MKMapViewDelegate,UITextFieldDelegate>
 
 @property UIImage *imageReport;

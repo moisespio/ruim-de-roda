@@ -21,9 +21,8 @@
     // Do any additional setup after loading the view.
     
     [self loadData];
-    
     [self.map setDelegate:self];
-    
+
 }
 
 
@@ -37,6 +36,18 @@
         _lblDate.text = [self formatDate:_report.createdAt withFormat:@"dd/MM/yyyy"];
         _lblHour.text = [self formatDate:_report.createdAt withFormat:@"hh:mm"];
         [_imgPhoto setImageWithURL:[NSURL URLWithString:_report.photo]  placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        
+        MapAnnotation * pin = [[MapAnnotation alloc] init];
+        pin.title = @"";
+        pin.subtitle = @"";
+        pin.coordinate = CLLocationCoordinate2DMake(_report.latitude.doubleValue, _report.longitude.doubleValue);
+ 
+        [self.map addAnnotation:pin];
+        
+        // zoom the map into the users current location
+          MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(pin.coordinate, 6*METERS_MILE, 6*METERS_MILE);
+         [[self map] setRegion:viewRegion animated:YES];
+        
         
     }
     

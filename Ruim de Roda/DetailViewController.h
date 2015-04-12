@@ -11,6 +11,9 @@
 @import MapKit;
 #import "MapAnnotation.h"
 
+#define METERS_MILE 109.344
+#define METERS_FEET 3.28084
+
 @interface DetailViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
@@ -20,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (unsafe_unretained, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) NSMutableArray *locations;
+
 
 @property (strong, nonatomic) Report* report;
 
