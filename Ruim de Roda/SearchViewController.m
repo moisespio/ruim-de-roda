@@ -69,10 +69,14 @@
     
     Report *report = [searchReports objectAtIndex:indexPath.row];
     
-    cell.plateLabel.text = report.plate;
+    cell.addressLabel.text = report.address;
+    cell.reportLabel.text = report.category.text;
+    cell.dateLabel.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
+    cell.hourLabel.text = [self formatDate:report.createdAt withFormat:@"hh:mm"];
 
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     Report *report = [searchReports objectAtIndex:indexPath.row];
@@ -81,6 +85,7 @@
     [self performSegueWithIdentifier:@"detailSearch" sender:self];
     
 }
+
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
     if(text.length < 7) {
         isFiltered = FALSE;
@@ -130,6 +135,18 @@
 
 -(void)dismissKeyboard {
     [self.searchBar resignFirstResponder];
+}
+
+-(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
+    
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];// here set format which you want...
+    
+    NSString *convertedString = [dateFormatter stringFromDate:date];
+    
+    return convertedString;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
