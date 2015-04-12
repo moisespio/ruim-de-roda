@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Report.h"
 
 @interface TabBarViewController : UITabBarController
 
-@property (strong, nonatomic) NSString * plate;
+@property (strong, nonatomic) Report * report;
 
 @end

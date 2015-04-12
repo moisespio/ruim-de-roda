@@ -359,9 +359,9 @@
                                                 <exclude reference="gsK-e3-KcJ"/>
                                                 <exclude reference="b44-WY-qIl"/>
                                                 <exclude reference="dfD-AA-4cn"/>
-                                                <exclude reference="Af6-R5-mek"/>
                                                 <exclude reference="DZZ-CF-kBM"/>
                                                 <exclude reference="Ks7-Jx-HcB"/>
+                                                <exclude reference="Af6-R5-mek"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -503,7 +503,7 @@
         <!--Detail-->
         <scene sceneID="bYX-Tq-1Oa">
             <objects>
-                <viewController id="LgT-Na-JBU" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="LgT-Na-JBU" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xB0-YD-Y7f"/>
                         <viewControllerLayoutGuide type="bottom" id="7tT-hh-wRh"/>

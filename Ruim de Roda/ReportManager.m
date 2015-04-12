@@ -11,7 +11,7 @@
 
 @implementation ReportManager
 
-- (void)postReport:(Report *)report forCategory:(NSString*)categoryId photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, NSError *error))response {
+- (void)postReport:(Report *)report forCategory:(NSString*)categoryId photoImage:(UIImage *)photoImage response:(void (^)(BOOL success, Report *repID, NSError *error))response {
     
     PFObject *pfReport = [PFObject objectWithClassName:@"Report"];
     
@@ -32,9 +32,7 @@
     }
     
     [pfReport saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
-        
-        response(succeed, error);
-        
+        response(succeed, report, error);
     }];
     
 }
@@ -97,5 +95,39 @@
     }];
     
 }
+- (void)requestReportByReportID:(NSString *)reportID response:(void (^)(Report *report, NSError *error))response; {
+    PFQuery *query = [PFQuery queryWithClassName:@"Report"];
+    [query whereKey:@"objectID" equalTo:reportID];
 
+    [query orderByDescending:@"createdAt"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *resultPlates, NSError *error) {
+        if (!resultPlates) {
+            response(nil, error);
+        }
+        else {
+            NSMutableArray *reports = [[NSMutableArray alloc] init];
+            
+            Report *rep;
+            
+            for (PFObject *resultPlate in resultPlates)
+            {
+                
+                rep = [[Report alloc] init];
+                
+                rep.objectId = resultPlate.objectId;
+                rep.address = [resultPlate objectForKey:@"address"];
+                rep.latitude = [resultPlate objectForKey:@"latitude"];
+                rep.longitude = [resultPlate objectForKey:@"longitude"];
+                rep.plate = [resultPlate objectForKey:@"plate"];
+                rep.createdAt = resultPlate.createdAt;
+                rep.updatedAt = resultPlate.updatedAt;
+
+                [reports addObject:rep];
+            }
+            
+            response(rep, nil);
+        }
+    }];
+}
 @end

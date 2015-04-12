@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PlateManager.h"
+#import "Report.h"
 
 @interface PushNotifications : NSObject
 
@@ -15,6 +16,6 @@
 //- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage userId:(NSString *)userId;
 //- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage pushType:(NSString *)pushType objectId:(NSString *)objectId userId:(NSString *)userId;
 
-- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage plate:(NSString *)plate;
+- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage report:(Report *)report;
 
 @end

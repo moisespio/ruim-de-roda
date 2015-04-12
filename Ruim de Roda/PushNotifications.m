@@ -18,11 +18,11 @@
     installation[@"user"] = [PFUser currentUser];
     [installation saveInBackground];
 }
-- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage plate:(NSString *)plate {
+- (void)sendPushNotificationsWithMessage:(NSString *)pushMessage report:(Report *)report {
     PlateManager *plateControl = [[PlateManager alloc] init];
 
 
-    [plateControl requestUserIDbyPlate:plate response:^(NSString *userID, NSError *error) {
+    [plateControl requestUserIDbyPlate:report.plate response:^(NSString *userID, NSError *error) {
         if (!error) {
             NSString *user_id = userID;
 //            NSLog(@"%@", user_id);
@@ -33,7 +33,7 @@
             
             NSDictionary *data = @{
                                    @"alert" : pushMessage,
-                                   @"plate": plate
+                                   @"report": report.objectId
                                    };
             
             // Send push notification to query

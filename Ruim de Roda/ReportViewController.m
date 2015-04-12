@@ -197,11 +197,11 @@
         _imageCrop = _reportImage.image;
         _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
         
-        [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, NSError *error) {
+        [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, Report *rep, NSError *error) {
             if (success) {
                 PushNotifications *pushNotifications = [[PushNotifications alloc] init];
 
-                [pushNotifications sendPushNotificationsWithMessage:[NSString stringWithFormat:@"Você recebeu uma denuncia na placa: %@", _plate] plate:_plate];
+                [pushNotifications sendPushNotificationsWithMessage:[NSString stringWithFormat:@"Você recebeu uma denuncia na placa: %@", report.plate] report:rep];
 
                 [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
             } else {
