@@ -23,7 +23,8 @@
 }
 - (void)requestPlates:(void (^)(NSArray *resultPlates, NSError *error))response {
     PFQuery *query = [PFQuery queryWithClassName:@"Plate"];
-    
+    [query whereKey:@"userID" equalTo:[PFUser currentUser]];
+
     [query includeKey:@"userID"];
     [query orderByDescending:@"createdAt"];
     
