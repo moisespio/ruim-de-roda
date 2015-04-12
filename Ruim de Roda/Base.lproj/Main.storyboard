@@ -14,6 +14,8 @@
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -600,7 +602,49 @@
                                         <exclude reference="xjo-9n-vSm"/>
                                     </mask>
                                 </variation>
-                            </scrollView>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-ym-svy">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZN4-rv-2LF">
+                                <rect key="frame" x="16" y="524" width="26" height="12"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/04/2015" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVW-n3-FaL">
+                                <rect key="frame" x="16" y="502" width="62" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="Y96-sG-byO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Y96-sG-byO"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xss-Gc-xXS">
+                                <rect key="frame" x="498" y="502" width="86" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="MO1-yk-BEg"/>
+                                    <constraint firstAttribute="height" constant="29" id="io5-Df-KpZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="MO1-yk-BEg"/>
+                                        <exclude reference="io5-Df-KpZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -624,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hD-6W-fWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2733" y="-382"/>
+            <point key="canvasLocation" x="2578" y="1132"/>
         </scene>
         <!--Camera-->
         <scene sceneID="iBk-Sg-BUx">
