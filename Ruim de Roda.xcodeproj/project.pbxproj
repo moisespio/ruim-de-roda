@@ -15,6 +15,10 @@
 		80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */; };
 		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
 		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
+		BF25ACC91ADA095000E821E3 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACC81ADA095000E821E3 /* ConfigViewController.m */; };
+		BF25ACCC1ADA0A8700E821E3 /* ConfigTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACCB1ADA0A8700E821E3 /* ConfigTableViewCell.m */; };
+		BF25ACD21ADA106700E821E3 /* PlateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */; };
+		BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD41ADA107B00E821E3 /* PlateViewController.m */; };
 		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
 		BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414511AD96F3400D2D7BD /* CameraView.m */; };
 		BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414541AD98FDA00D2D7BD /* ReportViewController.m */; };
@@ -86,6 +90,14 @@
 		80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ruim de RodaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F9AFED1AD942D100DCE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
+		BF25ACC71ADA095000E821E3 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		BF25ACC81ADA095000E821E3 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		BF25ACCA1ADA0A8700E821E3 /* ConfigTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigTableViewCell.h; sourceTree = "<group>"; };
+		BF25ACCB1ADA0A8700E821E3 /* ConfigTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigTableViewCell.m; sourceTree = "<group>"; };
+		BF25ACD01ADA106700E821E3 /* PlateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateTableViewCell.h; sourceTree = "<group>"; };
+		BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTableViewCell.m; sourceTree = "<group>"; };
+		BF25ACD31ADA107B00E821E3 /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
+		BF25ACD41ADA107B00E821E3 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
 		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BFB414501AD96F3400D2D7BD /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
@@ -309,6 +321,14 @@
 				BFCB0A5B1AD9EA7A00E00A9F /* SearchViewController.m */,
 				BFCB0A5D1AD9EB2F00E00A9F /* SearchTableViewCell.h */,
 				BFCB0A5E1AD9EB2F00E00A9F /* SearchTableViewCell.m */,
+				BF25ACC71ADA095000E821E3 /* ConfigViewController.h */,
+				BF25ACC81ADA095000E821E3 /* ConfigViewController.m */,
+				BF25ACCA1ADA0A8700E821E3 /* ConfigTableViewCell.h */,
+				BF25ACCB1ADA0A8700E821E3 /* ConfigTableViewCell.m */,
+				BF25ACD31ADA107B00E821E3 /* PlateViewController.h */,
+				BF25ACD41ADA107B00E821E3 /* PlateViewController.m */,
+				BF25ACD01ADA106700E821E3 /* PlateTableViewCell.h */,
+				BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -505,6 +525,7 @@
 				C53F71951AD9B7BD0050FFD3 /* SDWebImageManager.m in Sources */,
 				BFB4145D1AD9C5CD00D2D7BD /* CategoryViewController.m in Sources */,
 				C53F71441AD972E10050FFD3 /* CategoryReportManager.m in Sources */,
+				BF25ACD21ADA106700E821E3 /* PlateTableViewCell.m in Sources */,
 				BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */,
 				C53F71911AD9B7BD0050FFD3 /* SDWebImageCompat.m in Sources */,
 				BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */,
@@ -516,15 +537,18 @@
 				C53F71991AD9B7BD0050FFD3 /* UIImage+MultiFormat.m in Sources */,
 				C53F71941AD9B7BD0050FFD3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C53F71931AD9B7BD0050FFD3 /* SDWebImageDownloader.m in Sources */,
+				BF25ACCC1ADA0A8700E821E3 /* ConfigTableViewCell.m in Sources */,
 				C53F71981AD9B7BD0050FFD3 /* UIImage+GIF.m in Sources */,
 				C53F713E1AD9718A0050FFD3 /* CategoryReport.m in Sources */,
 				C53F714C1AD9A1FA0050FFD3 /* FeedTableViewCell.m in Sources */,
 				C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */,
+				BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */,
 				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
 				C53F71901AD9B7BD0050FFD3 /* SDImageCache.m in Sources */,
 				C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */,
 				C53F71971AD9B7BD0050FFD3 /* UIButton+WebCache.m in Sources */,
 				C53F718F1AD9B7BD0050FFD3 /* NSData+ImageContentType.m in Sources */,
+				BF25ACC91ADA095000E821E3 /* ConfigViewController.m in Sources */,
 				C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
