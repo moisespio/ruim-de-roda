@@ -10,4 +10,10 @@
 
 @interface SearchTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *plateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *reportLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hourLabel;
+
 @end
