@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+#import "UIImageView+WebCache.h"
 
 @interface DetailViewController ()
 
@@ -17,6 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self loadData];
+    
+}
+
+
+-(void) loadData {
+    
+    if (_report) {
+        
+        
+        _lblCategory.text = _report.category.text;
+        _lblPlate.text = _report.plate;
+        _lblDate.text = [self formatDate:_report.createdAt withFormat:@"dd/MM/yyyy"];
+        _lblHour.text = [self formatDate:_report.createdAt withFormat:@"hh:mm"];
+        [_imgPhoto setImageWithURL:[NSURL URLWithString:_report.photo]  placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +54,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+-(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
+    
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:format];// here set format which you want...
+    
+    NSString *convertedString = [dateFormatter stringFromDate:date];
+    
+    return convertedString;
+}
 
 @end
