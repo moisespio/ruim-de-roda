@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "SearchTableViewCell.h"
 #import "ReportManager.h"
+#import "DetailViewController.h"
 
 @interface SearchViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -72,7 +73,14 @@
 
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Report *report = [searchReports objectAtIndex:indexPath.row];
+    _selectedReport = report;
+    
+    [self performSegueWithIdentifier:@"detailSearch" sender:self];
+    
+}
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
     if(text.length < 7) {
         isFiltered = FALSE;
@@ -122,6 +130,11 @@
 
 -(void)dismissKeyboard {
     [self.searchBar resignFirstResponder];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.report = _selectedReport;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -131,9 +131,6 @@
 
     DetailViewController *detailViewController = [segue destinationViewController];
     detailViewController.report = _selectedReport;
-    
-    
-    
 }
 
 
