@@ -61,8 +61,6 @@
 		C53F719A1AD9B7BD0050FFD3 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F718A1AD9B7BD0050FFD3 /* UIImageView+HighlightedWebCache.m */; };
 		C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F718C1AD9B7BD0050FFD3 /* UIImageView+WebCache.m */; };
 		C53F719C1AD9B7BD0050FFD3 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F718E1AD9B7BD0050FFD3 /* UIView+WebCacheOperation.m */; };
-		C53F71A21AD9B7C60050FFD3 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = C53F719E1AD9B7C60050FFD3 /* LICENSE.txt */; };
-		C53F71A31AD9B7C60050FFD3 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C53F719F1AD9B7C60050FFD3 /* README.md */; };
 		C53F71A41AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */; };
 		C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D11AD96B0900864136 /* FeedViewController.m */; };
 		C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D41AD96B3000864136 /* DetailViewController.m */; };
@@ -174,8 +172,6 @@
 		C53F718C1AD9B7BD0050FFD3 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C53F718D1AD9B7BD0050FFD3 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C53F718E1AD9B7BD0050FFD3 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		C53F719E1AD9B7C60050FFD3 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
-		C53F719F1AD9B7C60050FFD3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C53F71A01AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+UIActivityIndicatorForSDWebImage.h"; sourceTree = "<group>"; };
 		C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+UIActivityIndicatorForSDWebImage.m"; sourceTree = "<group>"; };
 		C53F71A51AD9D79E0050FFD3 /* PatrickHand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PatrickHand.ttf; sourceTree = "<group>"; };
@@ -419,8 +415,6 @@
 		C53F719D1AD9B7C60050FFD3 /* UIActivityIndicator-for-SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
-				C53F719E1AD9B7C60050FFD3 /* LICENSE.txt */,
-				C53F719F1AD9B7C60050FFD3 /* README.md */,
 				C53F71A01AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.h */,
 				C53F71A11AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m */,
 			);
@@ -517,7 +511,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8088C17C1AD9DB5F00E092C7 /* PatrickHand.ttf in Resources */,
-				C53F71A21AD9B7C60050FFD3 /* LICENSE.txt in Resources */,
 				80F9AFDE1AD942D100DCE8E0 /* Main.storyboard in Resources */,
 				80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */,
 				80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */,
@@ -545,7 +538,6 @@
 				C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */,
 				C5A0A8D81AD96D8500864136 /* Report.m in Sources */,
 				BFCB0A5F1AD9EB2F00E00A9F /* SearchTableViewCell.m in Sources */,
-				C53F71A31AD9B7C60050FFD3 /* README.md in Sources */,
 				BFCB0A5C1AD9EA7A00E00A9F /* SearchViewController.m in Sources */,
 				BF25ACDE1ADA261500E821E3 /* Plate.m in Sources */,
 				BF25ACE11ADA263000E821E3 /* PlateManager.m in Sources */,
@@ -711,7 +703,7 @@
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "b8f05ab6-4e43-4276-8370-2170daa41f63";
 			};
 			name = Debug;
 		};
@@ -719,7 +711,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/HenriqueVelloso/Downloads/parse-library-1-2",
@@ -728,7 +720,7 @@
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "b8f05ab6-4e43-4276-8370-2170daa41f63";
 			};
 			name = Release;
 		};
