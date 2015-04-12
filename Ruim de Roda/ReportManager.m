@@ -103,6 +103,8 @@
 - (void)requestReportByReportID:(NSString *)reportID response:(void (^)(Report *report, NSError *error))response; {
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
     [query whereKey:@"objectId" equalTo:reportID];
+    
+    [query includeKey:@"categoryID"];
 
     [query orderByDescending:@"createdAt"];
     
@@ -127,6 +129,27 @@
                 rep.plate = [resultPlate objectForKey:@"plate"];
                 rep.createdAt = resultPlate.createdAt;
                 rep.updatedAt = resultPlate.updatedAt;
+                
+                
+                //Category
+                CategoryReport *category = [[CategoryReport alloc] init];
+                PFObject *pfCategory = resultPlate[@"categoryID"];
+                
+                category.objectId = pfCategory.objectId;
+                category.text = [pfCategory objectForKey:@"text"];
+                category.createdAt = pfCategory.createdAt;
+                category.updatedAt = pfCategory.updatedAt;
+                
+                rep.category = category;
+                
+                
+                //Photo
+                if ([resultPlate objectForKey:@"photo"]) {
+                    PFFile *pfFile = [resultPlate objectForKey:@"photo"];
+                    rep.photo = pfFile.url;
+                }
+                
+                
 
                 [reports addObject:rep];
             }
