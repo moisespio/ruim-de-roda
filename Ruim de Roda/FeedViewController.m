@@ -23,6 +23,41 @@
 
 @implementation FeedViewController
 
+-(BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:NO];
+    [self becomeFirstResponder];
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:NO];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [self resignFirstResponder];
+    [super viewDidDisappear:NO];
+}
+
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake )
+    {
+        [self.tabBarController setSelectedIndex:1];
+    }
+}
+
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake )
+    {
+
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
