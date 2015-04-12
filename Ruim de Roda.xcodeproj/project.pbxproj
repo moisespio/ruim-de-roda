@@ -350,6 +350,8 @@
 				BF25ACD41ADA107B00E821E3 /* PlateViewController.m */,
 				BF25ACD01ADA106700E821E3 /* PlateTableViewCell.h */,
 				BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */,
+				C5B6658E1ADA3F22000B419D /* TabBarViewController.h */,
+				C5B6658F1ADA3F22000B419D /* TabBarViewController.m */,
 				BF25ACE51ADA300700E821E3 /* NewPlateTableViewController.h */,
 				BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */,
 			);
