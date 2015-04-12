@@ -14,6 +14,7 @@
 #import "UIImageView+WebCache.h"
 #import "DetailViewController.h"
 #import "UserManager.h"
+#import "TabBarViewController.h"
 
 
 
@@ -46,6 +47,24 @@
     if (motion == UIEventSubtypeMotionShake )
     {
         [self.tabBarController setSelectedIndex:1];
+    }
+}
+
+- (void) loadByPushNotification {
+    
+    TabBarViewController * tabBarController = (TabBarViewController*)self.tabBarController;
+    
+    if (tabBarController.report) {
+       
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        DetailViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+        vc.report = tabBarController.report;
+        [self.navigationController pushViewController:vc animated:YES];
+        
+        
+        [self.tableView reloadData];
+        tabBarController.report = nil;
     }
 }
 

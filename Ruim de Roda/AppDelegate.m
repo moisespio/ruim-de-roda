@@ -66,25 +66,25 @@
         // so we consider the app as having been "opened by a push notification."
         [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
         
+        NSString *reportID = [userInfo objectForKey:@"report"];
+
+        //TODO
+        ReportManager *reportControl = [[ReportManager alloc] init];
+        [reportControl requestReportByReportID:reportID response:^(Report *report, NSError *error) {
+            if (!error) {
+                tabBarController.report = report;
+
+                if(tabBarController.selectedIndex == 0)
+                {
+                    [tabBarController.viewControllers[0] popToRootViewControllerAnimated:NO];
+                }
+                else {
+                    tabBarController.selectedIndex = 0;
+                }
+            }
+        }];
         
-        // Recebendo o Push de Comments, Likes e Follow
-        if ([[userInfo objectForKey:@"pushType"] isEqualToString:@"report"])
-        {
-            NSLog(@"User Reported with plate: %@", [userInfo objectForKey:@"plate"]);
-        }
-       
         
-        tabBarController.plate = [userInfo objectForKey:@"plate"];
-        
-        
-        
-        if(tabBarController.selectedIndex == 0)
-        {
-            [tabBarController.viewControllers[0] popToRootViewControllerAnimated:NO];
-        }
-        else {
-            tabBarController.selectedIndex = 0;
-        }
         
     }
     else {
