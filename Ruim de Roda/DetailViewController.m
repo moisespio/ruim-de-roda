@@ -22,6 +22,8 @@
     
     [self loadData];
     
+    [self.map setDelegate:self];
+    
 }
 
 
@@ -54,6 +56,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) addPins {
+    
+    for (MapAnnotation * pin in _locations) {
+        
+        [self.map addAnnotation:pin];
+
+    }
+    
+}
 
 
 -(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
