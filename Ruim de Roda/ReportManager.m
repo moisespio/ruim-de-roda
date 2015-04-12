@@ -32,7 +32,12 @@
     }
     
     [pfReport saveInBackgroundWithBlock:^(BOOL succeed, NSError *error) {
-        response(succeed, report, error);
+        NSLog(@"%@", [pfReport objectId]);
+        [self requestReportByReportID:[pfReport objectId] response:^(Report *reportS, NSError *error) {
+            if (!error) {
+                response(succeed, reportS, error);
+            }
+        }];
     }];
     
 }
@@ -97,7 +102,7 @@
 }
 - (void)requestReportByReportID:(NSString *)reportID response:(void (^)(Report *report, NSError *error))response; {
     PFQuery *query = [PFQuery queryWithClassName:@"Report"];
-    [query whereKey:@"objectID" equalTo:reportID];
+    [query whereKey:@"objectId" equalTo:reportID];
 
     [query orderByDescending:@"createdAt"];
     
