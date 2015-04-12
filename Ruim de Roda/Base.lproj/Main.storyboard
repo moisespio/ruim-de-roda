@@ -790,6 +790,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JUN-Sf-MrA" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="tse-4a-EVT">
                         <autoresizingMask key="autoresizingMask"/>
