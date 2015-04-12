@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -217,10 +217,17 @@
                             <constraint firstItem="Tdl-nT-wNj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vhq-EI-8ag"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT"/>
+                    <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT">
+                        <barButtonItem key="rightBarButtonItem" image="config" id="uvg-WN-9Zv">
+                            <connections>
+                                <action selector="goConfig:" destination="vXZ-lx-hvc" id="shs-2g-dpc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Tdl-nT-wNj" id="0we-VN-ebb"/>
                         <segue destination="LgT-Na-JBU" kind="show" identifier="segueDetail" id="Eiu-OM-Qcd"/>
+                        <segue destination="Jo3-J0-k0l" kind="show" identifier="configSegue" id="Hsk-MX-SiU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -487,26 +494,26 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GOq-W5-o64">
-                                        <rect key="frame" x="8" y="76" width="584" height="21"/>
+                                        <rect key="frame" x="8" y="8" width="584" height="23.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="wLR-6F-hgJ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
-                                        <rect key="frame" x="8" y="105" width="584" height="777"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
+                                        <rect key="frame" x="0.0" y="39" width="600" height="798"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ebs-Ba-zWe"/>
                                             <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="3:4" constant="1" id="tbk-Fq-hwj"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
-                                        <rect key="frame" x="0.0" y="882" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="837" width="600" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-EC-TTl">
-                                                <rect key="frame" x="8" y="35" width="60" height="16.5"/>
+                                                <rect key="frame" x="8" y="27" width="60" height="16.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="6dN-IF-ZYt"/>
                                                 </constraints>
@@ -551,14 +558,15 @@
                                             <constraint firstAttribute="trailing" secondItem="QVy-E2-3r3" secondAttribute="trailing" constant="8.5" id="S0w-EY-R46"/>
                                             <constraint firstItem="0qK-EC-TTl" firstAttribute="leading" secondItem="1W9-yG-vlQ" secondAttribute="leading" constant="8" id="bma-s8-JUO"/>
                                             <constraint firstItem="QVy-E2-3r3" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="4" id="e7q-A4-6bU"/>
-                                            <constraint firstAttribute="height" constant="150" id="fln-2W-dkk"/>
+                                            <constraint firstAttribute="height" constant="55" id="fln-2W-dkk"/>
                                             <constraint firstItem="DQ3-DD-I13" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="8" id="qGK-pm-5g7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rRp-V7-7Cd"/>
-                                            <constraint firstItem="0qK-EC-TTl" firstAttribute="top" secondItem="DQ3-DD-I13" secondAttribute="bottom" constant="8" id="zir-KY-Js3"/>
+                                            <constraint firstItem="QVy-E2-3r3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="4" id="t1s-Hj-SC3"/>
+                                            <constraint firstItem="0qK-EC-TTl" firstAttribute="top" secondItem="DQ3-DD-I13" secondAttribute="bottom" id="zir-KY-Js3"/>
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
-                                        <rect key="frame" x="8" y="1032" width="584" height="150"/>
+                                        <rect key="frame" x="0.0" y="891.5" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2tR-tr-bTA"/>
                                             <constraint firstAttribute="height" constant="150" id="n6N-nd-XFO"/>
@@ -572,8 +580,8 @@
                                     <constraint firstAttribute="centerX" secondItem="YVu-us-AgL" secondAttribute="centerX" id="1gF-rb-yqA"/>
                                     <constraint firstItem="ys0-Vw-83t" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leadingMargin" id="3bZ-pS-ES9"/>
                                     <constraint firstAttribute="centerX" secondItem="ys0-Vw-83t" secondAttribute="centerX" id="4EX-rs-XBV"/>
-                                    <constraint firstAttribute="bottom" secondItem="YVu-us-AgL" secondAttribute="bottom" constant="48" id="58C-bo-D3C"/>
-                                    <constraint firstItem="GOq-W5-o64" firstAttribute="top" secondItem="JrA-n6-uRY" secondAttribute="top" constant="76" id="E7m-JY-SGg"/>
+                                    <constraint firstAttribute="bottom" secondItem="YVu-us-AgL" secondAttribute="bottom" id="58C-bo-D3C"/>
+                                    <constraint firstItem="GOq-W5-o64" firstAttribute="top" secondItem="JrA-n6-uRY" secondAttribute="top" constant="8" id="E7m-JY-SGg"/>
                                     <constraint firstItem="GOq-W5-o64" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" constant="8" id="ELc-Ep-BRS"/>
                                     <constraint firstItem="ys0-Vw-83t" firstAttribute="trailing" secondItem="JrA-n6-uRY" secondAttribute="trailingMargin" id="KO7-zE-XaS"/>
                                     <constraint firstAttribute="centerX" secondItem="1W9-yG-vlQ" secondAttribute="centerX" id="QQc-D6-akB"/>
@@ -581,16 +589,16 @@
                                     <constraint firstAttribute="trailing" secondItem="GOq-W5-o64" secondAttribute="trailing" constant="8" id="Svg-QU-Ci6"/>
                                     <constraint firstAttribute="trailing" secondItem="1W9-yG-vlQ" secondAttribute="trailing" id="Vfh-U5-NDh"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="ys0-Vw-83t" secondAttribute="trailing" id="XIL-Mx-qfZ"/>
-                                    <constraint firstItem="YVu-us-AgL" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" constant="8" id="XZp-5W-5Ji"/>
-                                    <constraint firstItem="ys0-Vw-83t" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" constant="8" id="b6P-V0-u8W"/>
+                                    <constraint firstItem="YVu-us-AgL" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" id="XZp-5W-5Ji"/>
+                                    <constraint firstItem="ys0-Vw-83t" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" id="b6P-V0-u8W"/>
                                     <constraint firstItem="1W9-yG-vlQ" firstAttribute="top" secondItem="ys0-Vw-83t" secondAttribute="bottom" id="dMr-tO-tr5"/>
                                     <constraint firstAttribute="centerX" secondItem="GOq-W5-o64" secondAttribute="centerX" id="hvC-gI-F8K"/>
                                     <constraint firstItem="1W9-yG-vlQ" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" id="ppH-nr-EHV"/>
                                     <constraint firstItem="ys0-Vw-83t" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leadingMargin" id="uwq-Rj-8p2"/>
                                     <constraint firstAttribute="bottom" secondItem="1W9-yG-vlQ" secondAttribute="bottom" constant="156" id="xjo-9n-vSm"/>
                                     <constraint firstItem="ys0-Vw-83t" firstAttribute="top" secondItem="GOq-W5-o64" secondAttribute="bottom" constant="8" id="ypr-la-Kmb"/>
-                                    <constraint firstAttribute="trailing" secondItem="YVu-us-AgL" secondAttribute="trailing" constant="8" id="ytk-dF-td9"/>
-                                    <constraint firstAttribute="trailing" secondItem="ys0-Vw-83t" secondAttribute="trailing" constant="8" id="zpM-db-zCv"/>
+                                    <constraint firstAttribute="trailing" secondItem="YVu-us-AgL" secondAttribute="trailing" id="ytk-dF-td9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ys0-Vw-83t" secondAttribute="trailing" id="zpM-db-zCv"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -767,7 +775,6 @@
                         <segue destination="RgN-Zo-gUA" kind="relationship" relationship="viewControllers" id="rTh-cO-fbP"/>
                         <segue destination="Te9-Py-I6l" kind="relationship" relationship="viewControllers" id="Lv2-vT-Utv"/>
                         <segue destination="gxt-ZO-Xrs" kind="relationship" relationship="viewControllers" id="Xhv-s2-0Wd"/>
-                        <segue destination="Jo3-J0-k0l" kind="relationship" relationship="viewControllers" id="DcU-MA-kGX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cga-Xz-fOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -784,6 +791,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hUo-tP-1Qg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

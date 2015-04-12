@@ -13,6 +13,7 @@
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 #import "UIImageView+WebCache.h"
 #import "DetailViewController.h"
+#import "UserManager.h"
 
 
 
@@ -32,6 +33,15 @@
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(loadData:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
+    
+    UserManager *userManager = [[UserManager alloc] init];
+    if (![userManager getUserDefaults]) {
+        [userManager createUser:^(NSString *objectID, NSError *error) {
+            if (!error) {
+                [userManager setUserDefaults:objectID];
+            }
+        }];
+    }
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -61,15 +71,12 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     return [_arrayReports count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    
+
     Report *report = [_arrayReports objectAtIndex:indexPath.row];
     
     cell.lblCategory.text = report.category.text;
@@ -93,10 +100,7 @@
     return cell;
 }
 
-
 -(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
-    
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];// here set format which you want...
@@ -115,24 +119,21 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     Report *report = [_arrayReports objectAtIndex:indexPath.row];
     _selectedReport = report;
     
     [self performSegueWithIdentifier:@"segueDetail" sender:self];
-    
 }
-
-
-
-#pragma mark - Navigation
+- (IBAction)goConfig:(id)sender {
+    [self performSegueWithIdentifier:@"configSegue" sender:self];
+}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
-    DetailViewController *detailViewController = [segue destinationViewController];
-    detailViewController.report = _selectedReport;
+    if ([segue.identifier isEqualToString:@"segueDetail"]) {
+        DetailViewController *detailViewController = [segue destinationViewController];
+        detailViewController.report = _selectedReport;
+    }
 }
-
 
 @end
