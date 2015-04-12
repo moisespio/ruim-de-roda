@@ -81,6 +81,9 @@
                 else {
                     tabBarController.selectedIndex = 0;
                 }
+                
+                
+                
             }
         }];
         

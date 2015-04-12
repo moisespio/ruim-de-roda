@@ -63,8 +63,8 @@
         [self.navigationController pushViewController:vc animated:YES];
         
         
-        [self.tableView reloadData];
-        tabBarController.report = nil;
+       // [self.tableView reloadData];
+       // tabBarController.report = nil;
     }
 }
 
@@ -79,6 +79,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   // [self loadByPushNotification];
 
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     
@@ -97,7 +99,19 @@
             }
         }];
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+
+    
+    
+    
 }
+
+
+- (void)appDidBecomeActive:(NSNotification *)notification {
+    [self loadByPushNotification];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
