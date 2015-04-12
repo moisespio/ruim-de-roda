@@ -15,14 +15,26 @@
 @end
 
 @implementation ReportViewController {
+    CGFloat _initialConstant;
     CLLocationManager *locationManager;
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
+    __weak IBOutlet UIScrollView *scrollView;
+    __weak IBOutlet NSLayoutConstraint *topConstraint;
+    __weak IBOutlet NSLayoutConstraint *bottomConstraint;
 }
 #define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
     
     locationManager = [[CLLocationManager alloc] init];
     geocoder = [[CLGeocoder alloc] init];
@@ -51,6 +63,55 @@
 
     // Override point for customization after application launch.
 }
+
+
+- (void) keyboardWillBeHidden:(NSNotification *)notification {
+    // Getting the keyboard frame and animation duration.
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    bottomConstraint.constant = 0;
+    topConstraint.constant = 0;
+    
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_initialConstant) {
+        _initialConstant =  bottomConstraint.constant;
+    }
+    
+    // If screen can fit everything, leave the constant untouched.
+    bottomConstraint.constant = MAX(keyboardFrame.size.height, _initialConstant);
+    topConstraint.constant = -MAX(keyboardFrame.size.height, _initialConstant);
+    
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+    
+    float width = scrollView.frame.size.width;
+    float height = scrollView.frame.size.height;
+    float newPosition = scrollView.contentOffset.y + height;
+    CGRect toVisible = CGRectMake(0, newPosition, width, height);
+    
+    [scrollView scrollRectToVisible:toVisible animated:YES];
+    
+}
+
+-(void)dismissKeyboard {
+    [self.plateText resignFirstResponder];
+}
+
+
+
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"didFailWithError: %@", error);
