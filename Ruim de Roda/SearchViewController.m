@@ -89,8 +89,10 @@
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
     if(text.length < 7) {
         isFiltered = FALSE;
+        self.tableView.hidden = YES;
     }
     else {
+        self.tableView.hidden = NO;
         isFiltered = true;
         searchReports = [[NSMutableArray alloc] init];
         for (int i = 0;i < [allReports count]; i++) {
@@ -138,11 +140,9 @@
 }
 
 -(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
-    
-    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:format];// here set format which you want...
+    [dateFormatter setDateFormat:format];
     
     NSString *convertedString = [dateFormatter stringFromDate:date];
     
@@ -156,7 +156,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

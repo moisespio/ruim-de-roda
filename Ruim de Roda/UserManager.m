@@ -35,11 +35,11 @@
 
     [userDefaults synchronize];
 }
-- (BOOL)getUserDefaults {
+- (NSString *)getUserDefaults {
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"objectID"]) {
-        return YES;
+        return [[NSUserDefaults standardUserDefaults] objectForKey:@"objectID"];
     } else {
-        return NO;
+        return nil;
     }
 }
 @end

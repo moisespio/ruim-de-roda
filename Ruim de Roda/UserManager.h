@@ -13,6 +13,6 @@
 
 - (void)createUser:(void (^)(NSString *objectID, NSError *error))response;
 - (void)setUserDefaults:(NSString *)objectID;
-- (BOOL)getUserDefaults;
+- (NSString *)getUserDefaults;
 
 @end

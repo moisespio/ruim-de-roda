@@ -7,8 +7,12 @@
 //
 
 #import "PlateViewController.h"
+#import "PlateManager.h"
+#import "PlateTableViewCell.h"
 
-@interface PlateViewController ()
+@interface PlateViewController () {
+    NSMutableArray *allPlates;
+}
 
 @end
 
@@ -16,12 +20,70 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    allPlates = [[NSMutableArray alloc] init];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self loadData:nil];
+}
+
+- (void)loadData:(UIRefreshControl *)refreshControl {
+    PlateManager *plateManager = [[PlateManager alloc] init];
+    [plateManager requestPlates:^(NSArray *resultPlates, NSError *error) {
+        if (resultPlates) {
+            allPlates = [resultPlates mutableCopy];
+            [self performSelectorOnMainThread:@selector(updateTableView) withObject:refreshControl waitUntilDone:NO];
+        }
+    }];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [allPlates count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PlateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"plateCell" forIndexPath:indexPath];
+    
+    Plate *plate = [allPlates objectAtIndex:indexPath.row];
+    
+    cell.plateNumber.text = plate.plate;
+    
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        PlateManager *plateControl = [[PlateManager alloc] init];
+        Plate *plate = [allPlates objectAtIndex:indexPath.row];
+        
+        [plateControl removePlate:plate.objectId response:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                [allPlates removeObjectAtIndex:indexPath.row];
+                
+                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+                [self updateTableView];
+            }
+        }];
+    } else {
+        NSLog(@"Unhandled editing style!");
+    }
+}
+- (IBAction)newPlate:(id)sender {
+    [self performSegueWithIdentifier:@"newPlate" sender:self];
+}
+- (IBAction)backPlate:(UIStoryboardSegue *)sender {
+}
+- (void)updateTableView {
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*

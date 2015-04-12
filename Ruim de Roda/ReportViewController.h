@@ -18,9 +18,7 @@
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryText;
-@property (weak, nonatomic) IBOutlet UITextField *plateLetters;
-@property (weak, nonatomic) IBOutlet UITextField *plateNumbers;
-@property UIImage *imageCrop;
+@property (weak, nonatomic) IBOutlet UITextField *plateText;@property UIImage *imageCrop;
 
 @property NSString *categoryID;
 @property NSString *plate;

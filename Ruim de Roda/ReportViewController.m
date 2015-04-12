@@ -106,30 +106,31 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sendReport:(id)sender {
-    Report *report = [[Report alloc] init];
-    
-    NSString *plateLetter = self.plateLetters.text;
-    NSString *plateNumber = self.plateNumbers.text;
-    
-    _plate = [NSString stringWithFormat:@"%@%@", plateLetter, plateNumber];
+    if (self.plateText.text.length > 7) {
+        [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
+    } else {
+        Report *report = [[Report alloc] init];
 
-    report.plate = _plate;
-    report.address = _address;
-    report.latitude = _latitude;
-    report.longitude = _longitude;
-
-    ReportManager *reportControl = [[ReportManager alloc] init];
-    
-    _imageCrop = _reportImage.image;
-    _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
-
-    [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, NSError *error) {
-        if (success) {
-            [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
-        } else {
-            [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
-        }
-    }];
+        _plate = self.plateText.text;
+        
+        report.plate = _plate;
+        report.address = _address;
+        report.latitude = _latitude;
+        report.longitude = _longitude;
+        
+        ReportManager *reportControl = [[ReportManager alloc] init];
+        
+        _imageCrop = _reportImage.image;
+        _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
+        
+        [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, NSError *error) {
+            if (success) {
+                [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
+            } else {
+                [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
+            }
+        }];
+    }
 }
 -(UIImage *)adjustImageSizeWhenCropping:(UIImage *)image {
     float actualHeight = image.size.height;
