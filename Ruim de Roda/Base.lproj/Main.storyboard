@@ -11,6 +11,11 @@
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
             <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
+            <string>PatrickHand-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -794,60 +799,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Digite sua placa" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-i0-1qH">
+                            <searchBar contentMode="redraw" placeholder="Insira a sua placa" translatesAutoresizingMaskIntoConstraints="NO" id="XMJ-i0-1qH">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="W3K-4l-WSO" id="5SO-lM-Mbg"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-zq-gWT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-zq-gWT">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="68" id="ac5-43-MLK" customClass="SearchTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="searchCell" rowHeight="64" id="ac5-43-MLK" customClass="SearchTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ac5-43-MLK" id="FvC-Dk-eDu">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Infração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cL-NSb">
-                                                    <rect key="frame" x="8" y="23" width="419" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cL-NSb">
+                                                    <rect key="frame" x="16" y="8" width="54.5" height="24.5"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
-                                                    <rect key="frame" x="8" y="46" width="419" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
+                                                    <rect key="frame" x="16" y="33" width="46" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-rz-JC2">
-                                                    <rect key="frame" x="526" y="8" width="36" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-rz-JC2">
+                                                    <rect key="frame" x="501.5" y="22" width="22.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hora" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73f-h7-Odk">
-                                                    <rect key="frame" x="524" y="33" width="38" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73f-h7-Odk">
+                                                    <rect key="frame" x="535" y="22" width="23.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-a3-hb2">
-                                                    <rect key="frame" x="8" y="8" width="147" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="022-xH-1aQ">
+                                                    <rect key="frame" x="524" y="22" width="9" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="top" secondItem="FvC-Dk-eDu" secondAttribute="topMargin" id="2e2-3A-tyq"/>
+                                                <constraint firstAttribute="centerY" secondItem="022-xH-1aQ" secondAttribute="centerY" id="2tL-me-8B1"/>
+                                                <constraint firstItem="EPB-QN-Xmd" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" constant="8" id="AAL-HS-0oh"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="leading" secondItem="022-xH-1aQ" secondAttribute="trailing" constant="2" id="Fsc-Xe-KjO"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="leading" secondItem="cWF-rz-JC2" secondAttribute="trailing" constant="20" id="InJ-rv-shu"/>
+                                                <constraint firstItem="cWF-rz-JC2" firstAttribute="leading" secondItem="1Ko-cL-NSb" secondAttribute="trailing" id="JdP-Q6-gBD"/>
+                                                <constraint firstItem="73f-h7-Odk" firstAttribute="trailing" secondItem="FvC-Dk-eDu" secondAttribute="trailingMargin" id="JpV-1k-KxU"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" constant="8" id="Tyj-J2-dox"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="leading" secondItem="FvC-Dk-eDu" secondAttribute="leadingMargin" id="fTG-UT-uAl"/>
+                                                <constraint firstItem="EPB-QN-Xmd" firstAttribute="top" secondItem="1Ko-cL-NSb" secondAttribute="bottom" id="htn-vd-q6A"/>
+                                                <constraint firstItem="022-xH-1aQ" firstAttribute="leading" secondItem="cWF-rz-JC2" secondAttribute="trailing" id="mbh-nh-Fi3"/>
+                                                <constraint firstAttribute="centerY" secondItem="cWF-rz-JC2" secondAttribute="centerY" id="oV9-m1-dyx"/>
+                                                <constraint firstAttribute="centerY" secondItem="73f-h7-Odk" secondAttribute="centerY" id="uQb-ua-w15"/>
+                                                <constraint firstItem="1Ko-cL-NSb" firstAttribute="top" secondItem="FvC-Dk-eDu" secondAttribute="topMargin" id="wU3-kc-yFW"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2e2-3A-tyq"/>
+                                                    <exclude reference="fTG-UT-uAl"/>
+                                                    <exclude reference="JdP-Q6-gBD"/>
+                                                    <exclude reference="InJ-rv-shu"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="addressLabel" destination="EPB-QN-Xmd" id="xey-tK-QjG"/>
                                             <outlet property="dateLabel" destination="cWF-rz-JC2" id="zhE-7s-I60"/>
                                             <outlet property="hourLabel" destination="73f-h7-Odk" id="90U-sf-8Zn"/>
-                                            <outlet property="plateLabel" destination="gEq-a3-hb2" id="drg-2F-dwp"/>
                                             <outlet property="reportLabel" destination="1Ko-cL-NSb" id="ZCX-vl-HRZ"/>
                                         </connections>
                                     </tableViewCell>
@@ -891,6 +919,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2pe-iy-zPt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
