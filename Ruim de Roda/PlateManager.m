@@ -49,6 +49,43 @@
         }
     }];
 }
+- (void)requestUserIDbyPlate:(NSString *)plate response:(void (^)(NSString *userID, NSError *error))response {
+    PFQuery *query = [PFQuery queryWithClassName:@"Plate"];
+    
+    [query includeKey:@"userID"];
+    [query orderByDescending:@"createdAt"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *resultPlates, NSError *error) {
+        if (!resultPlates) {
+            response(nil, error);
+        }
+        else {
+            NSMutableArray *reports = [[NSMutableArray alloc] init];
+            
+            Plate *plate;
+            
+            for (PFObject *resultPlate in resultPlates)
+            {
+                
+                plate = [[Plate alloc] init];
+                
+                plate.objectId = resultPlate.objectId;
+                plate.plate = [resultPlate objectForKey:@"plate"];
+                
+                PFUser *user = [PFUser user];
+                user = resultPlate[@"userID"];
+                
+                plate.user = [[User alloc] init];
+                plate.user.objectId = user.objectId;
+                
+                [reports addObject:plate];
+            }
+            
+            response(plate.user.objectId, nil);
+        }
+    }];
+
+}
 - (void)removePlate:(NSString *)objectId response:(void (^)(BOOL succeeded, NSError *error))response {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Plate"];

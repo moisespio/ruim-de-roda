@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "PushNotifications.h"
 
 @interface UserManager : NSObject
 

@@ -18,6 +18,8 @@
 
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
+                PushNotifications *pushNotifications = [[PushNotifications alloc] init];
+                [pushNotifications associateDeviceWithCurrentUser];
                 response(nil, error);
             } else {
                 NSString *errorString = [error userInfo][@"error"];
