@@ -11,10 +11,8 @@
 #import "Report.h"
 #import "ReportManager.h"
 #import "UIImageView+UIActivityIndicatorForSDWebImage.h"
-
-
-
 #import "UIImageView+WebCache.h"
+#import "DetailViewController.h"
 
 
 
@@ -115,12 +113,28 @@
     [self.tableView reloadData];
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Report *report = [_arrayReports objectAtIndex:indexPath.row];
+    _selectedReport = report;
+    
+    [self performSegueWithIdentifier:@"segueDetail" sender:self];
+    
+}
+
+
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+    DetailViewController *detailViewController = [segue destinationViewController];
+    detailViewController.report = _selectedReport;
+    
+    
+    
 }
 
 
