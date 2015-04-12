@@ -554,6 +554,7 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     if([segue.identifier isEqualToString:@"photoTaked"]){
         UINavigationController *navController = (UINavigationController*)[segue destinationViewController];
         ReportViewController *rpc = (ReportViewController *)[navController topViewController];
+        rpc.sourceVC = self;
         rpc.imageReport = _photoTaked;
     }
 }

@@ -10,6 +10,7 @@
 #import "ReportManager.h"
 #import "MapAnnotation.h"
 #import "PushNotifications.h"
+#import "TabBarViewController.h"
 
 @interface ReportViewController ()
 
@@ -182,6 +183,8 @@
 - (IBAction)sendReport:(id)sender {
     if (self.plateText.text.length > 7) {
         [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
+    } else if (!_categoryID) {
+        [self alertWithTitle:@"Ops!" message:@"Selecione uma categoria"];
     } else {
         Report *report = [[Report alloc] init];
 
@@ -229,7 +232,12 @@
     return img;
 }
 - (void)successfulRequest {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        TabBarViewController *tabBarController = (TabBarViewController*)self.sourceVC.tabBarController;
+        [tabBarController setSelectedIndex:0];
+    }];
 }
 
 - (void)errorRequest {

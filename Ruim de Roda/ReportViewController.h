@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *categoryText;
 @property (weak, nonatomic) IBOutlet UITextField *plateText;@property UIImage *imageCrop;
 
+@property (nonatomic) UIViewController *sourceVC;
+
 @property NSString *categoryID;
 @property NSString *plate;
 @property NSString *address;

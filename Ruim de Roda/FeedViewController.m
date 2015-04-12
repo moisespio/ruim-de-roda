@@ -89,8 +89,6 @@
     [self.tableView addSubview:refreshControl];
     
     UserManager *userManager = [[UserManager alloc] init];
-    
-    NSLog(@"%@", [userManager getUserDefaults]);
 
     if (![userManager getUserDefaults]) {
         [userManager createUser:^(NSString *objectID, NSError *error) {
