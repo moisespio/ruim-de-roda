@@ -19,6 +19,8 @@
 		BF25ACCC1ADA0A8700E821E3 /* ConfigTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACCB1ADA0A8700E821E3 /* ConfigTableViewCell.m */; };
 		BF25ACD21ADA106700E821E3 /* PlateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */; };
 		BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD41ADA107B00E821E3 /* PlateViewController.m */; };
+		BF25ACD81ADA156A00E821E3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD71ADA156A00E821E3 /* User.m */; };
+		BF25ACDB1ADA157D00E821E3 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACDA1ADA157D00E821E3 /* UserManager.m */; };
 		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
 		BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414511AD96F3400D2D7BD /* CameraView.m */; };
 		BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414541AD98FDA00D2D7BD /* ReportViewController.m */; };
@@ -98,6 +100,10 @@
 		BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTableViewCell.m; sourceTree = "<group>"; };
 		BF25ACD31ADA107B00E821E3 /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
 		BF25ACD41ADA107B00E821E3 /* PlateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateViewController.m; sourceTree = "<group>"; };
+		BF25ACD61ADA156A00E821E3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		BF25ACD71ADA156A00E821E3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		BF25ACD91ADA157D00E821E3 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		BF25ACDA1ADA157D00E821E3 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BFB414501AD96F3400D2D7BD /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
@@ -275,6 +281,10 @@
 		BFB4144A1AD9686A00D2D7BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF25ACD61ADA156A00E821E3 /* User.h */,
+				BF25ACD71ADA156A00E821E3 /* User.m */,
+				BF25ACD91ADA157D00E821E3 /* UserManager.h */,
+				BF25ACDA1ADA157D00E821E3 /* UserManager.m */,
 				C5A0A8D61AD96D8500864136 /* Report.h */,
 				C5A0A8D71AD96D8500864136 /* Report.m */,
 				C53F713F1AD972CA0050FFD3 /* ReportManager.h */,
@@ -514,6 +524,7 @@
 			files = (
 				C53F719A1AD9B7BD0050FFD3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BFB4145A1AD9C54100D2D7BD /* CategoryTableViewCell.m in Sources */,
+				BF25ACDB1ADA157D00E821E3 /* UserManager.m in Sources */,
 				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
 				C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */,
 				C5A0A8D81AD96D8500864136 /* Report.m in Sources */,
@@ -538,6 +549,7 @@
 				C53F71941AD9B7BD0050FFD3 /* SDWebImageDownloaderOperation.m in Sources */,
 				C53F71931AD9B7BD0050FFD3 /* SDWebImageDownloader.m in Sources */,
 				BF25ACCC1ADA0A8700E821E3 /* ConfigTableViewCell.m in Sources */,
+				BF25ACD81ADA156A00E821E3 /* User.m in Sources */,
 				C53F71981AD9B7BD0050FFD3 /* UIImage+GIF.m in Sources */,
 				C53F713E1AD9718A0050FFD3 /* CategoryReport.m in Sources */,
 				C53F714C1AD9A1FA0050FFD3 /* FeedTableViewCell.m in Sources */,

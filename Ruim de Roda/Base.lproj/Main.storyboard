@@ -221,10 +221,17 @@
                             <constraint firstItem="Tdl-nT-wNj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vhq-EI-8ag"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT"/>
+                    <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT">
+                        <barButtonItem key="rightBarButtonItem" image="config" id="uvg-WN-9Zv">
+                            <connections>
+                                <action selector="goConfig:" destination="vXZ-lx-hvc" id="shs-2g-dpc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Tdl-nT-wNj" id="0we-VN-ebb"/>
                         <segue destination="LgT-Na-JBU" kind="show" identifier="segueDetail" id="Eiu-OM-Qcd"/>
+                        <segue destination="Jo3-J0-k0l" kind="show" identifier="configSegue" id="Hsk-MX-SiU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -773,7 +780,6 @@
                         <segue destination="RgN-Zo-gUA" kind="relationship" relationship="viewControllers" id="rTh-cO-fbP"/>
                         <segue destination="Te9-Py-I6l" kind="relationship" relationship="viewControllers" id="Lv2-vT-Utv"/>
                         <segue destination="gxt-ZO-Xrs" kind="relationship" relationship="viewControllers" id="Xhv-s2-0Wd"/>
-                        <segue destination="Jo3-J0-k0l" kind="relationship" relationship="viewControllers" id="DcU-MA-kGX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cga-Xz-fOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -973,25 +979,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-cL-NSb">
-                                                    <rect key="frame" x="16" y="8" width="54.5" height="24.5"/>
+                                                    <rect key="frame" x="16" y="8" width="55" height="25"/>
                                                     <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endereço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPB-QN-Xmd">
                                                     <rect key="frame" x="16" y="33" width="46" height="19"/>
                                                     <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWF-rz-JC2">
-                                                    <rect key="frame" x="501.5" y="22" width="22.5" height="19"/>
+                                                    <rect key="frame" x="501" y="22" width="23" height="19"/>
                                                     <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="73f-h7-Odk">
-                                                    <rect key="frame" x="535" y="22" width="23.5" height="19"/>
+                                                    <rect key="frame" x="535" y="22" width="24" height="19"/>
                                                     <fontDescription key="fontDescription" name="PatrickHand-Regular" family="Patrick Hand" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -1116,6 +1122,6 @@
         <image name="search" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dc0-h5-fQm"/>
+        <segue reference="Eiu-OM-Qcd"/>
     </inferredMetricsTieBreakers>
 </document>
