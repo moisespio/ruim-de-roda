@@ -31,6 +31,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:NO];
     [self becomeFirstResponder];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -79,8 +80,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-   // [self loadByPushNotification];
 
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     
@@ -101,12 +100,7 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-
-    
-    
-    
 }
-
 
 - (void)appDidBecomeActive:(NSNotification *)notification {
     [self loadByPushNotification];

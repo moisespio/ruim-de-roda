@@ -63,8 +63,6 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    
     self.flashMode = -1;
     
     self.stillButton.layer.cornerRadius = self.stillButton.frame.size.width / 2;
@@ -166,22 +164,11 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     });
 }
 
--(void)hideStatusBar {
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
-    [self setNeedsStatusBarAppearanceUpdate];
-#else
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-#endif
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
     dispatch_async([self sessionQueue], ^{
         [self addObserver:self forKeyPath:@"sessionRunningAndDeviceAuthorized" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:SessionRunningAndDeviceAuthorizedContext];
         [self addObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:CapturingStillImageContext];

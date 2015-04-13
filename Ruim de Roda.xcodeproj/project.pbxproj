@@ -15,6 +15,7 @@
 		80F9AFE01AD942D100DCE8E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFDF1AD942D100DCE8E0 /* Images.xcassets */; };
 		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
 		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
+		BF0DE47D1ADBFCC1007E5C4A /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */; };
 		BF25ACD21ADA106700E821E3 /* PlateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */; };
 		BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD41ADA107B00E821E3 /* PlateViewController.m */; };
 		BF25ACD81ADA156A00E821E3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD71ADA156A00E821E3 /* User.m */; };
@@ -93,6 +94,8 @@
 		80F9AFE81AD942D100DCE8E0 /* Ruim de RodaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ruim de RodaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F9AFED1AD942D100DCE8E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
+		BF0DE47B1ADBFCC1007E5C4A /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
+		BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
 		BF25ACD01ADA106700E821E3 /* PlateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateTableViewCell.h; sourceTree = "<group>"; };
 		BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTableViewCell.m; sourceTree = "<group>"; };
 		BF25ACD31ADA107B00E821E3 /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
@@ -350,6 +353,8 @@
 				C5B6658F1ADA3F22000B419D /* TabBarViewController.m */,
 				BF25ACE51ADA300700E821E3 /* NewPlateTableViewController.h */,
 				BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */,
+				BF0DE47B1ADBFCC1007E5C4A /* AboutTableViewController.h */,
+				BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -562,6 +567,7 @@
 				C53F71981AD9B7BD0050FFD3 /* UIImage+GIF.m in Sources */,
 				C53F713E1AD9718A0050FFD3 /* CategoryReport.m in Sources */,
 				C53F714C1AD9A1FA0050FFD3 /* FeedTableViewCell.m in Sources */,
+				BF0DE47D1ADBFCC1007E5C4A /* AboutTableViewController.m in Sources */,
 				C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */,
 				BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */,
 				C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */,
