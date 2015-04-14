@@ -963,41 +963,103 @@
         <!--Como foi feito-->
         <scene sceneID="Iup-9c-Xoc">
             <objects>
-                <tableViewController id="nnQ-X2-pcF" sceneMemberID="viewController">
+                <tableViewController id="nnQ-X2-pcF" customClass="VideoTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YAw-1H-7R2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="lUc-J6-dlH">
+                            <tableViewSection headerTitle="Equipe" id="lUc-J6-dlH">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="194" id="5KI-7z-r4E">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="310" id="5KI-7z-r4E">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5KI-7z-r4E" id="mor-p8-mOp">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HackInPoa" translatesAutoresizingMaskIntoConstraints="NO" id="1LY-p6-BJf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="309"/>
+                                                    <rect key="contentStretch" x="0.0" y="1.3877787807814457e-17" width="1" height="1"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1LY-p6-BJf" firstAttribute="leading" secondItem="mor-p8-mOp" secondAttribute="leading" id="QPs-Hv-yqF"/>
+                                                <constraint firstAttribute="bottom" secondItem="1LY-p6-BJf" secondAttribute="bottom" id="Xzd-Ra-qBs"/>
+                                                <constraint firstItem="1LY-p6-BJf" firstAttribute="top" secondItem="mor-p8-mOp" secondAttribute="top" id="lxb-zf-jc2"/>
+                                                <constraint firstAttribute="trailing" secondItem="1LY-p6-BJf" secondAttribute="trailing" id="yRb-ha-A1K"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Experiência" id="9qV-vg-NpW">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="225" id="Dui-2R-jqZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="546" id="Dui-2R-jqZ">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dui-2R-jqZ" id="6Fl-Hw-f47">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-eh-eKr">
-                                                    <rect key="frame" x="8" y="8" width="584" height="41"/>
-                                                    <string key="text">sfsafasfsafa sfsafasfsafasfsafasfsafa sfsafasfsafa sfsafasfsafasfsafasfsafa sfsafasfsafa sfsafasfsafasfsafasfsafa sfsafasfsafa sfsafasfsafasfsafasfsafa </string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como foi feito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-EU-mmg">
+                                                    <rect key="frame" x="8" y="8" width="584" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-pJ-ckU">
+                                                    <rect key="frame" x="8" y="37" width="584" height="94"/>
+                                                    <string key="text">O Ruim de Roda é um aplicativo que foi criado em 24 horas no Hack in Poa, um evento organizado pela Globo.com em Porto Alegre/RS. O aplicativo foi destaque entre os organizadores do evento, devido ao seu amplo alcance tecnológico e social, podendo concorrer em qualquer uma das categorias disponíveis: web apps, mobile apps e cidadania.</string>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para que serve" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2B-ho-Ee1">
+                                                    <rect key="frame" x="8" y="139" width="584" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-10-c0A">
+                                                    <rect key="frame" x="8" y="168" width="584" height="206"/>
+                                                    <mutableString key="text">O Ruim de Roda serve para denunciarmos os maus motoristas de nossa cidade. Com ele, é possível tirar uma foto da infração que o motorista está cometendo e compartilhar com as outras pessoas que usam o aplicativo. A denúncia é totalmente anônima e nenhum dado de contato é armazenado em nosso banco de dados. O motorista que utiliza o app, por sua vez, será notificado instantaneamente assim que uma denúncia for feita.
+
+A ideia é conscientizar os motoristas de que o trânsito não é feito apenas de veículos e que outras pessoas têm o mesmo direito de transitar pelas ruas da cidade. Não devemos fazer o certo apenas quando algum fiscal está próximo. Se todos colaborarmos, faremos do trânsito um lugar muito melhor.</mutableString>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como surgiu a ideia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSV-ir-gSQ">
+                                                    <rect key="frame" x="8" y="382" width="584" height="22"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHa-Qu-D2D">
+                                                    <rect key="frame" x="8" y="411" width="584" height="112"/>
+                                                    <string key="text">Diariamente acompanhamos a rotina da mobilidade urbana de nossas cidades. Sabemos o quanto é comum encontrarmos motoristas imprudentes que estacionam em locais proibidos, em vagas para deficientes físicos, dentre diversas outras infrações. Sabemos também que não há fiscais de trânsito que comportem a quantidade de infrações em nossas cidades e esse foi o principal motivo de criarmos o Ruim de Roda.</string>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="EIV-eh-eKr" firstAttribute="top" secondItem="6Fl-Hw-f47" secondAttribute="topMargin" id="eoV-uy-fWF"/>
-                                                <constraint firstItem="EIV-eh-eKr" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="i4a-04-tz3"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="EIV-eh-eKr" secondAttribute="trailing" id="pQu-v5-c9V"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OHa-Qu-D2D" secondAttribute="bottom" constant="14" id="2Wf-xL-NnU"/>
+                                                <constraint firstItem="J2B-ho-Ee1" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="8Um-wq-bSo"/>
+                                                <constraint firstItem="J2B-ho-Ee1" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="8Zg-Mp-xQv"/>
+                                                <constraint firstItem="DKn-pJ-ckU" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="9Le-ZS-tm6"/>
+                                                <constraint firstItem="OHa-Qu-D2D" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="AIP-aG-Iqg"/>
+                                                <constraint firstItem="OHa-Qu-D2D" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="ISk-47-9kp"/>
+                                                <constraint firstItem="lSV-ir-gSQ" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="Sgf-B5-BSY"/>
+                                                <constraint firstItem="hTe-EU-mmg" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="UOv-M4-hEC"/>
+                                                <constraint firstItem="lSV-ir-gSQ" firstAttribute="top" secondItem="Nem-10-c0A" secondAttribute="bottom" constant="8" id="Z8U-E6-f4e"/>
+                                                <constraint firstItem="lSV-ir-gSQ" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="agd-Mf-xki"/>
+                                                <constraint firstItem="J2B-ho-Ee1" firstAttribute="top" secondItem="DKn-pJ-ckU" secondAttribute="bottom" constant="8" id="ajh-vH-OoO"/>
+                                                <constraint firstItem="DKn-pJ-ckU" firstAttribute="top" secondItem="6Fl-Hw-f47" secondAttribute="topMargin" constant="29" id="caY-xr-Kj1"/>
+                                                <constraint firstItem="hTe-EU-mmg" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="fWt-Xb-pwC"/>
+                                                <constraint firstItem="DKn-pJ-ckU" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="hN4-oB-QfY"/>
+                                                <constraint firstItem="hTe-EU-mmg" firstAttribute="top" secondItem="6Fl-Hw-f47" secondAttribute="topMargin" id="nIz-TB-mf6"/>
+                                                <constraint firstItem="Nem-10-c0A" firstAttribute="leading" secondItem="6Fl-Hw-f47" secondAttribute="leadingMargin" id="sOc-VR-84B"/>
+                                                <constraint firstItem="Nem-10-c0A" firstAttribute="top" secondItem="J2B-ho-Ee1" secondAttribute="bottom" constant="7" id="sZJ-dW-0yt"/>
+                                                <constraint firstItem="Nem-10-c0A" firstAttribute="trailing" secondItem="6Fl-Hw-f47" secondAttribute="trailingMargin" id="sf4-rP-dfA"/>
+                                                <constraint firstItem="OHa-Qu-D2D" firstAttribute="top" secondItem="lSV-ir-gSQ" secondAttribute="bottom" constant="7" id="zXq-mt-fwf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1010,10 +1072,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Como foi feito" id="Zdv-YM-cF8"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1400"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6O-MC-z9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="3454"/>
+            <point key="canvasLocation" x="1049" y="5712"/>
         </scene>
         <!--Desenvolvedores-->
         <scene sceneID="Hjr-bS-AUl">
@@ -1429,6 +1493,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HackInPoa" width="1024" height="768"/>
         <image name="config" width="44" height="45"/>
         <image name="home" width="46" height="45"/>
         <image name="image-icon" width="128" height="128"/>

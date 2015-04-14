@@ -66,6 +66,7 @@
 		C5A0A8D21AD96B0900864136 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D11AD96B0900864136 /* FeedViewController.m */; };
 		C5A0A8D51AD96B3000864136 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D41AD96B3000864136 /* DetailViewController.m */; };
 		C5A0A8D81AD96D8500864136 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A0A8D71AD96D8500864136 /* Report.m */; };
+		C5B253951ADD41A1001019B5 /* VideoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B253941ADD41A1001019B5 /* VideoTableViewController.m */; };
 		C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658C1ADA0E77000B419D /* MapAnnotation.m */; };
 		C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658F1ADA3F22000B419D /* TabBarViewController.m */; };
 		C5B665931ADA415A000B419D /* PushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B665921ADA415A000B419D /* PushNotifications.m */; };
@@ -184,6 +185,8 @@
 		C5A0A8D41AD96B3000864136 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C5A0A8D61AD96D8500864136 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
 		C5A0A8D71AD96D8500864136 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		C5B253931ADD41A1001019B5 /* VideoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewController.h; sourceTree = "<group>"; };
+		C5B253941ADD41A1001019B5 /* VideoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewController.m; sourceTree = "<group>"; };
 		C5B6658B1ADA0E77000B419D /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		C5B6658C1ADA0E77000B419D /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		C5B6658E1ADA3F22000B419D /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */,
 				BF0DE47B1ADBFCC1007E5C4A /* AboutTableViewController.h */,
 				BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */,
+				C5B253931ADD41A1001019B5 /* VideoTableViewController.h */,
+				C5B253941ADD41A1001019B5 /* VideoTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -575,6 +580,7 @@
 				C53F71901AD9B7BD0050FFD3 /* SDImageCache.m in Sources */,
 				C5B665931ADA415A000B419D /* PushNotifications.m in Sources */,
 				C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */,
+				C5B253951ADD41A1001019B5 /* VideoTableViewController.m in Sources */,
 				BF25ACE71ADA300700E821E3 /* NewPlateTableViewController.m in Sources */,
 				C53F71971AD9B7BD0050FFD3 /* UIButton+WebCache.m in Sources */,
 				C53F718F1AD9B7BD0050FFD3 /* NSData+ImageContentType.m in Sources */,
@@ -700,16 +706,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/HenriqueVelloso/Downloads/parse-library-1-2",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "401f8ef5-b1ca-44df-a3b8-5bf2644a9aec";
 			};
 			name = Debug;
 		};
@@ -717,16 +724,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/HenriqueVelloso/Downloads/parse-library-1-2",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Ruim de Roda/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "401f8ef5-b1ca-44df-a3b8-5bf2644a9aec";
 			};
 			name = Release;
 		};
