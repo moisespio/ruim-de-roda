@@ -25,6 +25,8 @@
 		BF25ACE11ADA263000E821E3 /* PlateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACE01ADA263000E821E3 /* PlateManager.m */; };
 		BF25ACE71ADA300700E821E3 /* NewPlateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */; };
 		BF5F7BEB1ADE8B39008E2E68 /* Inappropriate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5F7BEA1ADE8B39008E2E68 /* Inappropriate.m */; };
+		BF5F7BEE1ADE91CA008E2E68 /* InappropriateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5F7BED1ADE91CA008E2E68 /* InappropriateViewController.m */; };
+		BF5F7BF11ADE91E0008E2E68 /* InappropriateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5F7BF01ADE91E0008E2E68 /* InappropriateTableViewCell.m */; };
 		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
 		BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414511AD96F3400D2D7BD /* CameraView.m */; };
 		BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414541AD98FDA00D2D7BD /* ReportViewController.m */; };
@@ -117,6 +119,10 @@
 		BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlateTableViewController.m; sourceTree = "<group>"; };
 		BF5F7BE91ADE8B39008E2E68 /* Inappropriate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inappropriate.h; sourceTree = "<group>"; };
 		BF5F7BEA1ADE8B39008E2E68 /* Inappropriate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inappropriate.m; sourceTree = "<group>"; };
+		BF5F7BEC1ADE91CA008E2E68 /* InappropriateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InappropriateViewController.h; sourceTree = "<group>"; };
+		BF5F7BED1ADE91CA008E2E68 /* InappropriateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InappropriateViewController.m; sourceTree = "<group>"; };
+		BF5F7BEF1ADE91DF008E2E68 /* InappropriateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InappropriateTableViewCell.h; sourceTree = "<group>"; };
+		BF5F7BF01ADE91E0008E2E68 /* InappropriateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InappropriateTableViewCell.m; sourceTree = "<group>"; };
 		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BFB414501AD96F3400D2D7BD /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
@@ -369,6 +375,10 @@
 				BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */,
 				C5B253931ADD41A1001019B5 /* VideoTableViewController.h */,
 				C5B253941ADD41A1001019B5 /* VideoTableViewController.m */,
+				BF5F7BEC1ADE91CA008E2E68 /* InappropriateViewController.h */,
+				BF5F7BED1ADE91CA008E2E68 /* InappropriateViewController.m */,
+				BF5F7BEF1ADE91DF008E2E68 /* InappropriateTableViewCell.h */,
+				BF5F7BF01ADE91E0008E2E68 /* InappropriateTableViewCell.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -575,6 +585,8 @@
 				80F9AFD81AD942D100DCE8E0 /* Ruim_de_Roda.xcdatamodeld in Sources */,
 				C53F71921AD9B7BD0050FFD3 /* SDWebImageDecoder.m in Sources */,
 				C53F71A41AD9B7C60050FFD3 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
+				BF5F7BF11ADE91E0008E2E68 /* InappropriateTableViewCell.m in Sources */,
+				BF5F7BEE1ADE91CA008E2E68 /* InappropriateViewController.m in Sources */,
 				C53F719C1AD9B7BD0050FFD3 /* UIView+WebCacheOperation.m in Sources */,
 				C53F71991AD9B7BD0050FFD3 /* UIImage+MultiFormat.m in Sources */,
 				C53F71941AD9B7BD0050FFD3 /* SDWebImageDownloaderOperation.m in Sources */,

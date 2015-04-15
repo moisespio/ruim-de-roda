@@ -13,7 +13,7 @@
 
 @interface Inappropriate : NSObject
 
-- (void)addInappropriateQuery:(NSString *)optionID toReportId:(NSString *)reportID;
+- (void)addInappropriateQuery:(NSString *)optionID toReportId:(NSString *)reportID response:(void (^)(BOOL succeeded, NSError *error))response;
 - (void)requestInappropriate:(void (^)(NSArray *allReports, NSError *error))response;
 
 @property (strong, nonatomic) PFObject *pfObject;

@@ -56,6 +56,9 @@
                                                             <state key="normal" image="more">
                                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="optionButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aWs-RX-zKs"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado na faixa de segurança" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-5e-zkf">
                                                             <rect key="frame" x="10" y="8" width="492" height="21"/>
@@ -268,11 +271,12 @@
                         <outlet property="tableView" destination="Tdl-nT-wNj" id="0we-VN-ebb"/>
                         <segue destination="LgT-Na-JBU" kind="show" identifier="segueDetail" id="Eiu-OM-Qcd"/>
                         <segue destination="Jo3-J0-k0l" kind="show" identifier="configSegue" id="Hsk-MX-SiU"/>
+                        <segue destination="k7Y-1i-rxM" kind="show" identifier="inappropriateSegue" id="33E-WJ-Hci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="1132"/>
+            <point key="canvasLocation" x="1797" y="2292"/>
         </scene>
         <!--Denuncie-->
         <scene sceneID="Cax-ph-iBH">
@@ -533,7 +537,7 @@
             </objects>
             <point key="canvasLocation" x="3295" y="95"/>
         </scene>
-        <!--Detail-->
+        <!--Denúncia-->
         <scene sceneID="bYX-Tq-1Oa">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="LgT-Na-JBU" customClass="DetailViewController" sceneMemberID="viewController">
@@ -630,6 +634,9 @@
                                                 <state key="normal" image="more">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="reportOption:" destination="LgT-Na-JBU" eventType="touchUpInside" id="DDv-zu-Jm6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -702,7 +709,7 @@
                             <constraint firstItem="JrA-n6-uRY" firstAttribute="leading" secondItem="SCU-lC-IJh" secondAttribute="leading" id="cNx-Oy-x9X"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="8dI-bF-g5y"/>
+                    <navigationItem key="navigationItem" title="Denúncia" id="8dI-bF-g5y"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1300"/>
                     <connections>
@@ -713,6 +720,7 @@
                         <outlet property="lblHour" destination="0qK-EC-TTl" id="xaW-ud-aNR"/>
                         <outlet property="lblPlate" destination="wsc-Yu-pqt" id="PHj-BL-vjm"/>
                         <outlet property="map" destination="YVu-us-AgL" id="7X9-52-vbJ"/>
+                        <segue destination="k7Y-1i-rxM" kind="show" identifier="detailInappropriated" id="IO1-HF-3KV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hD-6W-fWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -891,7 +899,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apZ-hy-dqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="1132"/>
+            <point key="canvasLocation" x="1034" y="1948"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GMg-tR-OU2">
@@ -915,7 +923,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uf4-1i-UT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="2681"/>
+            <point key="canvasLocation" x="1041" y="3059"/>
         </scene>
         <!--Opções-->
         <scene sceneID="TlP-5q-1Ye">
@@ -995,7 +1003,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IPr-0D-tQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="2681"/>
+            <point key="canvasLocation" x="1802" y="3357"/>
         </scene>
         <!--Como foi feito-->
         <scene sceneID="Iup-9c-Xoc">
@@ -1114,7 +1122,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6O-MC-z9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="5712"/>
+            <point key="canvasLocation" x="1034" y="4339"/>
         </scene>
         <!--Desenvolvedores-->
         <scene sceneID="Hjr-bS-AUl">
@@ -1223,7 +1231,79 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNt-Lp-33K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="3457"/>
+            <point key="canvasLocation" x="1802" y="4133"/>
+        </scene>
+        <!--Reportar abuso-->
+        <scene sceneID="RAn-rd-z27">
+            <objects>
+                <viewController id="k7Y-1i-rxM" customClass="InappropriateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b7x-DD-9J1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Plk-75-ocz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="osU-JO-OvV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ocz-EC-AP2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inappropriateCell" rowHeight="50" id="RLy-Vk-1LX" customClass="InappropriateTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RLy-Vk-1LX" id="Ykx-4P-ccd">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-7n-LVT">
+                                                    <rect key="frame" x="8" y="16" width="584" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iqf-7n-LVT" firstAttribute="leading" secondItem="Ykx-4P-ccd" secondAttribute="leading" constant="8" id="8BU-yo-zUz"/>
+                                                <constraint firstAttribute="centerY" secondItem="iqf-7n-LVT" secondAttribute="centerY" id="dVt-fu-zF2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iqf-7n-LVT" secondAttribute="trailing" id="vIS-jA-3Nb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="inappropriateText" destination="iqf-7n-LVT" id="pdh-K1-i6G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="k7Y-1i-rxM" id="TtI-mX-xmE"/>
+                                    <outlet property="delegate" destination="k7Y-1i-rxM" id="6gp-t4-OV4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ocz-EC-AP2" firstAttribute="leading" secondItem="osU-JO-OvV" secondAttribute="leading" id="f9c-2A-7ug"/>
+                            <constraint firstItem="Plk-75-ocz" firstAttribute="top" secondItem="Ocz-EC-AP2" secondAttribute="bottom" id="k4Y-MZ-03a"/>
+                            <constraint firstAttribute="trailing" secondItem="Ocz-EC-AP2" secondAttribute="trailing" id="r0S-jh-cCr"/>
+                            <constraint firstItem="Ocz-EC-AP2" firstAttribute="top" secondItem="osU-JO-OvV" secondAttribute="top" id="vJu-hq-pSG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reportar abuso" id="ypA-Fn-NAY">
+                        <barButtonItem key="leftBarButtonItem" title="Cancelar" id="1N6-UG-eUa">
+                            <connections>
+                                <segue destination="Y4J-VW-QfN" kind="unwind" identifier="segueBackFeed" unwindAction="backInappropriate:" id="Nt9-Lc-7ag"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ocz-EC-AP2" id="BTv-OB-A1C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfR-zj-SD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Y4J-VW-QfN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2562" y="2599"/>
         </scene>
         <!--Placas-->
         <scene sceneID="MDe-fl-Qzh">
@@ -1292,7 +1372,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q3K-5b-nJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="2681"/>
+            <point key="canvasLocation" x="2552" y="3357"/>
         </scene>
         <!--Adicionar Placa-->
         <scene sceneID="gm6-n1-6P4">
@@ -1359,7 +1439,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4i-oz-4Z0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="d3V-px-Yif" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="3457"/>
+            <point key="canvasLocation" x="2552" y="4133"/>
         </scene>
         <!--Busca-->
         <scene sceneID="xV4-xs-AK4">
@@ -1480,7 +1560,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaC-a1-mGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="1924"/>
+            <point key="canvasLocation" x="1797" y="1160"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KBE-Wy-9CK">
@@ -1505,7 +1585,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgb-2j-H9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="1924"/>
+            <point key="canvasLocation" x="1034" y="1150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6XL-oX-3vQ">
@@ -1540,5 +1620,6 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Eiu-OM-Qcd"/>
+        <segue reference="IO1-HF-3KV"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,15 +10,16 @@
 
 @implementation Inappropriate
 
-- (void)addInappropriateQuery:(NSString *)optionID toReportId:(NSString *)reportID {
+- (void)addInappropriateQuery:(NSString *)optionID toReportId:(NSString *)reportID response:(void (^)(BOOL succeeded, NSError *error))response {
     PFObject *reportObject = [PFObject objectWithClassName:@"Inappropriate"];
     [reportObject setObject:[PFObject objectWithoutDataWithClassName:@"Report" objectId:reportID] forKey:@"report"];
     [reportObject setObject:[PFObject objectWithoutDataWithClassName:@"Inappropriate_option" objectId:optionID] forKey:@"option"];
-//    [reportObject setObject:[PFObject objectWithoutDataWithClassName:@"User" objectId:userId] forKey:@"user"];
 
     [reportObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            NSLog(@"foi");
+            response(YES, nil);
+        } else {
+            response(NO, error);
         }
     }];
 }

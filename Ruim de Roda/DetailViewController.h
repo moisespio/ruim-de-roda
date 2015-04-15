@@ -24,7 +24,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet MKMapView *map;
 @property (strong, nonatomic) NSMutableArray *locations;
 
-
 @property (strong, nonatomic) Report* report;
 
 @end

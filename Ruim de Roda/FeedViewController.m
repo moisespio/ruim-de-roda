@@ -16,9 +16,11 @@
 #import "UserManager.h"
 #import "TabBarViewController.h"
 #import "Reachability.h"
+#import "InappropriateViewController.h"
 
-@interface FeedViewController () {
+@interface FeedViewController () <UIActionSheetDelegate> {
     Reachability *internetReachableFoo;
+    NSString *reportSelected;
 }
 
 @end
@@ -31,7 +33,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testInternetConnection];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     
@@ -114,7 +115,6 @@
         dispatch_async(dispatch_get_main_queue(), ^{
 //            weakSelf.tableView.hidden = NO;
 //            weakSelf.internetAlert.hidden = YES;
-            NSLog(@"tem internet");
         });
     };
     
@@ -125,11 +125,16 @@
 //            [weakSelf.tableView setHidden:NO];
 //            weakSelf.tableView.hidden = YES;
 //            weakSelf.internetAlert.hidden = NO;
-            NSLog(@"nao tem internet");
+            [weakSelf alertWithTitle:@"Ops!" message:@"Você não esta conectado na internet."];
         });
     };
 
     [internetReachableFoo startNotifier];
+}
+
+- (void)alertWithTitle:(NSString *)_alertTitle message:(NSString *)_alertMessage {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:_alertTitle message:_alertMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 - (void)loadData:(UIRefreshControl *)refreshControl {
@@ -200,7 +205,8 @@
 
     [self.tableView reloadData];
 }
-
+- (IBAction)backInappropriate:(UIStoryboardSegue *)sender {
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Report *report = [_arrayReports objectAtIndex:indexPath.row];
@@ -212,10 +218,32 @@
     [self performSegueWithIdentifier:@"configSegue" sender:self];
 }
 
+- (IBAction)optionButton:(id)sender {
+    CGPoint switchPositionPoint = [sender convertPoint:CGPointZero toView:[self tableView]];
+    NSIndexPath *indexPath = [[self tableView] indexPathForRowAtPoint:switchPositionPoint];
+    
+    Report *report = [_arrayReports objectAtIndex:indexPath.row];
+    reportSelected = report.objectId;
+
+    UIActionSheet *actionButtonActionSheet = [[UIActionSheet alloc] initWithTitle:nil
+                                                                        delegate:self
+                                                               cancelButtonTitle:@"Cancelar"
+                                                          destructiveButtonTitle:nil
+                                                               otherButtonTitles:@"Reportar abuso", nil];
+    [actionButtonActionSheet showInView:self.view];
+}
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        [self performSegueWithIdentifier:@"inappropriateSegue" sender:nil];
+    }
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"segueDetail"]) {
         DetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.report = _selectedReport;
+    } else if ([segue.identifier isEqualToString:@"inappropriateSegue"]) {
+        InappropriateViewController *ivc = segue.destinationViewController;
+        ivc.reportID = reportSelected;
     }
 }
 
