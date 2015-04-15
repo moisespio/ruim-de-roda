@@ -48,7 +48,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA8-XL-MO5">
-                                                    <rect key="frame" x="80" y="16" width="512" height="265.5"/>
+                                                    <rect key="frame" x="80" y="16" width="512" height="266"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado na faixa de segurança" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-5e-zkf">
                                                             <rect key="frame" x="10" y="8" width="492" height="21"/>
@@ -60,7 +60,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXe-nM-sTj">
-                                                            <rect key="frame" x="10" y="239" width="60" height="16.5"/>
+                                                            <rect key="frame" x="10" y="239" width="60" height="17"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="hED-RW-Msb"/>
                                                             </constraints>
@@ -69,7 +69,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/04/2015" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLf-20-Vwz">
-                                                            <rect key="frame" x="10" y="220" width="57.5" height="19"/>
+                                                            <rect key="frame" x="10" y="220" width="58" height="19"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="216" id="R7l-Pk-unM"/>
                                                             </constraints>
@@ -103,7 +103,7 @@
                                                             </variation>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
-                                                            <rect key="frame" x="440" y="231" width="61.5" height="24.5"/>
+                                                            <rect key="frame" x="440" y="231" width="62" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="168" id="4S0-Xl-dmD"/>
                                                                 <constraint firstAttribute="height" constant="29" id="yma-6Q-1R5"/>
@@ -142,10 +142,10 @@
                                                     </variation>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1O-w3-G6d">
-                                                    <rect key="frame" x="0.0" y="8" width="80" height="273.5"/>
+                                                    <rect key="frame" x="0.0" y="8" width="80" height="274"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-Tu-XqF">
-                                                            <rect key="frame" x="38" y="-8" width="4" height="289.5"/>
+                                                            <rect key="frame" x="38" y="-8" width="4" height="290"/>
                                                             <color key="backgroundColor" red="0.80784313725490198" green="0.8666666666666667" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="4" id="lOQ-jM-Gvo"/>
