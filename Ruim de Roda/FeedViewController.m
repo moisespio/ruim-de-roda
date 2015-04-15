@@ -15,10 +15,11 @@
 #import "DetailViewController.h"
 #import "UserManager.h"
 #import "TabBarViewController.h"
+#import "Reachability.h"
 
-
-
-@interface FeedViewController ()
+@interface FeedViewController () {
+    Reachability *internetReachableFoo;
+}
 
 @end
 
@@ -28,9 +29,45 @@
     return YES;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self testInternetConnection];
+    
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
+    
+    self.tableView.separatorColor = [UIColor clearColor];
+    
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(loadData:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:refreshControl];
+    
+    UserManager *userManager = [[UserManager alloc] init];
+    
+    if (![userManager getUserDefaults]) {
+        [userManager createUser:^(NSString *objectID, NSError *error) {
+            if (!error) {
+                [userManager setUserDefaults:objectID];
+            }
+        }];
+    }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)appDidBecomeActive:(NSNotification *)notification {
+    [self loadByPushNotification];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self testInternetConnection];
+    [self loadData:nil];
+}
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:NO];
     [self becomeFirstResponder];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 
 -(void)viewWillDisappear:(BOOL)animated {
@@ -42,88 +79,63 @@
     [super viewDidDisappear:NO];
 }
 
--(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake )
-    {
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake ) {
         [self.tabBarController setSelectedIndex:1];
     }
 }
 
 - (void) loadByPushNotification {
-    
     TabBarViewController * tabBarController = (TabBarViewController*)self.tabBarController;
     
     if (tabBarController.report) {
-       
-        
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         DetailViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
         vc.report = tabBarController.report;
         [self.navigationController pushViewController:vc animated:YES];
-        
-        
        // [self.tableView reloadData];
        // tabBarController.report = nil;
     }
 }
 
-
--(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake )
-    {
-
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake ) {
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-   // [self loadByPushNotification];
+- (void)testInternetConnection {
+    __weak typeof(self) weakSelf = self;
 
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
+    internetReachableFoo = [Reachability reachabilityWithHostname:@"www.google.com"];
     
-    self.tableView.separatorColor = [UIColor clearColor];
+    // Internet is reachable
+    internetReachableFoo.reachableBlock = ^(Reachability*reach) {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+//            weakSelf.tableView.hidden = NO;
+//            weakSelf.internetAlert.hidden = YES;
+            NSLog(@"tem internet");
+        });
+    };
     
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(loadData:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:refreshControl];
-    
-    UserManager *userManager = [[UserManager alloc] init];
+    // Internet is not reachable
+    internetReachableFoo.unreachableBlock = ^(Reachability*reach) {
+        // Update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+//            [weakSelf.tableView setHidden:NO];
+//            weakSelf.tableView.hidden = YES;
+//            weakSelf.internetAlert.hidden = NO;
+            NSLog(@"nao tem internet");
+        });
+    };
 
-    if (![userManager getUserDefaults]) {
-        [userManager createUser:^(NSString *objectID, NSError *error) {
-            if (!error) {
-                [userManager setUserDefaults:objectID];
-            }
-        }];
-    }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-
-    
-    
-    
-}
-
-
-- (void)appDidBecomeActive:(NSNotification *)notification {
-    [self loadByPushNotification];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-    [self loadData:nil];
+    [internetReachableFoo startNotifier];
 }
 
 - (void)loadData:(UIRefreshControl *)refreshControl {
     ReportManager *reportManager = [[ReportManager alloc] init];
     [reportManager requestReports:^(NSArray *resultReports, NSError *error) {
-        
         if (resultReports) {
-            
             _arrayReports = [resultReports mutableCopy];
             [self performSelectorOnMainThread:@selector(updateTableView:) withObject:refreshControl waitUntilDone:NO];
         }
@@ -150,6 +162,9 @@
     
     cell.lblCategory.text = report.category.text;
     cell.lblPlate.text = report.plate;
+    cell.lblPlate.layer.cornerRadius = 3;
+    cell.lblPlate.clipsToBounds = YES;
+    
     cell.lblDate.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
     cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"hh:mm"];
     [cell.viewPostIcon setBackgroundColor:[UIColor colorWithRed:238.0/255.0 green:45.0/255.0 blue:100.0/255.0 alpha: 1]];
@@ -197,7 +212,6 @@
     [self performSegueWithIdentifier:@"configSegue" sender:self];
 }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"segueDetail"]) {
         DetailViewController *detailViewController = [segue destinationViewController];

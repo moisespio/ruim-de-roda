@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray* arrayReports;
 @property (strong, nonatomic) Report* selectedReport;
+@property (strong, nonatomic) IBOutlet UIView *internetAlert;
 
 @end

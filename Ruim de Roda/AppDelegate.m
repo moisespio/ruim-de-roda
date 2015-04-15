@@ -28,22 +28,17 @@
     [Parse setApplicationId:@"3qHKou3OidT4uEM7OCgBAEBuLGpjdREyihlMtMrZ"
                   clientKey:@"ZJitFcqHIx9HXHfAy3e5Wman0hSh1PKZlyUscfO3"];
     
-    
     // ---------------------------------------
     // --- Setup for Push Notifications
 
-        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
-                                                        UIUserNotificationTypeBadge |
-                                                        UIUserNotificationTypeSound);
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                                 categories:nil];
-        [application registerUserNotificationSettings:settings];
-        [application registerForRemoteNotifications];
-    
-
-    
-    
-    
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    [application registerUserNotificationSettings:settings];
+    [application registerForRemoteNotifications];
+ 
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
@@ -60,8 +55,7 @@
 - (void)handleRemoteNotification:(UIApplication *)application userInfo:(NSDictionary *)userInfo {
     
     TabBarViewController *tabBarController = (TabBarViewController*)self.window.rootViewController;
-    
-    
+
     if (application.applicationState == UIApplicationStateInactive) {
         // The application was just brought from the background to the foreground,
         // so we consider the app as having been "opened by a push notification."
@@ -82,30 +76,16 @@
                 else {
                     tabBarController.selectedIndex = 0;
                 }
-                
-                
-                
             }
         }];
-        
-        
-        
     }
     else {
-
     }
-    
-    
-    
-    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    
     [self handleRemoteNotification:application userInfo:userInfo];
-    
 }
-
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Store the deviceToken in the current Installation and save it to Parse.
@@ -186,7 +166,6 @@
     
     return _persistentStoreCoordinator;
 }
-
 
 - (NSManagedObjectContext *)managedObjectContext {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)

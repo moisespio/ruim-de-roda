@@ -218,10 +218,10 @@
     
     float actualWidth = image.size.width;
     
-    float ratio=300/actualWidth;
+    float ratio=640/actualWidth;
     actualHeight = actualHeight*ratio;
     
-    CGRect rect = CGRectMake(0.0, 0.0, 300, actualHeight);
+    CGRect rect = CGRectMake(0.0, 0.0, 640, actualHeight);
     // UIGraphicsBeginImageContext(rect.size);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
     [image drawInRect:rect];

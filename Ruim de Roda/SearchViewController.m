@@ -43,7 +43,8 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+
     [self loadData:nil];
 }
 - (void)loadData:(UIRefreshControl *)refreshControl {
@@ -90,12 +91,10 @@
 }
 
 -(void)searchBar:(UISearchBar*)searchBar textDidChange:(NSString*)text {
-    if(text.length < 7) {
+    if(text.length == 0) {
         isFiltered = FALSE;
-        self.tableView.hidden = YES;
     }
     else {
-        self.tableView.hidden = NO;
         isFiltered = true;
         searchReports = [[NSMutableArray alloc] init];
         for (int i = 0;i < [allReports count]; i++) {
@@ -142,7 +141,7 @@
     [self.searchBar resignFirstResponder];
 }
 
--(NSString*) formatDate: (NSDate*)date withFormat:(NSString*)format {
+-(NSString *)formatDate: (NSDate*)date withFormat:(NSString*)format {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:format];

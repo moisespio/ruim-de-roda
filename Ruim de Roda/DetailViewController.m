@@ -11,6 +11,7 @@
 #import "UIImageView+WebCache.h"
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lblAddress;
 
 @end
 
@@ -33,6 +34,9 @@
         
         _lblCategory.text = _report.category.text;
         _lblPlate.text = _report.plate;
+        _lblPlate.layer.cornerRadius = 3;
+        _lblPlate.clipsToBounds = YES;
+        _lblAddress.text = _report.address;
         _lblDate.text = [self formatDate:_report.createdAt withFormat:@"dd/MM/yyyy"];
         _lblHour.text = [self formatDate:_report.createdAt withFormat:@"hh:mm"];
         [_imgPhoto setImageWithURL:[NSURL URLWithString:_report.photo]  placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
