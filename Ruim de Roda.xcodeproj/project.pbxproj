@@ -24,6 +24,7 @@
 		BF25ACDE1ADA261500E821E3 /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACDD1ADA261500E821E3 /* Plate.m */; };
 		BF25ACE11ADA263000E821E3 /* PlateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACE01ADA263000E821E3 /* PlateManager.m */; };
 		BF25ACE71ADA300700E821E3 /* NewPlateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */; };
+		BF5F7BEB1ADE8B39008E2E68 /* Inappropriate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5F7BEA1ADE8B39008E2E68 /* Inappropriate.m */; };
 		BFB4144F1AD9692200D2D7BD /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4144E1AD9692200D2D7BD /* CameraViewController.m */; };
 		BFB414521AD96F3400D2D7BD /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414511AD96F3400D2D7BD /* CameraView.m */; };
 		BFB414551AD98FDA00D2D7BD /* ReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB414541AD98FDA00D2D7BD /* ReportViewController.m */; };
@@ -114,6 +115,8 @@
 		BF25ACE01ADA263000E821E3 /* PlateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateManager.m; sourceTree = "<group>"; };
 		BF25ACE51ADA300700E821E3 /* NewPlateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPlateTableViewController.h; sourceTree = "<group>"; };
 		BF25ACE61ADA300700E821E3 /* NewPlateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPlateTableViewController.m; sourceTree = "<group>"; };
+		BF5F7BE91ADE8B39008E2E68 /* Inappropriate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inappropriate.h; sourceTree = "<group>"; };
+		BF5F7BEA1ADE8B39008E2E68 /* Inappropriate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inappropriate.m; sourceTree = "<group>"; };
 		BFB4144D1AD9692200D2D7BD /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BFB4144E1AD9692200D2D7BD /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		BFB414501AD96F3400D2D7BD /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
@@ -312,6 +315,8 @@
 				C53F713D1AD9718A0050FFD3 /* CategoryReport.m */,
 				C53F71421AD972E10050FFD3 /* CategoryReportManager.h */,
 				C53F71431AD972E10050FFD3 /* CategoryReportManager.m */,
+				BF5F7BE91ADE8B39008E2E68 /* Inappropriate.h */,
+				BF5F7BEA1ADE8B39008E2E68 /* Inappropriate.m */,
 				C5B6658B1ADA0E77000B419D /* MapAnnotation.h */,
 				C5B6658C1ADA0E77000B419D /* MapAnnotation.m */,
 				C5B665911ADA4159000B419D /* PushNotifications.h */,
@@ -546,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5F7BEB1ADE8B39008E2E68 /* Inappropriate.m in Sources */,
 				C53F719A1AD9B7BD0050FFD3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				BFB4145A1AD9C54100D2D7BD /* CategoryTableViewCell.m in Sources */,
 				BF25ACDB1ADA157D00E821E3 /* UserManager.m in Sources */,
