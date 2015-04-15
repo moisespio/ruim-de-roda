@@ -26,7 +26,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Feed-->
+        <!--Denúncias-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="FeedViewController" sceneMemberID="viewController">
@@ -219,16 +219,36 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="VdZ-ef-9Py"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97v-VM-qGJ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sem conexão com a internet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OG9-tm-o5I">
+                                        <rect key="frame" x="190" y="233" width="221" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="OG9-tm-o5I" secondAttribute="centerY" id="1uf-d6-4Or"/>
+                                    <constraint firstAttribute="centerX" secondItem="OG9-tm-o5I" secondAttribute="centerX" id="wnX-8n-tX6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.89411764709999997" green="0.92549019610000005" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="97v-VM-qGJ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E9N-Yf-V0M"/>
                             <constraint firstAttribute="trailing" secondItem="Tdl-nT-wNj" secondAttribute="trailing" id="F30-m2-hLY"/>
+                            <constraint firstItem="97v-VM-qGJ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="N0o-Pt-jsU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="97v-VM-qGJ" secondAttribute="bottom" id="XWG-31-dqa"/>
                             <constraint firstAttribute="bottom" secondItem="Tdl-nT-wNj" secondAttribute="bottom" id="f5R-ly-haa"/>
                             <constraint firstItem="Tdl-nT-wNj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gPj-cE-ttb"/>
                             <constraint firstItem="Tdl-nT-wNj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="vhq-EI-8ag"/>
+                            <constraint firstAttribute="trailing" secondItem="97v-VM-qGJ" secondAttribute="trailing" id="y5e-e2-A6h"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Feed" id="HMD-fG-XXT">
+                    <navigationItem key="navigationItem" title="Denúncias" id="HMD-fG-XXT">
                         <barButtonItem key="rightBarButtonItem" image="config" id="uvg-WN-9Zv">
                             <connections>
                                 <action selector="goConfig:" destination="vXZ-lx-hvc" id="shs-2g-dpc"/>
@@ -236,6 +256,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="internetAlert" destination="kh9-bI-dsS" id="s4d-fi-S23"/>
                         <outlet property="tableView" destination="Tdl-nT-wNj" id="0we-VN-ebb"/>
                         <segue destination="LgT-Na-JBU" kind="show" identifier="segueDetail" id="Eiu-OM-Qcd"/>
                         <segue destination="Jo3-J0-k0l" kind="show" identifier="configSegue" id="Hsk-MX-SiU"/>
@@ -1019,9 +1040,9 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-10-c0A">
                                                     <rect key="frame" x="8" y="168" width="584" height="206"/>
-                                                    <mutableString key="text">O Ruim de Roda serve para denunciarmos os maus motoristas de nossa cidade. Com ele, é possível tirar uma foto da infração que o motorista está cometendo e compartilhar com as outras pessoas que usam o aplicativo. A denúncia é totalmente anônima e nenhum dado de contato é armazenado em nosso banco de dados. O motorista que utiliza o app, por sua vez, será notificado instantaneamente assim que uma denúncia for feita.
+                                                    <string key="text">O Ruim de Roda serve para denunciarmos os maus motoristas de nossa cidade. Com ele, é possível tirar uma foto da infração que o motorista está cometendo e compartilhar com as outras pessoas que usam o aplicativo. A denúncia é totalmente anônima e nenhum dado de contato é armazenado em nosso banco de dados. O motorista que utiliza o app, por sua vez, será notificado instantaneamente assim que uma denúncia for feita.
 
-A ideia é conscientizar os motoristas de que o trânsito não é feito apenas de veículos e que outras pessoas têm o mesmo direito de transitar pelas ruas da cidade. Não devemos fazer o certo apenas quando algum fiscal está próximo. Se todos colaborarmos, faremos do trânsito um lugar muito melhor.</mutableString>
+A ideia é conscientizar os motoristas de que o trânsito não é feito apenas de veículos e que outras pessoas têm o mesmo direito de transitar pelas ruas da cidade. Não devemos fazer o certo apenas quando algum fiscal está próximo. Se todos colaborarmos, faremos do trânsito um lugar muito melhor.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1501,6 +1522,6 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
         <image name="search" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Dc0-h5-fQm"/>
+        <segue reference="Eiu-OM-Qcd"/>
     </inferredMetricsTieBreakers>
 </document>

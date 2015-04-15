@@ -16,6 +16,7 @@
 		80F9AFE31AD942D100DCE8E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80F9AFE11AD942D100DCE8E0 /* LaunchScreen.xib */; };
 		80F9AFEF1AD942D100DCE8E0 /* Ruim_de_RodaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */; };
 		BF0DE47D1ADBFCC1007E5C4A /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */; };
+		BF0DE4831ADDE6C6007E5C4A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BF0DE4821ADDE6C6007E5C4A /* Reachability.m */; };
 		BF25ACD21ADA106700E821E3 /* PlateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */; };
 		BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD41ADA107B00E821E3 /* PlateViewController.m */; };
 		BF25ACD81ADA156A00E821E3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = BF25ACD71ADA156A00E821E3 /* User.m */; };
@@ -97,6 +98,8 @@
 		80F9AFEE1AD942D100DCE8E0 /* Ruim_de_RodaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ruim_de_RodaTests.m; sourceTree = "<group>"; };
 		BF0DE47B1ADBFCC1007E5C4A /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
 		BF0DE47C1ADBFCC1007E5C4A /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
+		BF0DE4811ADDE6C6007E5C4A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BF0DE4821ADDE6C6007E5C4A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		BF25ACD01ADA106700E821E3 /* PlateTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateTableViewCell.h; sourceTree = "<group>"; };
 		BF25ACD11ADA106700E821E3 /* PlateTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlateTableViewCell.m; sourceTree = "<group>"; };
 		BF25ACD31ADA107B00E821E3 /* PlateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlateViewController.h; sourceTree = "<group>"; };
@@ -230,7 +233,6 @@
 		80F9AFC31AD942D100DCE8E0 = {
 			isa = PBXGroup;
 			children = (
-				BFB414561AD997A600D2D7BD /* MapKit.framework */,
 				80F9AFCE1AD942D100DCE8E0 /* Ruim de Roda */,
 				80F9AFEB1AD942D100DCE8E0 /* Ruim de RodaTests */,
 				80F9AFCD1AD942D100DCE8E0 /* Products */,
@@ -292,6 +294,8 @@
 		BFB4144A1AD9686A00D2D7BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BF0DE4811ADDE6C6007E5C4A /* Reachability.h */,
+				BF0DE4821ADDE6C6007E5C4A /* Reachability.m */,
 				BF25ACD61ADA156A00E821E3 /* User.h */,
 				BF25ACD71ADA156A00E821E3 /* User.m */,
 				BF25ACD91ADA157D00E821E3 /* UserManager.h */,
@@ -371,6 +375,7 @@
 				C53F71711AD9B7BD0050FFD3 /* SDWebImage */,
 				C53F71631AD9A6980050FFD3 /* libsqlite3.dylib */,
 				C53F71611AD9A6910050FFD3 /* libz.dylib */,
+				BFB414561AD997A600D2D7BD /* MapKit.framework */,
 				C53F715F1AD9A68B0050FFD3 /* SystemConfiguration.framework */,
 				C53F715D1AD9A6830050FFD3 /* StoreKit.framework */,
 				C53F715B1AD9A6800050FFD3 /* Security.framework */,
@@ -575,6 +580,7 @@
 				BF0DE47D1ADBFCC1007E5C4A /* AboutTableViewController.m in Sources */,
 				C53F71411AD972CA0050FFD3 /* ReportManager.m in Sources */,
 				BF25ACD51ADA107B00E821E3 /* PlateViewController.m in Sources */,
+				BF0DE4831ADDE6C6007E5C4A /* Reachability.m in Sources */,
 				C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */,
 				80F9AFD21AD942D100DCE8E0 /* main.m in Sources */,
 				C53F71901AD9B7BD0050FFD3 /* SDImageCache.m in Sources */,
@@ -716,7 +722,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "401f8ef5-b1ca-44df-a3b8-5bf2644a9aec";
+				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
 			};
 			name = Debug;
 		};
@@ -734,7 +740,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "401f8ef5-b1ca-44df-a3b8-5bf2644a9aec";
+				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
 			};
 			name = Release;
 		};
