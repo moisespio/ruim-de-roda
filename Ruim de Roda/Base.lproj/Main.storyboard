@@ -51,6 +51,12 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xA8-XL-MO5">
                                                     <rect key="frame" x="80" y="16" width="512" height="266"/>
                                                     <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwR-Qp-PHC">
+                                                            <rect key="frame" x="456" y="8" width="48" height="48"/>
+                                                            <state key="normal" image="more">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parado na faixa de segurança" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGE-5e-zkf">
                                                             <rect key="frame" x="10" y="8" width="492" height="21"/>
                                                             <constraints>
@@ -103,8 +109,9 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
-                                                            <rect key="frame" x="440" y="231" width="62" height="25"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
+                                                            <rect key="frame" x="412" y="226" width="90" height="30"/>
+                                                            <color key="backgroundColor" red="0.61176470588235299" green="0.6588235294117647" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="168" id="4S0-Xl-dmD"/>
                                                                 <constraint firstAttribute="height" constant="30" id="ms4-Nb-uTD"/>
@@ -124,6 +131,7 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstItem="kwR-Qp-PHC" firstAttribute="top" secondItem="xA8-XL-MO5" secondAttribute="top" constant="8" id="2Jv-UM-aLw"/>
                                                         <constraint firstItem="tLf-20-Vwz" firstAttribute="leading" secondItem="xA8-XL-MO5" secondAttribute="leading" constant="10" id="ECq-hK-Aef"/>
                                                         <constraint firstAttribute="bottom" secondItem="0xg-ny-cgf" secondAttribute="bottom" constant="10" id="G5u-Lk-hdq"/>
                                                         <constraint firstAttribute="trailing" secondItem="TnS-kR-CMg" secondAttribute="trailing" constant="10" id="LBV-7J-n4t"/>
@@ -131,6 +139,7 @@
                                                         <constraint firstItem="XGE-5e-zkf" firstAttribute="top" secondItem="xA8-XL-MO5" secondAttribute="top" constant="8" id="Lrb-KO-h4A"/>
                                                         <constraint firstItem="TnS-kR-CMg" firstAttribute="leading" secondItem="xA8-XL-MO5" secondAttribute="leading" constant="10" id="QDl-D8-ok2"/>
                                                         <constraint firstAttribute="trailing" secondItem="XGE-5e-zkf" secondAttribute="trailing" constant="10" id="SyB-5K-GYh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kwR-Qp-PHC" secondAttribute="trailing" constant="8" id="Uz3-wU-PoV"/>
                                                         <constraint firstAttribute="trailing" secondItem="0xg-ny-cgf" secondAttribute="trailing" constant="10" id="exP-Tl-yHB"/>
                                                         <constraint firstItem="qXe-nM-sTj" firstAttribute="leading" secondItem="xA8-XL-MO5" secondAttribute="leading" constant="10" id="f6h-ZF-ShA"/>
                                                         <constraint firstItem="tLf-20-Vwz" firstAttribute="top" secondItem="TnS-kR-CMg" secondAttribute="bottom" constant="10" id="fzR-X0-Are"/>
@@ -616,6 +625,12 @@
                                                     </mask>
                                                 </variation>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRc-BI-cNa">
+                                                <rect key="frame" x="544" y="38" width="48" height="48"/>
+                                                <state key="normal" image="more">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -628,6 +643,8 @@
                                             <constraint firstAttribute="height" constant="80" id="fln-2W-dkk"/>
                                             <constraint firstItem="DQ3-DD-I13" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="top" constant="8" id="qGK-pm-5g7"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="rRp-V7-7Cd"/>
+                                            <constraint firstAttribute="trailing" secondItem="iRc-BI-cNa" secondAttribute="trailing" constant="8" id="tup-4d-WZz"/>
+                                            <constraint firstItem="T8K-JN-n3A" firstAttribute="centerY" secondItem="iRc-BI-cNa" secondAttribute="centerY" id="zCt-EN-dNS"/>
                                             <constraint firstItem="0qK-EC-TTl" firstAttribute="top" secondItem="DQ3-DD-I13" secondAttribute="bottom" id="zir-KY-Js3"/>
                                         </constraints>
                                     </view>
@@ -1517,6 +1534,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
         <image name="config" width="44" height="45"/>
         <image name="home" width="46" height="45"/>
         <image name="image-icon" width="128" height="128"/>
+        <image name="more" width="48" height="48"/>
         <image name="photo" width="45" height="38"/>
         <image name="search" width="45" height="45"/>
     </resources>
