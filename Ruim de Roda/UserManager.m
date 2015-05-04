@@ -11,9 +11,10 @@
 @implementation UserManager
 
 - (void)createUser:(void (^)(NSString *objectID, NSError *error))response {
-    [self requestNumReports:^(NSInteger numReports, NSError *error) {
+
+    //[self requestNumReports:^(NSInteger numReports, NSError *error) {
         PFUser *user = [PFUser user];
-        user.username = [NSString stringWithFormat:@"ruimderoda%ld", (long)numReports+1];
+        user.username =  [[NSUUID UUID] UUIDString]; //[NSString stringWithFormat:@"ruimderoda%ld", (long)numReports+1];
         user.password = @"123";
 
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -29,21 +30,21 @@
             response(user.objectId, error);
         }];
 
-    }];
+  //  }];
     
     }
 
 -(void)setUserDefaults:(NSString *)objectID {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
-    [userDefaults setObject:objectID forKey:@"objectID"];
+    [userDefaults setObject:objectID forKey:@"userObjectID"];
 
     [userDefaults synchronize];
 }
 
 - (NSString *)getUserDefaults {
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"objectID"]) {
-        return [[NSUserDefaults standardUserDefaults] objectForKey:@"objectID"];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userObjectID"]) {
+        return [[NSUserDefaults standardUserDefaults] objectForKey:@"userObjectID"];
     } else {
         return nil;
     }
