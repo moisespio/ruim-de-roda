@@ -21,6 +21,9 @@
     CLLocationManager *locationManager;
     CLGeocoder *geocoder;
     CLPlacemark *placemark;
+    
+    BOOL posting;
+    
     __weak IBOutlet UIScrollView *scrollView;
     __weak IBOutlet NSLayoutConstraint *topConstraint;
     __weak IBOutlet NSLayoutConstraint *bottomConstraint;
@@ -29,7 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    posting = NO;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -49,20 +52,20 @@
     if(IS_OS_8_OR_LATER) {
         [locationManager requestAlwaysAuthorization];
     }
-
+    
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     
     [locationManager startUpdatingLocation];
-
+    
     self.mapView.delegate = self;
-//    locationManager = [[CLLocationManager alloc] init];
-//    [locationManager setDelegate:self];
-//    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-//    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
-
+    //    locationManager = [[CLLocationManager alloc] init];
+    //    [locationManager setDelegate:self];
+    //    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    //    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
     [self.mapView setShowsUserLocation:NO];
-
+    
     // Override point for customization after application launch.
 }
 
@@ -123,24 +126,24 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-//    NSLog(@"didUpdateToLocation: %@", newLocation);
+    //    NSLog(@"didUpdateToLocation: %@", newLocation);
     CLLocation *currentLocation = newLocation;
     
     
     if (currentLocation != nil) {
         _latitude = [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.latitude];
         _longitude= [NSString stringWithFormat:@"%.8f", currentLocation.coordinate.longitude];
-
+        
     }
-
+    
     [locationManager stopUpdatingLocation];
-
+    
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
             self.addressLabel.text = [NSString stringWithFormat:@"%@, %@\n %@ - %@",
-                                 placemark.thoroughfare, placemark.subThoroughfare,
-                                 placemark.locality, placemark.administrativeArea];
+                                      placemark.thoroughfare, placemark.subThoroughfare,
+                                      placemark.locality, placemark.administrativeArea];
             
             MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(placemark.location.coordinate, 6*METERS_MILE, 6*METERS_MILE);
             [self.mapView setRegion:viewRegion animated: YES];
@@ -171,7 +174,7 @@
         mapRegion.center = mapView.userLocation.coordinate;
         mapRegion.span.latitudeDelta = 0.01;
         mapRegion.span.longitudeDelta = 0.01;
-
+        
         [mapView setRegion:mapRegion animated: YES];
     }
     
@@ -181,36 +184,43 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)sendReport:(id)sender {
-    if (self.plateText.text.length > 7) {
-        [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
-    } else if (!_categoryID) {
-        [self alertWithTitle:@"Ops!" message:@"Selecione uma categoria"];
-    } else {
-        Report *report = [[Report alloc] init];
-
-        _plate = self.plateText.text;
+    
+    if (!posting) {
         
-        report.plate = _plate;
-        report.address = _address;
-        report.latitude = _latitude;
-        report.longitude = _longitude;
-        
-        ReportManager *reportControl = [[ReportManager alloc] init];
-        
-        _imageCrop = _reportImage.image;
-        _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
-        
-        [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, Report *rep, NSError *error) {
-            if (success) {
-                PushNotifications *pushNotifications = [[PushNotifications alloc] init];
-
-                [pushNotifications sendPushNotificationsWithMessage:[NSString stringWithFormat:@"Você recebeu uma denuncia na placa: %@", report.plate] report:rep];
-
-                [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
-            } else {
-                [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
-            }
-        }];
+        if (self.plateText.text.length > 7) {
+            [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
+        } else if (!_categoryID) {
+            [self alertWithTitle:@"Ops!" message:@"Selecione uma categoria"];
+        } else {
+            
+            posting = YES;
+            Report *report = [[Report alloc] init];
+            
+            _plate = self.plateText.text;
+            
+            report.plate = _plate;
+            report.address = _address;
+            report.latitude = _latitude;
+            report.longitude = _longitude;
+            
+            ReportManager *reportControl = [[ReportManager alloc] init];
+            
+            _imageCrop = _reportImage.image;
+            _imageCrop = [self adjustImageSizeWhenCropping:_imageCrop];
+            
+            [reportControl postReport:report forCategory:_categoryID photoImage:_imageCrop response:^(BOOL success, Report *rep, NSError *error) {
+                if (success) {
+                    PushNotifications *pushNotifications = [[PushNotifications alloc] init];
+                    
+                    [pushNotifications sendPushNotificationsWithMessage:[NSString stringWithFormat:@"Você recebeu uma denuncia na placa: %@", report.plate] report:rep];
+                    
+                    [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
+                } else {
+                    [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
+                }
+                posting = NO;
+            }];
+        }
     }
 }
 -(UIImage *)adjustImageSizeWhenCropping:(UIImage *)image {
@@ -232,7 +242,7 @@
     return img;
 }
 - (void)successfulRequest {
-
+    
     [self dismissViewControllerAnimated:YES completion:^{
         
         TabBarViewController *tabBarController = (TabBarViewController*)self.sourceVC.tabBarController;
@@ -256,13 +266,13 @@
 - (IBAction)backCategory:(UIStoryboardSegue *)sender {
 }
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

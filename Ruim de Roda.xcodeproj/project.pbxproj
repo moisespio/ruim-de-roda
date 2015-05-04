@@ -48,7 +48,6 @@
 		C53F71581AD9A6760050FFD3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F71571AD9A6760050FFD3 /* MobileCoreServices.framework */; };
 		C53F715A1AD9A67B0050FFD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F71591AD9A67B0050FFD3 /* QuartzCore.framework */; };
 		C53F715C1AD9A6800050FFD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F715B1AD9A6800050FFD3 /* Security.framework */; };
-		C53F715E1AD9A6830050FFD3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F715D1AD9A6830050FFD3 /* StoreKit.framework */; };
 		C53F71601AD9A68B0050FFD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F715F1AD9A68B0050FFD3 /* SystemConfiguration.framework */; };
 		C53F71621AD9A6910050FFD3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F71611AD9A6910050FFD3 /* libz.dylib */; };
 		C53F71641AD9A6980050FFD3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F71631AD9A6980050FFD3 /* libsqlite3.dylib */; };
@@ -74,6 +73,7 @@
 		C5B6658D1ADA0E77000B419D /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658C1ADA0E77000B419D /* MapAnnotation.m */; };
 		C5B665901ADA3F22000B419D /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B6658F1ADA3F22000B419D /* TabBarViewController.m */; };
 		C5B665931ADA415A000B419D /* PushNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B665921ADA415A000B419D /* PushNotifications.m */; };
+		C5C346B51AF804DD00E0E355 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C346B41AF804DD00E0E355 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,7 +155,6 @@
 		C53F71571AD9A6760050FFD3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		C53F71591AD9A67B0050FFD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C53F715B1AD9A6800050FFD3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		C53F715D1AD9A6830050FFD3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C53F715F1AD9A68B0050FFD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C53F71611AD9A6910050FFD3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C53F71631AD9A6980050FFD3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -205,6 +204,8 @@
 		C5B6658F1ADA3F22000B419D /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		C5B665911ADA4159000B419D /* PushNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushNotifications.h; sourceTree = "<group>"; };
 		C5B665921ADA415A000B419D /* PushNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotifications.m; sourceTree = "<group>"; };
+		C5C346B31AF804DD00E0E355 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		C5C346B41AF804DD00E0E355 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +216,6 @@
 				C53F71641AD9A6980050FFD3 /* libsqlite3.dylib in Frameworks */,
 				C53F71621AD9A6910050FFD3 /* libz.dylib in Frameworks */,
 				C53F71601AD9A68B0050FFD3 /* SystemConfiguration.framework in Frameworks */,
-				C53F715E1AD9A6830050FFD3 /* StoreKit.framework in Frameworks */,
 				C53F715C1AD9A6800050FFD3 /* Security.framework in Frameworks */,
 				C53F715A1AD9A67B0050FFD3 /* QuartzCore.framework in Frameworks */,
 				C53F71581AD9A6760050FFD3 /* MobileCoreServices.framework in Frameworks */,
@@ -379,6 +379,8 @@
 				BF5F7BED1ADE91CA008E2E68 /* InappropriateViewController.m */,
 				BF5F7BEF1ADE91DF008E2E68 /* InappropriateTableViewCell.h */,
 				BF5F7BF01ADE91E0008E2E68 /* InappropriateTableViewCell.m */,
+				C5C346B31AF804DD00E0E355 /* MapViewController.h */,
+				C5C346B41AF804DD00E0E355 /* MapViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -392,7 +394,6 @@
 				C53F71611AD9A6910050FFD3 /* libz.dylib */,
 				BFB414561AD997A600D2D7BD /* MapKit.framework */,
 				C53F715F1AD9A68B0050FFD3 /* SystemConfiguration.framework */,
-				C53F715D1AD9A6830050FFD3 /* StoreKit.framework */,
 				C53F715B1AD9A6800050FFD3 /* Security.framework */,
 				C53F71591AD9A67B0050FFD3 /* QuartzCore.framework */,
 				C53F71571AD9A6760050FFD3 /* MobileCoreServices.framework */,
@@ -509,6 +510,11 @@
 					80F9AFCB1AD942D100DCE8E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = DNPZJLD62G;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					80F9AFE71AD942D100DCE8E0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -567,6 +573,7 @@
 				BF25ACDB1ADA157D00E821E3 /* UserManager.m in Sources */,
 				80F9AFD51AD942D100DCE8E0 /* AppDelegate.m in Sources */,
 				C53F719B1AD9B7BD0050FFD3 /* UIImageView+WebCache.m in Sources */,
+				C5C346B51AF804DD00E0E355 /* MapViewController.m in Sources */,
 				C5A0A8D81AD96D8500864136 /* Report.m in Sources */,
 				BFCB0A5F1AD9EB2F00E00A9F /* SearchTableViewCell.m in Sources */,
 				BFCB0A5C1AD9EA7A00E00A9F /* SearchViewController.m in Sources */,
@@ -734,7 +741,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -745,7 +752,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "967ccc2f-aaed-4d9a-b679-60bc6e869946";
 			};
 			name = Debug;
 		};
@@ -753,7 +760,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Henrique Velloso (DNPZJLD62G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Henrique Velloso (DNPZJLD62G)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -764,7 +771,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "395e13f9-ef76-4da4-94a6-3930f50336af";
+				PROVISIONING_PROFILE = "f55ae451-4b84-43a6-9f6d-bce8ddcb77af";
 			};
 			name = Release;
 		};

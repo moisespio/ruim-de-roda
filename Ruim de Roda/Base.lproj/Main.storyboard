@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -401,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMF-jg-uUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="95"/>
+            <point key="canvasLocation" x="3374" y="95"/>
         </scene>
         <!--Selecione a ocorrencia-->
         <scene sceneID="xdm-yg-awz">
@@ -466,7 +466,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wHT-R2-b5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5nD-fK-f8f" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3295" y="95"/>
+            <point key="canvasLocation" x="4107" y="95"/>
         </scene>
         <!--Denúncia-->
         <scene sceneID="bYX-Tq-1Oa">
@@ -492,15 +492,24 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
-                                        <rect key="frame" x="0.0" y="40" width="600" height="599"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
+                                        <rect key="frame" x="0.0" y="40" width="600" height="600"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="1:1" id="3LQ-H5-cLe"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="Y4f-VK-WWI"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ebs-Ba-zWe"/>
                                             <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="1:1" constant="1" id="tbk-Fq-hwj"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Y4f-VK-WWI"/>
+                                                <exclude reference="ebs-Ba-zWe"/>
+                                                <exclude reference="tbk-Fq-hwj"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
-                                        <rect key="frame" x="0.0" y="639" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="640" width="600" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-EC-TTl">
                                                 <rect key="frame" x="8" y="27" width="60" height="17"/>
@@ -587,7 +596,7 @@
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
-                                        <rect key="frame" x="0.0" y="719" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="720" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2tR-tr-bTA"/>
                                             <constraint firstAttribute="height" constant="150" id="n6N-nd-XFO"/>
@@ -603,7 +612,9 @@
                                     <constraint firstAttribute="centerX" secondItem="ys0-Vw-83t" secondAttribute="centerX" id="4EX-rs-XBV"/>
                                     <constraint firstAttribute="bottom" secondItem="YVu-us-AgL" secondAttribute="bottom" id="58C-bo-D3C"/>
                                     <constraint firstItem="GOq-W5-o64" firstAttribute="top" secondItem="JrA-n6-uRY" secondAttribute="top" constant="8" id="E7m-JY-SGg"/>
+                                    <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="width" id="EJz-qM-y4a"/>
                                     <constraint firstItem="GOq-W5-o64" firstAttribute="leading" secondItem="JrA-n6-uRY" secondAttribute="leading" constant="8" id="ELc-Ep-BRS"/>
+                                    <constraint firstItem="1W9-yG-vlQ" firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="width" id="H6O-Vx-KpT"/>
                                     <constraint firstItem="ys0-Vw-83t" firstAttribute="trailing" secondItem="JrA-n6-uRY" secondAttribute="trailingMargin" id="KO7-zE-XaS"/>
                                     <constraint firstAttribute="centerX" secondItem="1W9-yG-vlQ" secondAttribute="centerX" id="QQc-D6-akB"/>
                                     <constraint firstItem="YVu-us-AgL" firstAttribute="top" secondItem="1W9-yG-vlQ" secondAttribute="bottom" id="Sf4-On-u6l"/>
@@ -624,9 +635,11 @@
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="3bZ-pS-ES9"/>
+                                        <exclude reference="EJz-qM-y4a"/>
                                         <exclude reference="KO7-zE-XaS"/>
                                         <exclude reference="XIL-Mx-qfZ"/>
                                         <exclude reference="uwq-Rj-8p2"/>
+                                        <exclude reference="H6O-Vx-KpT"/>
                                         <exclude reference="xjo-9n-vSm"/>
                                     </mask>
                                 </variation>
@@ -637,8 +650,14 @@
                             <constraint firstAttribute="bottom" secondItem="JrA-n6-uRY" secondAttribute="bottom" id="81Y-ST-bIz"/>
                             <constraint firstAttribute="trailing" secondItem="JrA-n6-uRY" secondAttribute="trailing" id="LpU-tr-Sur"/>
                             <constraint firstItem="JrA-n6-uRY" firstAttribute="top" secondItem="SCU-lC-IJh" secondAttribute="top" id="Pj9-zH-Fks"/>
+                            <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="width" id="XIz-po-unl"/>
                             <constraint firstItem="JrA-n6-uRY" firstAttribute="leading" secondItem="SCU-lC-IJh" secondAttribute="leading" id="cNx-Oy-x9X"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XIz-po-unl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Denúncia" id="8dI-bF-g5y"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -656,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hD-6W-fWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2562" y="1482"/>
+            <point key="canvasLocation" x="3374" y="1482"/>
         </scene>
         <!--Camera-->
         <scene sceneID="iBk-Sg-BUx">
@@ -845,7 +864,43 @@
                 </tapGestureRecognizer>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qal-q9-gFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="-5"/>
+            <point key="canvasLocation" x="1846" y="-5"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="IO1-xy-2LK">
+            <objects>
+                <viewController id="JJr-w8-5uX" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RR2-qa-4Cj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWj-y6-scD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yAP-T6-rfS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8e-Pk-01K">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="JJr-w8-5uX" id="l2d-rW-HIa"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="q8e-Pk-01K" secondAttribute="trailing" constant="-16" id="ZyT-iy-cyd"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="q8e-Pk-01K" secondAttribute="bottom" id="jyo-Lz-Mak"/>
+                            <constraint firstItem="q8e-Pk-01K" firstAttribute="top" secondItem="yAP-T6-rfS" secondAttribute="topMargin" id="mNb-dT-6x7"/>
+                            <constraint firstItem="q8e-Pk-01K" firstAttribute="leading" secondItem="yAP-T6-rfS" secondAttribute="leadingMargin" constant="-16" id="wj0-iC-bSH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xHM-X8-5Ev"/>
+                    <connections>
+                        <outlet property="mapVIew" destination="q8e-Pk-01K" id="LPX-7l-I7S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mL-F9-kNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="523"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="md3-ZL-x0b">
@@ -861,12 +916,13 @@
                     <connections>
                         <segue destination="RgN-Zo-gUA" kind="relationship" relationship="viewControllers" id="rTh-cO-fbP"/>
                         <segue destination="Te9-Py-I6l" kind="relationship" relationship="viewControllers" id="Lv2-vT-Utv"/>
+                        <segue destination="4MN-oa-CyY" kind="relationship" relationship="viewControllers" id="brh-eS-KOd"/>
                         <segue destination="gxt-ZO-Xrs" kind="relationship" relationship="viewControllers" id="Xhv-s2-0Wd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cga-Xz-fOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="105" y="1540"/>
+            <point key="canvasLocation" x="91" y="1482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SGR-Ao-psg">
@@ -1552,7 +1608,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaC-a1-mGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="1160"/>
+            <point key="canvasLocation" x="2609" y="1160"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KBE-Wy-9CK">
@@ -1577,7 +1633,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgb-2j-H9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="1150"/>
+            <point key="canvasLocation" x="1846" y="1150"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6XL-oX-3vQ">
@@ -1598,11 +1654,33 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpV-cL-EHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797" y="-5"/>
+            <point key="canvasLocation" x="2609" y="-5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vdE-cY-HBh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4MN-oa-CyY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="MapIcon" id="vqS-G3-DKK">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ItD-5L-cZe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JJr-w8-5uX" kind="relationship" relationship="rootViewController" id="uLi-Yc-f09"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VeV-jl-P4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="523"/>
         </scene>
     </scenes>
     <resources>
         <image name="HackInPoa" width="1024" height="768"/>
+        <image name="MapIcon" width="45" height="45"/>
         <image name="config" width="44" height="45"/>
         <image name="home" width="46" height="45"/>
         <image name="more" width="48" height="48"/>
