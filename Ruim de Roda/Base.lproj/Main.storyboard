@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JUN-Sf-MrA">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -225,9 +225,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="twy-bq-h0A">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="twy-bq-h0A" secondAttribute="height" multiplier="3:4" id="0xR-C2-0pH"/>
+                                            <constraint firstAttribute="width" secondItem="twy-bq-h0A" secondAttribute="height" multiplier="1:1" id="0xR-C2-0pH"/>
                                             <constraint firstAttribute="height" constant="30" id="h6f-H3-qde"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="hXc-jA-kMU"/>
                                         </constraints>
@@ -238,14 +238,14 @@
                                         </variation>
                                     </imageView>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xbn-CN-bB8">
-                                        <rect key="frame" x="0.0" y="960" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="760" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="GQH-gC-22W"/>
                                             <constraint firstAttribute="height" constant="150" id="uED-an-LrV"/>
                                         </constraints>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yar-St-cF1">
-                                        <rect key="frame" x="0.0" y="800" width="600" height="160"/>
+                                        <rect key="frame" x="0.0" y="600" width="600" height="160"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione uma categoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="un5-OI-e0m">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -492,15 +492,15 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
-                                        <rect key="frame" x="0.0" y="40" width="600" height="798"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Vw-83t">
+                                        <rect key="frame" x="0.0" y="40" width="600" height="599"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="ebs-Ba-zWe"/>
-                                            <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="3:4" constant="1" id="tbk-Fq-hwj"/>
+                                            <constraint firstAttribute="width" secondItem="ys0-Vw-83t" secondAttribute="height" multiplier="1:1" constant="1" id="tbk-Fq-hwj"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1W9-yG-vlQ">
-                                        <rect key="frame" x="0.0" y="838" width="600" height="80"/>
+                                        <rect key="frame" x="0.0" y="639" width="600" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14:20" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qK-EC-TTl">
                                                 <rect key="frame" x="8" y="27" width="60" height="17"/>
@@ -587,7 +587,7 @@
                                         </constraints>
                                     </view>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
-                                        <rect key="frame" x="0.0" y="918" width="600" height="150"/>
+                                        <rect key="frame" x="0.0" y="719" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2tR-tr-bTA"/>
                                             <constraint firstAttribute="height" constant="150" id="n6N-nd-XFO"/>
@@ -714,23 +714,46 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="9ji-qE-u2c" secondAttribute="trailing" constant="30" id="aUC-hh-CVg"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZy-2z-UbZ">
+                                        <rect key="frame" x="0.0" y="44" width="600" height="600"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dZy-2z-UbZ" secondAttribute="height" multiplier="1:1" id="8c7-7v-gZp"/>
+                                            <constraint firstAttribute="width" secondItem="dZy-2z-UbZ" secondAttribute="height" multiplier="1:1" constant="1" id="Pte-pn-ti0"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Pte-pn-ti0"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dZy-2z-UbZ" secondAttribute="trailing" id="4Kr-DL-dge"/>
                                     <constraint firstAttribute="width" secondItem="hjx-07-taH" secondAttribute="height" multiplier="3:4" id="QNg-BJ-HH2"/>
+                                    <constraint firstItem="dZy-2z-UbZ" firstAttribute="leading" secondItem="hjx-07-taH" secondAttribute="leadingMargin" id="RGT-rv-lzF"/>
+                                    <constraint firstItem="dZy-2z-UbZ" firstAttribute="top" secondItem="Zbw-X3-j54" secondAttribute="bottom" id="dsH-uE-bOq"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="dZy-2z-UbZ" secondAttribute="trailing" id="fPN-Rw-K3w"/>
                                     <constraint firstAttribute="trailing" secondItem="Zbw-X3-j54" secondAttribute="trailing" id="gPL-IS-SKM"/>
                                     <constraint firstItem="Zbw-X3-j54" firstAttribute="leading" secondItem="hjx-07-taH" secondAttribute="leading" id="j4S-BW-XaF"/>
                                     <constraint firstItem="Zbw-X3-j54" firstAttribute="top" secondItem="hjx-07-taH" secondAttribute="top" id="mTF-kM-pCq"/>
+                                    <constraint firstItem="dZy-2z-UbZ" firstAttribute="leading" secondItem="hjx-07-taH" secondAttribute="leading" id="va0-og-QYo"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RGT-rv-lzF"/>
+                                        <exclude reference="fPN-Rw-K3w"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Ljb-p4-ahx" appends="YES" id="9vd-XS-Jpv"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-II-UNn">
-                                <rect key="frame" x="0.0" y="800" width="600" height="151"/>
+                                <rect key="frame" x="0.0" y="644" width="600" height="307"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJN-Hb-O69">
-                                        <rect key="frame" x="260" y="36" width="80" height="80"/>
+                                        <rect key="frame" x="260" y="114" width="80" height="80"/>
                                         <color key="backgroundColor" red="0.3333333731" green="0.84313720459999997" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="HBb-K2-7AW"/>
@@ -743,12 +766,42 @@
                                             <action selector="snapStillImage:" destination="Te9-Py-I6l" eventType="touchUpInside" id="BxP-Mp-nXx"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vOL-MC-iJJ">
+                                        <rect key="frame" x="21" y="128" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vOL-MC-iJJ" secondAttribute="height" multiplier="1:1" id="TID-B4-WIm"/>
+                                            <constraint firstAttribute="height" constant="50" id="UU8-Je-RQe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfm-Mc-z5H">
+                                        <rect key="frame" x="21" y="129" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6ZP-aS-iZc"/>
+                                            <constraint firstAttribute="width" secondItem="Jfm-Mc-z5H" secondAttribute="height" multiplier="1:1" id="MQ7-Gw-0XW"/>
+                                        </constraints>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="Te9-Py-I6l" eventType="touchUpInside" id="Bdw-1T-yUf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.32156862749999998" green="0.39607843139999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Jfm-Mc-z5H" firstAttribute="leading" secondItem="vOL-MC-iJJ" secondAttribute="leading" id="2Ym-uk-oSb"/>
+                                    <constraint firstItem="Jfm-Mc-z5H" firstAttribute="top" secondItem="vOL-MC-iJJ" secondAttribute="bottom" constant="-34" id="2k9-pR-lHZ"/>
+                                    <constraint firstItem="Jfm-Mc-z5H" firstAttribute="centerY" secondItem="vOL-MC-iJJ" secondAttribute="centerY" constant="1" id="7Sm-xC-eRP"/>
+                                    <constraint firstItem="wJN-Hb-O69" firstAttribute="centerY" secondItem="vOL-MC-iJJ" secondAttribute="centerY" constant="1" id="KgE-xC-5z8"/>
                                     <constraint firstAttribute="centerY" secondItem="wJN-Hb-O69" secondAttribute="centerY" id="MNR-rt-Zm0"/>
                                     <constraint firstAttribute="centerX" secondItem="wJN-Hb-O69" secondAttribute="centerX" id="MXl-H1-hfE"/>
+                                    <constraint firstItem="vOL-MC-iJJ" firstAttribute="leading" secondItem="VnS-II-UNn" secondAttribute="leading" constant="21" id="S0M-eZ-vd8"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2k9-pR-lHZ"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -756,11 +809,17 @@
                             <constraint firstItem="VnS-II-UNn" firstAttribute="leading" secondItem="45V-CT-k1d" secondAttribute="leading" id="4Ol-v0-9rS"/>
                             <constraint firstAttribute="trailing" secondItem="VnS-II-UNn" secondAttribute="trailing" id="Exn-2F-ft1"/>
                             <constraint firstItem="VnS-II-UNn" firstAttribute="top" secondItem="hjx-07-taH" secondAttribute="bottom" id="Otm-v1-PPl"/>
+                            <constraint firstItem="VnS-II-UNn" firstAttribute="top" secondItem="dZy-2z-UbZ" secondAttribute="bottom" id="PWD-53-PHa"/>
                             <constraint firstItem="hjx-07-taH" firstAttribute="top" secondItem="45V-CT-k1d" secondAttribute="top" id="bmd-3k-JxF"/>
                             <constraint firstItem="i1X-ke-Yc9" firstAttribute="top" secondItem="VnS-II-UNn" secondAttribute="bottom" id="gAT-qW-e39"/>
                             <constraint firstAttribute="trailing" secondItem="hjx-07-taH" secondAttribute="trailing" id="ngC-fh-PKh"/>
                             <constraint firstItem="hjx-07-taH" firstAttribute="leading" secondItem="45V-CT-k1d" secondAttribute="leading" id="sDC-5D-v2g"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Otm-v1-PPl"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="photo" id="SkE-ni-0NO">
                         <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
@@ -770,6 +829,8 @@
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
                         <outlet property="cameraButton" destination="9ji-qE-u2c" id="tHg-9t-hFf"/>
+                        <outlet property="cameraRoll" destination="Jfm-Mc-z5H" id="QD8-2h-iBx"/>
+                        <outlet property="cameraRollImage" destination="vOL-MC-iJJ" id="xvo-5u-tpj"/>
                         <outlet property="flashButton" destination="laH-7Z-2ax" id="4lP-vQ-7af"/>
                         <outlet property="previewLayer" destination="hjx-07-taH" id="wfc-Of-X8K"/>
                         <outlet property="previewView" destination="hjx-07-taH" id="ngv-gn-2tY"/>
@@ -943,7 +1004,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YAw-1H-7R2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Equipe" id="lUc-J6-dlH">
                                 <cells>
@@ -977,20 +1038,20 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como foi feito" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-EU-mmg">
                                                     <rect key="frame" x="8" y="8" width="584" height="22"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKn-pJ-ckU">
                                                     <rect key="frame" x="8" y="37" width="584" height="94"/>
                                                     <string key="text">O Ruim de Roda é um aplicativo que foi criado em 24 horas no Hack in Poa, um evento organizado pela Globo.com em Porto Alegre/RS. O aplicativo foi destaque entre os organizadores do evento, devido ao seu amplo alcance tecnológico e social, podendo concorrer em qualquer uma das categorias disponíveis: web apps, mobile apps e cidadania.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para que serve" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2B-ho-Ee1">
                                                     <rect key="frame" x="8" y="139" width="584" height="22"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-10-c0A">
@@ -999,20 +1060,20 @@
 
 A ideia é conscientizar os motoristas de que o trânsito não é feito apenas de veículos e que outras pessoas têm o mesmo direito de transitar pelas ruas da cidade. Não devemos fazer o certo apenas quando algum fiscal está próximo. Se todos colaborarmos, faremos do trânsito um lugar muito melhor.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Como surgiu a ideia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSV-ir-gSQ">
                                                     <rect key="frame" x="8" y="382" width="584" height="22"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHa-Qu-D2D">
                                                     <rect key="frame" x="8" y="411" width="584" height="112"/>
                                                     <string key="text">Diariamente acompanhamos a rotina da mobilidade urbana de nossas cidades. Sabemos o quanto é comum encontrarmos motoristas imprudentes que estacionam em locais proibidos, em vagas para deficientes físicos, dentre diversas outras infrações. Sabemos também que não há fiscais de trânsito que comportem a quantidade de infrações em nossas cidades e esse foi o principal motivo de criarmos o Ruim de Roda.</string>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1189,7 +1250,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqf-7n-LVT">
                                                     <rect key="frame" x="8" y="16" width="584" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1549,7 +1610,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
         <image name="search" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="33E-WJ-Hci"/>
         <segue reference="Eiu-OM-Qcd"/>
+        <segue reference="IO1-HF-3KV"/>
     </inferredMetricsTieBreakers>
 </document>

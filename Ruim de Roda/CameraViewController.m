@@ -23,6 +23,8 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 @property (nonatomic, weak) IBOutlet UIButton *cameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
 @property (weak, nonatomic) IBOutlet UIButton *flashButton;
+@property (weak, nonatomic) IBOutlet UIImageView *cameraRollImage;
+@property (weak, nonatomic) IBOutlet UIButton *cameraRoll;
 
 - (IBAction)changeCamera:(id)sender;
 - (IBAction)snapStillImage:(id)sender;
@@ -134,19 +136,16 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         AVCaptureDevice *audioDevice = [[AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio] firstObject];
         AVCaptureDeviceInput *audioDeviceInput = [AVCaptureDeviceInput deviceInputWithDevice:audioDevice error:&error];
         
-        if (error)
-        {
+        if (error) {
             NSLog(@"%@", error);
         }
         
-        if ([session canAddInput:audioDeviceInput])
-        {
+        if ([session canAddInput:audioDeviceInput]) {
             [session addInput:audioDeviceInput];
         }
         
         AVCaptureMovieFileOutput *movieFileOutput = [[AVCaptureMovieFileOutput alloc] init];
-        if ([session canAddOutput:movieFileOutput])
-        {
+        if ([session canAddOutput:movieFileOutput]) {
             [session addOutput:movieFileOutput];
             AVCaptureConnection *connection = [movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
             if ([connection isVideoStabilizationSupported])
@@ -155,13 +154,44 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
         }
         
         AVCaptureStillImageOutput *stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
-        if ([session canAddOutput:stillImageOutput])
-        {
+        if ([session canAddOutput:stillImageOutput]) {
             [stillImageOutput setOutputSettings:@{AVVideoCodecKey : AVVideoCodecJPEG}];
             [session addOutput:stillImageOutput];
             [self setStillImageOutput:stillImageOutput];
         }
     });
+    
+    ALAssetsLibrary *assetsLibrary = [[ALAssetsLibrary alloc] init];
+    
+    [assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
+        if (nil != group && group.numberOfAssets > 0) {
+            [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+            [group enumerateAssetsAtIndexes:[NSIndexSet indexSetWithIndex:group.numberOfAssets - 1] options:0 usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                if (nil != result) {
+                    ALAssetRepresentation *repr = [result defaultRepresentation];
+                    UIImage *img = [UIImage imageWithCGImage:[repr fullResolutionImage]];
+                    
+                    if (!img) {
+                        NSLog(@"faz nada");
+                    } else {
+                        [self.cameraRollImage setImage:img];
+                        
+                        self.cameraRollImage.layer.cornerRadius = 6;
+                        self.cameraRollImage.clipsToBounds = YES;
+                        
+                        self.cameraRoll.layer.cornerRadius = self.cameraRoll.frame.size.width / 2;
+                        self.cameraRoll.clipsToBounds = YES;
+                        
+                        *stop = YES;
+                    }
+                }
+            }];
+        }
+        
+        *stop = NO;
+    } failureBlock:^(NSError *error) {
+        NSLog(@"error: %@", error);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -356,8 +386,15 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
                                                     orientation:(_photoTaked.imageOrientation)];
                         break;
                     case AVCaptureDevicePositionFront:
+                        _photoTaked = [UIImage imageWithCGImage:_photoTaked.CGImage scale:_photoTaked.scale orientation:UIImageOrientationLeftMirrored];
+                        
                         break;
                 }
+                
+                CGFloat width = 500;
+                
+                _photoTaked = [self squareImageFromImage:_photoTaked scaledToSize:width];
+                _photoTaked = [self adjustImageSizeWhenCropping:_photoTaked];
                 
                 [self performSegueWithIdentifier:@"photoTaked" sender:sender];
             }
@@ -365,6 +402,68 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
     });
 }
 
+-(UIImage *)adjustImageSizeWhenCropping:(UIImage *)image {
+    float actualHeight = image.size.height;
+    
+    float actualWidth = image.size.width;
+    
+    float ratio=640/actualWidth;
+    actualHeight = actualHeight*ratio;
+    
+    CGRect rect = CGRectMake(0.0, 0.0, 640, actualHeight);
+    // UIGraphicsBeginImageContext(rect.size);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 1.0);
+    [image drawInRect:rect];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+- (UIImage *)squareImageFromImage:(UIImage *)image scaledToSize:(CGFloat)newSize {
+    CGAffineTransform scaleTransform;
+    CGPoint origin;
+    
+    if (image.size.width > image.size.height) {
+        CGFloat scaleRatio = newSize / image.size.height;
+        scaleTransform = CGAffineTransformMakeScale(scaleRatio, scaleRatio);
+        
+        origin = CGPointMake(-(image.size.width - image.size.height) / 2.0f, 0);
+    } else {
+        CGFloat scaleRatio = newSize / image.size.width;
+        scaleTransform = CGAffineTransformMakeScale(scaleRatio, scaleRatio);
+        
+//        NSLog(@"%f", image.size.width);
+        //        origin = CGPointMake(0, -(image.size.height - image.size.width) / 2.0f);
+        if (image.size.width == 1174) {
+//                        NSLog(@"camera de tras");
+            origin = CGPointMake(0, -204);
+        } else if(image.size.width == 968) { // iPhone 4 Camera
+            
+        } else {
+            origin = CGPointMake(0, -124);
+//                        NSLog(@"camera da frente");
+        }
+    }
+    
+    CGSize size = CGSizeMake(newSize, newSize);
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]) {
+        UIGraphicsBeginImageContextWithOptions(size, YES, 0);
+    } else {
+        UIGraphicsBeginImageContext(size);
+    }
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextConcatCTM(context, scaleTransform);
+    
+    [image drawAtPoint:origin];
+    
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer
 {
     CGPoint devicePoint = [(AVCaptureVideoPreviewLayer *)[[self previewView] layer] captureDevicePointOfInterestForPoint:[gestureRecognizer locationInView:[gestureRecognizer view]]];
@@ -526,10 +625,12 @@ static void * SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevic
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     _photoTaked = info[UIImagePickerControllerEditedImage];
-    [self performSegueWithIdentifier:@"photoTaked" sender:nil];
-    //    [self updateTableView];
-    
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    _photoTaked = [self adjustImageSizeWhenCropping:_photoTaked];
+
+//    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        [self performSegueWithIdentifier:@"photoTaked" sender:nil];
+    }];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
