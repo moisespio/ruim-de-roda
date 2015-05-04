@@ -171,7 +171,7 @@
     cell.lblPlate.clipsToBounds = YES;
     
     cell.lblDate.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
-    cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"hh:mm"];
+    cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"HH:mm"];
     [cell.viewPostIcon setBackgroundColor:[UIColor colorWithRed:238.0/255.0 green:45.0/255.0 blue:100.0/255.0 alpha: 1]];
     cell.viewPostIcon.layer.cornerRadius = cell.viewPostIcon.frame.size.width / 2;
     cell.viewPostIcon.clipsToBounds = YES;

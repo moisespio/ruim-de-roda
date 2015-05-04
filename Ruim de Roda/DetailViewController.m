@@ -34,7 +34,7 @@
         _lblPlate.clipsToBounds = YES;
         _lblAddress.text = _report.address;
         _lblDate.text = [self formatDate:_report.createdAt withFormat:@"dd/MM/yyyy"];
-        _lblHour.text = [self formatDate:_report.createdAt withFormat:@"hh:mm"];
+        _lblHour.text = [self formatDate:_report.createdAt withFormat:@"HH:mm"];
         [_imgPhoto setImageWithURL:[NSURL URLWithString:_report.photo]  placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
         
         MapAnnotation * pin = [[MapAnnotation alloc] init];
