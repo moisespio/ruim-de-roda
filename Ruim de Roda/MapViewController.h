@@ -10,6 +10,7 @@
 @import MapKit;
 
 @interface MapViewController : UIViewController <CLLocationManagerDelegate , MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityindicator;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapVIew;
 

@@ -24,6 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _activityindicator.hidesWhenStopped = true;
+    [_activityindicator stopAnimating];
+    
     _mapVIew.delegate = self;
     
         self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
@@ -41,6 +44,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)refreshMap:(id)sender {
+    
+    [self addPins];
+}
 
 -(void) locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     
@@ -78,11 +85,13 @@
 -(void) addPins {
     
     
-    
+    [_activityindicator startAnimating];
     
     ReportManager *reportManager = [[ReportManager alloc] init];
     [reportManager requestReports:^(NSArray *resultReports, NSError *error) {
         if (resultReports) {
+            
+            [_mapVIew removeAnnotations:_mapVIew.annotations];
             
             for (Report *report in resultReports) {
                 
@@ -93,7 +102,7 @@
                 [_mapVIew addAnnotation:point];
             }
             
-            
+            [_activityindicator stopAnimating];
             
             
         }

@@ -28,6 +28,11 @@
 
 -(void) loadData {
     if (_report) {
+        
+        if ([_report.plate  isEqual: @""]) {
+            _lblPlate.hidden = YES;
+        }
+        
         _lblCategory.text = _report.category.text;
         _lblPlate.text = _report.plate;
         _lblPlate.layer.cornerRadius = 3;

@@ -10,7 +10,12 @@
 #import "PlateManager.h"
 #import "UserManager.h"
 
-@interface NewPlateTableViewController ()
+@interface NewPlateTableViewController () {
+    
+    BOOL posting;
+    
+    
+}
 
 @end
 
@@ -18,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    posting = NO;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,20 +41,28 @@
 }
 - (IBAction)newPlate:(id)sender {
     if (self.plateText.text.length == 7) {
-        Plate *plate = [[Plate alloc] init];
+        
+        if (!posting) {
+            
+            posting = YES;
 
-        plate.plate = self.plateText.text;
+            Plate *plate = [[Plate alloc] init];
+            
+            plate.plate = self.plateText.text;
+            
+            PlateManager *plateControl = [[PlateManager alloc] init];
+            UserManager *userControl = [[UserManager alloc] init];
+            
+            [plateControl savePlate:plate forUser:[userControl getUserDefaults] response:^(BOOL success, NSError *error) {
+                if (success) {
+                    [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
+                } else {
+                    [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
+                }
+                posting = NO;
 
-        PlateManager *plateControl = [[PlateManager alloc] init];
-        UserManager *userControl = [[UserManager alloc] init];
-
-        [plateControl savePlate:plate forUser:[userControl getUserDefaults] response:^(BOOL success, NSError *error) {
-            if (success) {
-                [self performSelectorOnMainThread:@selector(successfulRequest) withObject:nil waitUntilDone:NO];
-            } else {
-                [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
-            }
-        }];
+            }];
+        }
     } else {
         [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
     }

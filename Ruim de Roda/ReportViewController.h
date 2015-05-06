@@ -24,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryText;
 @property (weak, nonatomic) IBOutlet UITextField *plateText;@property UIImage *imageCrop;
+@property (weak, nonatomic) IBOutlet UIButton *btnCategory;
 
 @property (nonatomic) UIViewController *sourceVC;
 

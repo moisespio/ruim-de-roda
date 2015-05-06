@@ -73,6 +73,7 @@
     ReportViewController *rpv = [segue destinationViewController];
     rpv.categoryID = _categoryID;
     rpv.categoryText.text = _categoryText;
+    rpv.btnCategory.titleLabel.text = _categoryText;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -163,12 +163,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
+    cell.lblPlate.hidden = NO;
+    
     Report *report = [_arrayReports objectAtIndex:indexPath.row];
     
     cell.lblCategory.text = report.category.text;
     cell.lblPlate.text = report.plate;
     cell.lblPlate.layer.cornerRadius = 3;
     cell.lblPlate.clipsToBounds = YES;
+    
+    if ([report.plate  isEqual: @""]) {
+        cell.lblPlate.hidden = YES;
+    }
+
     
     cell.lblDate.text = [self formatDate:report.createdAt withFormat:@"dd/MM/yyyy"];
     cell.lblHour.text = [self formatDate:report.createdAt withFormat:@"HH:mm"];

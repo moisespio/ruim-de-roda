@@ -143,7 +143,7 @@
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
-            self.addressLabel.text = [NSString stringWithFormat:@"%@, %@\n %@ - %@",
+            self.addressLabel.text = [NSString stringWithFormat:@"%@, %@. %@ - %@",
                                       placemark.thoroughfare, placemark.subThoroughfare,
                                       placemark.locality, placemark.administrativeArea];
             
@@ -162,7 +162,7 @@
             NSString *city = placemark.locality;
             NSString *state = placemark.administrativeArea;
             
-            _address = [NSString stringWithFormat:@"%@, %@\n %@, %@", street, number, city, state];
+            _address = [NSString stringWithFormat:@"%@, %@ %@, %@", street, number, city, state];
         } else {
             NSLog(@"%@", error.debugDescription);
         }
@@ -187,7 +187,6 @@
 }
 - (IBAction)sendReport:(id)sender {
     
-    [_activityIndicator startAnimating];
 
     
     if (!posting) {
@@ -200,6 +199,8 @@
             [self alertWithTitle:@"Ops!" message:@"Selecione uma categoria"];
         } else {
             
+            [_activityIndicator startAnimating];
+
             _postingVIew.hidden = NO;
             posting = YES;
             Report *report = [[Report alloc] init];
@@ -276,6 +277,8 @@
     [self performSegueWithIdentifier:@"showCategory" sender:sender];
 }
 - (IBAction)backCategory:(UIStoryboardSegue *)sender {
+    
+    
 }
 /*
  #pragma mark - Navigation
