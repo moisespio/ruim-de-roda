@@ -284,8 +284,8 @@
                                                     </mask>
                                                 </variation>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
-                                                <rect key="frame" x="16" y="109" width="568" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
+                                                <rect key="frame" x="16" y="109" width="568" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="OXt-vC-89R"/>
                                                 </constraints>
@@ -325,6 +325,7 @@
                                             <mask key="constraints">
                                                 <exclude reference="U2G-eZ-fle"/>
                                                 <exclude reference="gsK-e3-KcJ"/>
+                                                <exclude reference="ts1-cV-E4M"/>
                                                 <exclude reference="b44-WY-qIl"/>
                                                 <exclude reference="dfD-AA-4cn"/>
                                                 <exclude reference="DZZ-CF-kBM"/>
@@ -333,15 +334,29 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view hidden="YES" alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGN-sN-dvA" userLabel="PostingView">
+                                        <rect key="frame" x="0.0" y="1" width="600" height="600"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5zR-sG-G72">
+                                        <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                        <color key="color" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="twy-bq-h0A" secondAttribute="centerX" id="0MS-7h-csB"/>
                                     <constraint firstItem="twy-bq-h0A" firstAttribute="leading" secondItem="ZPB-6M-R23" secondAttribute="leading" id="1qq-1w-RFB"/>
                                     <constraint firstAttribute="bottom" secondItem="Xbn-CN-bB8" secondAttribute="bottom" id="5Mh-Hr-JeB"/>
+                                    <constraint firstItem="twy-bq-h0A" firstAttribute="centerX" secondItem="5zR-sG-G72" secondAttribute="centerX" id="6d8-g0-2iW"/>
+                                    <constraint firstItem="twy-bq-h0A" firstAttribute="centerY" secondItem="5zR-sG-G72" secondAttribute="centerY" id="8WM-6g-c8A"/>
+                                    <constraint firstItem="zGN-sN-dvA" firstAttribute="height" secondItem="twy-bq-h0A" secondAttribute="height" id="9ag-dj-WBu"/>
                                     <constraint firstAttribute="trailing" secondItem="yar-St-cF1" secondAttribute="trailing" id="BE0-YY-b2B"/>
                                     <constraint firstAttribute="centerX" secondItem="twy-bq-h0A" secondAttribute="centerX" id="CPP-3w-qTc"/>
                                     <constraint firstItem="yar-St-cF1" firstAttribute="top" secondItem="twy-bq-h0A" secondAttribute="bottom" id="Hil-5a-HOw"/>
+                                    <constraint firstItem="zGN-sN-dvA" firstAttribute="width" secondItem="twy-bq-h0A" secondAttribute="width" id="OKU-zS-Mm0"/>
                                     <constraint firstItem="yar-St-cF1" firstAttribute="leading" secondItem="ZPB-6M-R23" secondAttribute="leading" id="UGJ-K9-sSX"/>
+                                    <constraint firstItem="zGN-sN-dvA" firstAttribute="centerX" secondItem="twy-bq-h0A" secondAttribute="centerX" id="aAL-Ql-wjK"/>
+                                    <constraint firstItem="zGN-sN-dvA" firstAttribute="centerY" secondItem="twy-bq-h0A" secondAttribute="centerY" constant="1" id="bCN-6E-GDq"/>
                                     <constraint firstItem="twy-bq-h0A" firstAttribute="top" secondItem="ZPB-6M-R23" secondAttribute="top" id="hPI-nD-6RH"/>
                                     <constraint firstItem="Xbn-CN-bB8" firstAttribute="leading" secondItem="ZPB-6M-R23" secondAttribute="leading" id="hhf-My-DBD"/>
                                     <constraint firstItem="yar-St-cF1" firstAttribute="top" secondItem="ZPB-6M-R23" secondAttribute="top" constant="734" id="iUC-ss-dhr"/>
@@ -388,11 +403,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1200"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="5zR-sG-G72" id="yno-rE-zFt"/>
                         <outlet property="addressLabel" destination="bMJ-5d-yF7" id="G3X-Gy-hoq"/>
                         <outlet property="bottomConstraint" destination="RiD-rl-Ydn" id="ldI-ym-5hE"/>
                         <outlet property="categoryText" destination="un5-OI-e0m" id="QWb-DA-cPA"/>
                         <outlet property="mapView" destination="Xbn-CN-bB8" id="DcB-JT-9wQ"/>
                         <outlet property="plateText" destination="HUq-Ff-doK" id="ABt-kD-j3W"/>
+                        <outlet property="postingVIew" destination="zGN-sN-dvA" id="Pqw-Zf-pCf"/>
                         <outlet property="reportImage" destination="twy-bq-h0A" id="MGb-p6-ZM2"/>
                         <outlet property="scrollView" destination="ZPB-6M-R23" id="C1i-H8-KPg"/>
                         <outlet property="topConstraint" destination="taY-OL-haH" id="tQX-P7-rfJ"/>
@@ -401,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMF-jg-uUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3374" y="95"/>
+            <point key="canvasLocation" x="3432" y="32"/>
         </scene>
         <!--Selecione a ocorrencia-->
         <scene sceneID="xdm-yg-awz">

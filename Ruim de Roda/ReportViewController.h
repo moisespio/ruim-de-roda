@@ -16,6 +16,8 @@
 @interface ReportViewController : UIViewController <UIApplicationDelegate,CLLocationManagerDelegate,MKMapViewDelegate,UITextFieldDelegate>
 
 @property UIImage *imageReport;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIView *postingVIew;
 
 @property (weak, nonatomic) IBOutlet UIImageView *reportImage;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

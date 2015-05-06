@@ -32,6 +32,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _activityIndicator.hidesWhenStopped = YES;
+    _postingVIew.hidden = YES;
     posting = NO;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -185,7 +187,12 @@
 }
 - (IBAction)sendReport:(id)sender {
     
+    [_activityIndicator startAnimating];
+
+    
     if (!posting) {
+        
+        
         
         if (self.plateText.text.length > 7) {
             [self alertWithTitle:@"Ops!" message:@"Sua placa deve ter 7 digitos"];
@@ -193,6 +200,7 @@
             [self alertWithTitle:@"Ops!" message:@"Selecione uma categoria"];
         } else {
             
+            _postingVIew.hidden = NO;
             posting = YES;
             Report *report = [[Report alloc] init];
             
@@ -219,6 +227,10 @@
                     [self performSelectorOnMainThread:@selector(errorRequest) withObject:nil waitUntilDone:NO];
                 }
                 posting = NO;
+                _postingVIew.hidden = YES;
+
+                [_activityIndicator stopAnimating];
+
             }];
         }
     }
