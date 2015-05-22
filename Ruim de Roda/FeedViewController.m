@@ -34,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo-header"]];
     
     self.tableView.separatorColor = [UIColor clearColor];
@@ -193,6 +195,9 @@
                    placeholderImage:[UIImage imageNamed:@"placeholder"]
         usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     
+    
+     cell.lblPlate.hidden = YES;
+    
     return cell;
 }
 
@@ -219,7 +224,7 @@
     Report *report = [_arrayReports objectAtIndex:indexPath.row];
     _selectedReport = report;
     
-    [self performSegueWithIdentifier:@"segueDetail" sender:self];
+    //[self performSegueWithIdentifier:@"segueDetail" sender:self];
 }
 - (IBAction)goConfig:(id)sender {
     [self performSegueWithIdentifier:@"configSegue" sender:self];
