@@ -115,7 +115,7 @@
                                                                 </mask>
                                                             </variation>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
+                                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xg-ny-cgf">
                                                             <rect key="frame" x="480" y="350" width="110" height="31"/>
                                                             <color key="backgroundColor" red="0.61176470588235299" green="0.6588235294117647" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
@@ -241,7 +241,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbn-CN-bB8">
+                                    <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbn-CN-bB8">
                                         <rect key="frame" x="0.0" y="760" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="GQH-gC-22W"/>
@@ -280,7 +280,7 @@
                                                     </mask>
                                                 </variation>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMJ-5d-yF7">
                                                 <rect key="frame" x="16" y="109" width="568" height="21"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="OXt-vC-89R"/>
@@ -535,7 +535,7 @@
                                                 <color key="textColor" red="0.14117647059999999" green="0.1843137255" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="endereço" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-JN-n3A">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="endereço" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-JN-n3A">
                                                 <rect key="frame" x="0.0" y="52" width="600" height="24"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -564,7 +564,7 @@
                                                     </mask>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-Yu-pqt">
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MJD-6166" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-Yu-pqt">
                                                 <rect key="frame" x="482" y="8" width="110" height="31"/>
                                                 <color key="backgroundColor" red="0.61176470589999998" green="0.6588235294" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -602,7 +602,7 @@
                                             <constraint firstItem="0qK-EC-TTl" firstAttribute="top" secondItem="DQ3-DD-I13" secondAttribute="bottom" constant="-5" id="zir-KY-Js3"/>
                                         </constraints>
                                     </view>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
+                                    <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-us-AgL">
                                         <rect key="frame" x="0.0" y="721" width="600" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="2tR-tr-bTA"/>
@@ -883,55 +883,6 @@
             </objects>
             <point key="canvasLocation" x="1846" y="-5"/>
         </scene>
-        <!--Map View Controller-->
-        <scene sceneID="IO1-xy-2LK">
-            <objects>
-                <viewController id="JJr-w8-5uX" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="RR2-qa-4Cj"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZWj-y6-scD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yAP-T6-rfS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8e-Pk-01K">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <outlet property="delegate" destination="JJr-w8-5uX" id="l2d-rW-HIa"/>
-                                </connections>
-                            </mapView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="aWY-zA-KWc">
-                                <rect key="frame" x="290" y="290" width="37" height="37"/>
-                            </activityIndicatorView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aWY-zA-KWc" firstAttribute="centerX" secondItem="q8e-Pk-01K" secondAttribute="centerX" constant="8.5" id="Fv4-yL-x2p"/>
-                            <constraint firstItem="aWY-zA-KWc" firstAttribute="centerY" secondItem="q8e-Pk-01K" secondAttribute="centerY" constant="8.5" id="LnY-F1-Fzl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="q8e-Pk-01K" secondAttribute="trailing" constant="-16" id="ZyT-iy-cyd"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="q8e-Pk-01K" secondAttribute="bottom" id="jyo-Lz-Mak"/>
-                            <constraint firstItem="q8e-Pk-01K" firstAttribute="top" secondItem="yAP-T6-rfS" secondAttribute="topMargin" id="mNb-dT-6x7"/>
-                            <constraint firstItem="q8e-Pk-01K" firstAttribute="leading" secondItem="yAP-T6-rfS" secondAttribute="leadingMargin" constant="-16" id="wj0-iC-bSH"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="xHM-X8-5Ev">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="CFe-lA-7gh">
-                            <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            <connections>
-                                <action selector="refreshMap:" destination="JJr-w8-5uX" id="lIW-5S-kJD"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="activityindicator" destination="aWY-zA-KWc" id="Ck9-B8-FBJ"/>
-                        <outlet property="mapVIew" destination="q8e-Pk-01K" id="LPX-7l-I7S"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8mL-F9-kNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="239" y="523"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="md3-ZL-x0b">
             <objects>
@@ -946,7 +897,6 @@
                     <connections>
                         <segue destination="RgN-Zo-gUA" kind="relationship" relationship="viewControllers" id="rTh-cO-fbP"/>
                         <segue destination="Te9-Py-I6l" kind="relationship" relationship="viewControllers" id="Lv2-vT-Utv"/>
-                        <segue destination="4MN-oa-CyY" kind="relationship" relationship="viewControllers" id="brh-eS-KOd"/>
                         <segue destination="gxt-ZO-Xrs" kind="relationship" relationship="viewControllers" id="Xhv-s2-0Wd"/>
                     </connections>
                 </tabBarController>
@@ -1687,31 +1637,9 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
             </objects>
             <point key="canvasLocation" x="2609" y="-5"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="vdE-cY-HBh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4MN-oa-CyY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="MapIcon" id="vqS-G3-DKK">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ItD-5L-cZe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="JJr-w8-5uX" kind="relationship" relationship="rootViewController" id="uLi-Yc-f09"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VeV-jl-P4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-599" y="523"/>
-        </scene>
     </scenes>
     <resources>
         <image name="HackInPoa" width="1024" height="768"/>
-        <image name="MapIcon" width="45" height="45"/>
         <image name="config" width="44" height="45"/>
         <image name="home" width="46" height="45"/>
         <image name="more" width="48" height="48"/>
@@ -1719,7 +1647,7 @@ A ideia é conscientizar os motoristas de que o trânsito não é feito apenas d
         <image name="search" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="IO1-HF-3KV"/>
         <segue reference="Eiu-OM-Qcd"/>
-        <segue reference="33E-WJ-Hci"/>
     </inferredMetricsTieBreakers>
 </document>
